@@ -4,8 +4,8 @@ import { Heading } from "@ui/heading";
 import { MainWrapper } from "@ui/main-wrapper";
 import React from "react";
 
-import { ButtonWrapper, HeaderContainer, HeaderWrapper } from "../styled";
-import { Menu } from "./menu";
+import { Menu } from "../menu";
+import { ButtonWrapper, HeaderContainer, HeaderWrapper } from "./styled";
 
 export const Header = () => {
   return (

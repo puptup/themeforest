@@ -2,8 +2,8 @@ import { Heading } from "@ui/heading";
 import { NavLink } from "@ui/nav-link";
 import React from "react";
 
-import { links } from "../constants";
-import { Container } from "../styled";
+import { links } from "../../constants";
+import { Container } from "./styled";
 
 export const Menu = () => {
   return (

@@ -1,12 +1,19 @@
 import IMG from "@assets/img_2.png";
-import { Block } from "@ui/block";
 import { Button } from "@ui/button";
 import { Heading } from "@ui/heading";
 import { Paragraph } from "@ui/paragraph";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import styled from "styled-components";
 
-import { Img, NewSolutionsWrapper } from "../styled";
+import { Img, NewSolutionsWrapper } from "./styled";
+
+const Block = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: ${({ theme }) => theme.spacing.block.width.xl};
+  gap: ${({ theme }) => theme.spacing.betweenItems.l};
+`;
 
 export const NewSolutionsSection = () => {
   const navigate = useNavigate();
@@ -18,7 +25,7 @@ export const NewSolutionsSection = () => {
   return (
     <NewSolutionsWrapper>
       <Img src={IMG} />
-      <Block size="xl" gap="l">
+      <Block>
         <Heading level="h2" fontWeight="extraBold">
           Radically new solutions for data
         </Heading>

@@ -1,5 +1,4 @@
-import { Block } from "@ui/block";
-import { Container } from "@ui/container";
+import { Button } from "@ui/button";
 import { Heading } from "@ui/heading";
 import { MainWrapper } from "@ui/main-wrapper";
 import { Paragraph } from "@ui/paragraph";
@@ -7,34 +6,35 @@ import { TextWithColor } from "@ui/text-with-color";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import { CircleButton } from "./circle-button";
+import { BlockWrapper, Container, HeadingWrapper } from "./styled";
 
-export const FindTruePowerSection = () => {
+export const AnaliticsPlatformSection = () => {
   const navigate = useNavigate();
-  const handleRoute = () => {
+
+  const routeChange = () => {
     navigate("/solutions");
   };
 
   return (
     <MainWrapper>
-      <Container mt="m" mb="xl">
-        <Block size="xl">
+      <Container>
+        <HeadingWrapper>
           <Heading level="h1" fontWeight="extraBold">
-            Find true power in your data with <TextWithColor color="primary">Ensome</TextWithColor>
+            The <TextWithColor color="primary">newest</TextWithColor> business analytics platform
           </Heading>
-        </Block>
-        <Block size="m">
+        </HeadingWrapper>
+        <BlockWrapper>
           <Paragraph level="p2" fontWeight="regular" color="grey">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
             lauda, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.
           </Paragraph>
-        </Block>
+          <Button size="xl" onClick={routeChange}>
+            <Heading level="h6" fontWeight="bold" color="white">
+              Discover more
+            </Heading>
+          </Button>
+        </BlockWrapper>
       </Container>
-      <CircleButton handleRoute={handleRoute}>
-        <Heading fontWeight="semiBold" level="h7" color="white">
-          Learn more
-        </Heading>
-      </CircleButton>
     </MainWrapper>
   );
 };

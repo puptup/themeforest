@@ -23,6 +23,7 @@ export const spacing = {
     },
   },
   betweenSections: {
+    xxs: "40px",
     xs: "50px",
     s: "60px",
     m: "70px",
@@ -34,7 +35,8 @@ export const spacing = {
   betweenItems: {
     xs: "10px",
     s: "12px",
-    m: "15px",
+    xm: "15px",
+    m: "20px",
     l: "30px",
     xl: "40px",
     xxl: "50px",

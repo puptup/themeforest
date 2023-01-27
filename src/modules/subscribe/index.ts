@@ -1,1 +1,1 @@
-export { SubscribeSection } from "./components/subscribe";
+export { SubscribeSection } from "./components/subscrive";

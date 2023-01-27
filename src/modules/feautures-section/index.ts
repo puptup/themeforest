@@ -1,1 +1,1 @@
-export { FeauturesSection } from "./components/feautures";
+export { FeauturesSection } from "./components/futures-section/feautures-section";

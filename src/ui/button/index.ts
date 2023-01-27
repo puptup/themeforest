@@ -22,7 +22,7 @@ export const Button = styled.button<ButtonProps>`
   box-shadow: ${({ theme }) => theme.shadow.button};
 
   &:hover {
-    background-color: ${({ theme }) => theme.color.primaryHovered};
+    opacity: 0.7;
     box-shadow: ${({ theme }) => theme.shadow.button};
   }
 `;

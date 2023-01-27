@@ -8,17 +8,12 @@ export const HeaderWrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 0;
+  padding: ${({ theme }) => theme.spacing.betweenSections.xxs} 0;
 `;
 
 export const ButtonWrapper = styled.div`
   color: white;
   display: flex;
   justify-content: center;
-  gap: 10px;
-`;
-
-export const Container = styled.div`
-  display: flex;
-  gap: 40px;
+  gap: ${({ theme }) => theme.spacing.betweenItems.xs};
 `;

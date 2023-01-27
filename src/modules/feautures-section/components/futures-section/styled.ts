@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Logo = styled.img`
+export const FullSizeIMG = styled.img`
   display: block;
-  width: 141px;
+  width: 100%;
 `;
