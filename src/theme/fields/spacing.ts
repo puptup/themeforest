@@ -4,7 +4,7 @@ export const spacing = {
       xl: "190px",
       l: "170px",
       m: "140px",
-      s: "80px",
+      xs: "80px",
     },
     paddingTopBottom: {
       xl: "15px",
@@ -12,6 +12,22 @@ export const spacing = {
       m: "15px",
       s: "18px",
     },
+    controlButtonWidth: {
+      l: "110px",
+      s: "48px",
+    },
+    controlButtonPadding: {
+      l: "15px",
+      s: "8px",
+    },
+  },
+  card: {
+    padding: {
+      m: "20px",
+      l: "25px",
+      xl: "35px",
+    },
+    borderRadius: "6px",
   },
   block: {
     width: {
@@ -20,6 +36,9 @@ export const spacing = {
       m: "350px",
       s: "285px",
       xs: "255px",
+    },
+    height: {
+      xl: "525px",
     },
   },
   betweenSections: {

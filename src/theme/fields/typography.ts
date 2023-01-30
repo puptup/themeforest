@@ -29,11 +29,13 @@ export const typography = {
   },
   paragraph: {
     lineHeight: {
+      p0: "55px",
       p1: "33px",
       p2: "28px",
       p3: "24px",
     },
     fontSize: {
+      p0: "50px",
       p1: "20px",
       p2: "16px",
       p3: "14px",
