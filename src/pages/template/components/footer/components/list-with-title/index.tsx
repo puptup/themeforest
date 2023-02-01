@@ -1,7 +1,6 @@
-import { Heading } from "@ui/heading";
 import React from "react";
 
-import { ListWrapepr, Wrapper } from "./styled";
+import { ListWrapepr, Text, Title, Wrapper } from "./styled";
 
 type ListWithTitleProps = {
   title: string;
@@ -11,14 +10,10 @@ type ListWithTitleProps = {
 export const ListWithTitle = ({ title, items }: ListWithTitleProps) => {
   return (
     <Wrapper>
-      <Heading level="h7" fontWeight="bold" color="white">
-        {title}
-      </Heading>
+      <Title>{title}</Title>
       <ListWrapepr>
         {items.map((item, index) => (
-          <Heading key={index} fontWeight="medium" level="h7" color="grey">
-            {item}
-          </Heading>
+          <Text key={index}>{item}</Text>
         ))}
       </ListWrapepr>
     </Wrapper>

@@ -15,6 +15,7 @@ export const typography = {
       h5: "30px",
       h6: "24px",
       h7: "24px",
+      h8: "24px",
     },
     fontSize: {
       h1: "46px",
@@ -24,6 +25,7 @@ export const typography = {
       h5: "20px",
       h6: "16px",
       h7: "14px",
+      h8: "12px",
     },
     fontFamily: '"Manrope", sans-serif',
   },
@@ -48,3 +50,19 @@ export type FontWeightTypography = keyof typeof typography.fontWeight;
 
 export type HeadingTypeographyLevels = keyof typeof typography.heading.fontSize;
 export type ParagraphTypeographyLevels = keyof typeof typography.paragraph.fontSize;
+
+// export const Heading = styled.div<HeadingProps>`
+//   font-size: ${({ theme, level }) => theme.typography.heading.fontSize[level]};
+//   line-height: ${({ theme, level }) => theme.typography.heading.lineHeight[level]};
+//   font-weight: ${({ theme, fontWeight }) => theme.typography.fontWeight[fontWeight]};
+//   ${({ theme, color }) => color && `color ${theme.color[color]};`}
+//   font-family: "Manrope", sans-serif;
+// `;
+
+// export const Paragraph = styled.p<ParagraphProps>`
+//   font-size: ${({ theme, level }) => theme.typography.paragraph.fontSize[level]};
+//   line-height: ${({ theme, level }) => theme.typography.paragraph.lineHeight[level]};
+//   font-weight: ${({ theme, fontWeight }) => theme.typography.fontWeight[fontWeight]};
+//   ${({ theme, color }) => color && `color ${theme.color[color]};`}
+//   font-family: "Open Sans", sans-serif;
+// `;

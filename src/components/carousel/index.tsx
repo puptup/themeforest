@@ -1,9 +1,8 @@
 import { ControlDirectionButton } from "@ui/control-direction-button";
-import { Heading } from "@ui/heading";
 import React, { useCallback, useRef, useState } from "react";
-import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
+import { SwiperRef, SwiperSlide } from "swiper/react";
 
-import { ContainerWrapper, ControlButtonsWrapper } from "./styled";
+import { ContainerWrapper, ControlButtonsWrapper, Swiper, Title } from "./styled";
 
 type CarouselProps = {
   children: JSX.Element[];
@@ -30,18 +29,10 @@ export const Carousel = ({ children, slidesPerView, title }: CarouselProps) => {
   return (
     <>
       <ContainerWrapper>
-        <Heading level="h2" fontWeight="extraBold">
-          {title}
-        </Heading>
+        <Title>{title}</Title>
         <ControlButtonsWrapper>
+          <ControlDirectionButton direction="left" onClick={handlePrev} disabled={slides <= 0} />
           <ControlDirectionButton
-            size="l"
-            direction="left"
-            onClick={handlePrev}
-            disabled={slides <= 0}
-          />
-          <ControlDirectionButton
-            size="l"
             direction="right"
             onClick={handleNext}
             disabled={slides >= children.length - slidesPerView}
@@ -49,10 +40,19 @@ export const Carousel = ({ children, slidesPerView, title }: CarouselProps) => {
         </ControlButtonsWrapper>
       </ContainerWrapper>
       <Swiper
-        spaceBetween={30}
-        slidesPerView={slidesPerView}
         ref={sliderRef}
-        style={{ padding: 10 }}
+        roundLengths
+        allowTouchMove={false}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 50,
+          },
+          1110: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        }}
       >
         {children.map((child) => (
           <SwiperSlide key={child.key}>{child}</SwiperSlide>

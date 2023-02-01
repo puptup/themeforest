@@ -16,6 +16,7 @@ export const Container = styled.div`
   justify-content: space-between;
   padding-top: ${({ theme }) => theme.spacing.betweenSections.xs};
   padding-bottom: ${({ theme }) => theme.spacing.betweenSections.xs};
+  overflow: hidden;
 `;
 
 export const Icon = styled.img`
@@ -50,4 +51,18 @@ export const CopyRightContainer = styled.div`
 export const CopyRigthBlock = styled.div`
   display: flex;
   gap: ${({ theme }) => theme.spacing.betweenItems.xxxl};
+`;
+
+export const CopyRightText = styled.p`
+  font-size: ${({ theme }) => theme.typography.paragraph.fontSize.p3};
+  line-height: ${({ theme }) => theme.typography.paragraph.lineHeight.p3};
+  font-weight: ${({ theme }) => theme.typography.fontWeight.regular};
+  color: ${({ theme }) => theme.color.blue2};
+`;
+
+export const Text = styled.p`
+  font-size: ${({ theme }) => theme.typography.paragraph.fontSize.p3};
+  line-height: ${({ theme }) => theme.typography.paragraph.lineHeight.p3};
+  font-weight: ${({ theme }) => theme.typography.fontWeight.regular};
+  color: ${({ theme }) => theme.color.white};
 `;

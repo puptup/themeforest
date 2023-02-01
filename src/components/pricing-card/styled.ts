@@ -1,9 +1,10 @@
-import { constolIcons } from "@assets/control-icons";
+import { controlIcons } from "@assets/control-icons";
 import { Button as UIButton } from "@ui/button";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
   box-shadow: ${({ theme }) => theme.shadow.card3};
+  flex-shrink: 0;
   width: ${({ theme }) => theme.spacing.block.width.xs};
   height: ${({ theme }) => theme.spacing.block.height.xl};
   border-radius: ${({ theme }) => theme.spacing.card.borderRadius.xs};
@@ -78,7 +79,7 @@ export const Benefit = styled.li`
   &::before {
     content: "";
     display: block;
-    mask: url(${constolIcons.CheckMark});
+    mask: url(${controlIcons.CheckMark});
     background-color: ${({ theme }) => theme.color.primary};
 
     mask-size: 100%;

@@ -3,7 +3,7 @@ import React from "react";
 import { FirstCircle, SecondCircle, ThirdCircle } from "./styled";
 
 type CircleButtonProps = {
-  children: React.ReactElement;
+  children: React.ReactNode;
   handleRoute: () => void;
 };
 

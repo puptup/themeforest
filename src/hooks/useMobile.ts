@@ -1,3 +1,4 @@
+import { size } from "@constants/devices";
 import { useLayoutEffect, useState } from "react";
 
 export const useMobile = (): boolean => {
@@ -5,7 +6,7 @@ export const useMobile = (): boolean => {
 
   useLayoutEffect(() => {
     const handleResize = (): void => {
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < Number(size.laptop.slice(0, -2))) {
         setIsMobile(true);
       } else {
         setIsMobile(false);
@@ -13,6 +14,7 @@ export const useMobile = (): boolean => {
     };
 
     window.addEventListener("resize", handleResize);
+    handleResize();
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 

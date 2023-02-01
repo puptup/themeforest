@@ -1,8 +1,14 @@
-import { constolIcons } from "@assets/control-icons";
+import { controlIcons } from "@assets/control-icons";
 import { Link as RouterLink } from "react-router-dom";
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+type BlogCardsVariants = "small" | "without-description";
+
+type WrapperProps = {
+  variant?: BlogCardsVariants;
+};
+
+export const Wrapper = styled.div<WrapperProps>`
   width: ${({ theme }) => theme.spacing.block.width.m};
   display: flex;
   flex-direction: column;
@@ -52,7 +58,7 @@ export const Link = styled(RouterLink)`
   &::after {
     content: "";
     display: block;
-    mask: url(${constolIcons.LeftArrow});
+    mask: url(${controlIcons.LeftArrow});
     background-color: ${({ theme }) => theme.color.primary};
     transform: rotate(180deg);
     mask-size: 100%;

@@ -1,9 +1,10 @@
+import { device } from "@constants/devices";
 import styled from "styled-components";
 
 export const FirstCircle = styled.div`
   position: absolute;
-  top: 210px;
-  right: 225px;
+  top: -70px;
+  right: 20%;
   width: 140px;
   height: 140px;
   background-color: ${({ theme }) => theme.color.white};
@@ -12,6 +13,13 @@ export const FirstCircle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media ${device.laptop} {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    right: 10%;
+  }
 `;
 
 export const SecondCircle = styled.div`
@@ -23,6 +31,11 @@ export const SecondCircle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media ${device.laptop} {
+    width: 89px;
+    height: 89px;
+  }
 `;
 
 export const ThirdCircle = styled.div`
@@ -34,4 +47,17 @@ export const ThirdCircle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  font-size: ${({ theme }) => theme.typography.heading.fontSize.h7};
+  line-height: ${({ theme }) => theme.typography.heading.lineHeight.h7};
+  font-weight: ${({ theme }) => theme.typography.fontWeight.extraBold};
+  color: ${({ theme }) => theme.color.white};
+
+  @media ${device.laptop} {
+    width: 78px;
+    height: 78px;
+    font-size: 12px;
+    line-height: ${({ theme }) => theme.typography.heading.lineHeight.h8};
+    font-size: ${({ theme }) => theme.typography.heading.fontSize.h8};
+  }
 `;

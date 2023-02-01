@@ -1,6 +1,5 @@
 import { Colors } from "@theme/fields/color";
 import { Button } from "@ui/button";
-import { Heading } from "@ui/heading";
 import { Input, InputWrapper } from "@ui/input";
 import React, { ChangeEvent, useState } from "react";
 
@@ -29,9 +28,7 @@ export const InputWithButton = ({
     <InputWrapper color={inputTextColor} size="l" background={bgColor}>
       <Input placeholder={placeholder} value={state} onChange={handleChange} />
       <Button size="m" color={btnColor}>
-        <Heading level="h6" fontWeight="bold">
-          {btnText}
-        </Heading>
+        {btnText}
       </Button>
     </InputWrapper>
   );

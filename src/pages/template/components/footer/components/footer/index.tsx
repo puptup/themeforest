@@ -1,13 +1,14 @@
 import { LogoByColor } from "@components/logo-by-color";
 import { MainWrapper } from "@ui/main-wrapper";
-import { Paragraph } from "@ui/paragraph";
 import React from "react";
 
 import { contactInfo, icons, infoBlocks } from "../../constants";
-import { ListWithTitle, ListWithTitleAndLinks } from "../list-with-title-and-links";
+import { ListWithTitle } from "../list-with-title";
+import { ListWithTitleAndLinks } from "../list-with-title-and-links";
 import {
   Container,
   CopyRightContainer,
+  CopyRightText,
   CopyRigthBlock,
   FooterWraper,
   Icon,
@@ -15,6 +16,7 @@ import {
   Line,
   LinksWrapper,
   LogoAndIconsWrapper,
+  Text,
 } from "./styled";
 
 export const Footer = () => {
@@ -24,10 +26,10 @@ export const Footer = () => {
         <Container>
           <LogoAndIconsWrapper>
             <LogoByColor color="blue" />
-            <Paragraph level="p3" fontWeight="regular" color="white">
+            <Text>
               Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
               laboriosam, nisi ut aliquid ex ea commodi.
-            </Paragraph>
+            </Text>
             <LinksWrapper>
               {icons.map((elem, index) => (
                 <Icon key={index} src={elem.icon} />
@@ -43,16 +45,10 @@ export const Footer = () => {
         </Container>
         <Line />
         <CopyRightContainer>
-          <Paragraph level="p3" fontWeight="regular" color="blue2">
-            Ensome© 2022 All Rights Reserved
-          </Paragraph>
+          <CopyRightText>Ensome© 2022 All Rights Reserved</CopyRightText>
           <CopyRigthBlock>
-            <Paragraph level="p3" fontWeight="regular" color="blue2">
-              Privacy policy
-            </Paragraph>
-            <Paragraph level="p3" fontWeight="regular" color="blue2">
-              Terms of us
-            </Paragraph>
+            <CopyRightText>Privacy policy</CopyRightText>
+            <CopyRightText>Terms of us</CopyRightText>
           </CopyRigthBlock>
         </CopyRightContainer>
       </MainWrapper>

@@ -15,6 +15,10 @@ export const Button = styled.button<ButtonProps>`
   background-color: ${({ theme, color }) => (!color ? theme.color.primary : theme.color[color])};
   border: 0;
   border-radius: 6px;
+  font-size: ${({ theme }) => theme.typography.heading.fontSize.h6};
+  line-height: ${({ theme }) => theme.typography.heading.lineHeight.h6};
+  font-weight: ${({ theme }) => theme.typography.fontWeight.bold};
+  color: ${({ theme }) => theme.color.white};
   cursor: pointer;
 
   transition: all 0.2s linear;

@@ -5,9 +5,10 @@ import { Block, Date, Image, Link, Text, Title, Wrapper } from "./styled";
 
 type BlogCardProps = {
   card: BlogCardType;
+  variant?: "small";
 };
 
-export const BlogCard = ({ card }: BlogCardProps) => {
+export const BlogCard = ({ card, variant }: BlogCardProps) => {
   const { image, date, title, text, link } = card;
   return (
     <Wrapper>

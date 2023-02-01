@@ -1,59 +1,50 @@
 import { companiesLogos } from "@assets/companies";
-import { Heading } from "@ui/heading";
 import { MainWrapper } from "@ui/main-wrapper";
-import { Paragraph } from "@ui/paragraph";
 import React from "react";
-import styled from "styled-components";
 
-import { Block, Container, ParagraphBlock, StatisticsWrapper } from "./styled";
-
-export const CompaniesListWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-`;
-
-export const CompanyLogo = styled.img``;
+import {
+  Block,
+  CompaniesListWrapper,
+  CompanyLogo,
+  Container,
+  Description,
+  Number,
+  ParagraphBlock,
+  StatisticDescription,
+  StatisticsBlocksWrapper,
+  StatisticsWrapper,
+  Title,
+} from "./styled";
 
 export const StatiscticsSection = () => {
   return (
     <MainWrapper>
       <Container>
-        <Heading level="h2" fontWeight="bold">
-          We provide services that guarantee your success
-        </Heading>
+        <Title>We provide services that guarantee your success</Title>
         <StatisticsWrapper>
-          <Block>
-            <Paragraph level="p0" fontWeight="extraBold" color="primary">
-              1830+
-            </Paragraph>
-            <Paragraph level="p2" fontWeight="regular" color="grey">
-              Project executed
-            </Paragraph>
-          </Block>
-          <Block>
-            <Paragraph level="p0" fontWeight="extraBold" color="primary">
-              843+
-            </Paragraph>
-            <Paragraph level="p2" fontWeight="regular" color="grey">
-              Satisfied customers
-            </Paragraph>
-          </Block>
-          <Block>
-            <Paragraph level="p0" fontWeight="extraBold" color="primary">
-              390
-            </Paragraph>
-            <Paragraph level="p2" fontWeight="regular" color="grey">
-              Data management
-            </Paragraph>
-          </Block>
+          <StatisticsBlocksWrapper>
+            <Block>
+              <Number>1830+</Number>
+              <StatisticDescription>Project executed</StatisticDescription>
+            </Block>
+            <Block>
+              <Number>843+</Number>
+              <StatisticDescription>Satisfied customers</StatisticDescription>
+            </Block>
+            <Block>
+              <Number>390</Number>
+              <StatisticDescription>Data management</StatisticDescription>
+            </Block>
+          </StatisticsBlocksWrapper>
           <ParagraphBlock>
-            <Paragraph level="p1" fontWeight="regular" color="grey">
+            <Description>
               Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque
               laudantium, totam rem aperiam, eaque ipsa quaeab illo inventore. Donec tincidunt
               tempor quam, non mollis quam finibus nec.
-            </Paragraph>
+            </Description>
           </ParagraphBlock>
         </StatisticsWrapper>
+
         <CompaniesListWrapper>
           {companiesLogos.map((logo, index) => (
             <CompanyLogo key={index} src={logo} />

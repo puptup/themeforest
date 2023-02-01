@@ -1,16 +1,17 @@
-import { constolIcons } from "@assets/control-icons";
+import { controlIcons } from "@assets/control-icons";
+import { device } from "@constants/devices";
 import styled from "styled-components";
 
 type ControlDirectionButtonProps = {
-  size: "l" | "s";
   direction: "left" | "right";
 };
 
 export const ControlDirectionButton = styled.button<ControlDirectionButtonProps>`
   display: flex;
   justify-content: center;
-  width: ${({ theme, size }) => theme.spacing.button.controlButtonWidth[size]};
-  padding: ${({ theme, size }) => theme.spacing.button.controlButtonPadding[size]} 0;
+  align-items: center;
+  width: ${({ theme }) => theme.spacing.button.controlButtonWidth.l};
+  padding: ${({ theme }) => theme.spacing.button.controlButtonPadding.l} 0;
   background-color: ${({ theme }) => theme.color.tertiary};
   border: 0;
   border-radius: 20px;
@@ -21,7 +22,7 @@ export const ControlDirectionButton = styled.button<ControlDirectionButtonProps>
 
   &:after {
     content: "";
-    mask: url(${constolIcons.LeftArrow});
+    mask: url(${controlIcons.LeftArrow});
     background-color: ${({ theme }) => theme.color.black};
     mask-size: 100%;
     transform: rotate(${({ direction }) => (direction === "left" ? "0" : "180deg")});
@@ -40,6 +41,16 @@ export const ControlDirectionButton = styled.button<ControlDirectionButtonProps>
     cursor: default;
     &::after {
       background-color: ${({ theme }) => theme.color.grey};
+    }
+  }
+
+  @media ${device.laptop} {
+    width: ${({ theme }) => theme.spacing.button.controlButtonWidth.s};
+    padding: ${({ theme }) => theme.spacing.button.controlButtonPadding.s} 0;
+
+    &:after {
+      width: 24px;
+      height: 24px;
     }
   }
 `;
