@@ -1,14 +1,13 @@
 import { BenefitsSection } from "@modules/benefits";
-import { ContactUs } from "@modules/contact-us";
+import { NeedHelpSection } from "@modules/need-help-section";
 import { OurPricingSection } from "@modules/pricing";
+import { StatiscticsSection } from "@modules/statistics-section";
 import { SubscribeSection } from "@modules/subscribe";
-import React from "react";
 
 import { AnaliticsPlatformSection } from "./components/analitics-platform-section";
 import { FindTruePowerSection } from "./components/find-true-power-section";
 import { NewSolutionsSection } from "./components/new-solutions-section";
 import { OurBlogSection } from "./components/our-blog-section";
-import { StatiscticsSection } from "./components/statistics-section";
 import { TestimonialsSection } from "./components/testimonials-section";
 
 export const HomePage = () => {
@@ -22,7 +21,7 @@ export const HomePage = () => {
       <TestimonialsSection />
       <OurPricingSection />
       <OurBlogSection />
-      <ContactUs />
+      <NeedHelpSection />
       <SubscribeSection />
     </>
   );

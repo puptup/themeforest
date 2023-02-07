@@ -1,4 +1,4 @@
-import { PricingCardType } from "@types";
+import { ChoosedPlan, PricingCardType } from "@types";
 import React, { useState } from "react";
 
 import {
@@ -13,15 +13,14 @@ import {
   Wrapper,
 } from "./styled";
 
-type PricingCardProps = {
-  card: PricingCardType;
-  active: boolean;
-  handleActiveCard: (id: string) => void;
-};
-
 type Pricing = "monthly" | "yearly";
 
-export const PricingCard = ({ card, active, handleActiveCard }: PricingCardProps) => {
+type PricingCardProps = {
+  card: PricingCardType;
+  openPopup: (plan: ChoosedPlan) => () => void;
+};
+
+export const PricingCard = ({ card, openPopup }: PricingCardProps) => {
   const { name, pricePerMonth, pricePerYear, benefits } = card;
   const [pricing, setPricing] = useState<Pricing>("monthly");
 
@@ -45,7 +44,15 @@ export const PricingCard = ({ card, active, handleActiveCard }: PricingCardProps
           </SwitchButton>
         </SwitcherWrapper>
       </Block>
-      <Button size="l" fullsize>
+      <Button
+        size="l"
+        fullsize
+        onClick={openPopup({
+          name,
+          benefits,
+          price: pricing === "monthly" ? pricePerMonth : pricePerYear!,
+        })}
+      >
         Choose plan
       </Button>
       <BenefitsWrapper>

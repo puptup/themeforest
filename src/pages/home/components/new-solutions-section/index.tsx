@@ -1,6 +1,5 @@
 import IMG1 from "@assets/img_2.png";
 import IMG2 from "@assets/img_3.png";
-import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import { Block, Button, Description, FullImg, HalfImg, NewSolutionsWrapper, Title } from "./styled";

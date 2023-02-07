@@ -5,6 +5,7 @@ import styled from "styled-components";
 export const HeaderContainer = styled.div`
   background-color: ${({ theme }) => theme.color.background};
   z-index: 2;
+
   @media ${device.laptop} {
     background-color: ${({ theme }) => theme.color.white};
   }
@@ -15,6 +16,7 @@ export const HeaderWrapper = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: ${({ theme }) => theme.spacing.betweenItems.xl} 0;
+
   @media ${device.laptop} {
     padding: ${({ theme }) => theme.spacing.betweenItems.m} 0;
   }

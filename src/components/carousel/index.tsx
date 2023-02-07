@@ -49,7 +49,7 @@ export const Carousel = ({ children, slidesPerView, title }: CarouselProps) => {
             spaceBetween: 50,
           },
           1110: {
-            slidesPerView: 3,
+            slidesPerView,
             spaceBetween: 50,
           },
         }}

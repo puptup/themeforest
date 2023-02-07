@@ -1,5 +1,4 @@
-import { controlIcons } from "@assets/control-icons";
-import { Link as RouterLink } from "react-router-dom";
+import { device } from "@constants/devices";
 import styled from "styled-components";
 
 type BlogCardsVariants = "small" | "without-description";
@@ -13,15 +12,29 @@ export const Wrapper = styled.div<WrapperProps>`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.betweenItems.m};
+  @media ${device.laptop} {
+    gap: ${({ theme }) => theme.spacing.betweenItems.xxs};
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+  }
 `;
 
 export const Block = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.betweenItems.s};
+  @media ${device.laptop} {
+    gap: ${({ theme }) => theme.spacing.betweenItems.xxs};
+  }
 `;
 
-export const Image = styled.img``;
+export const Image = styled.img`
+  @media ${device.laptop} {
+    width: 160px;
+    height: 96px;
+  }
+`;
 
 export const Date = styled.p`
   font-family: "Open Sans", sans-serif;
@@ -36,6 +49,10 @@ export const Title = styled.h4`
   font-size: ${({ theme }) => theme.typography.heading.fontSize.h4};
   line-height: ${({ theme }) => theme.typography.heading.lineHeight.h4};
   font-weight: ${({ theme }) => theme.typography.fontWeight.bold};
+  @media ${device.laptop} {
+    font-size: ${({ theme }) => theme.typography.heading.fontSize.h8};
+    line-height: ${({ theme }) => theme.typography.heading.lineHeight.h7};
+  }
 `;
 
 export const Text = styled.p`
@@ -44,26 +61,8 @@ export const Text = styled.p`
   line-height: ${({ theme }) => theme.typography.paragraph.lineHeight.p2};
   font-weight: ${({ theme }) => theme.typography.fontWeight.regular};
   color: ${({ theme }) => theme.color.grey};
-`;
 
-export const Link = styled(RouterLink)`
-  color: ${({ theme }) => theme.color.primary};
-  text-decoration: none;
-  font-family: "Manrope", sans-serif;
-  font-size: ${({ theme }) => theme.typography.heading.fontSize.h7};
-  line-height: ${({ theme }) => theme.typography.heading.lineHeight.h7};
-  font-weight: ${({ theme }) => theme.typography.fontWeight.bold};
-  display: flex;
-  align-items: center;
-  &::after {
-    content: "";
-    display: block;
-    mask: url(${controlIcons.LeftArrow});
-    background-color: ${({ theme }) => theme.color.primary};
-    transform: rotate(180deg);
-    mask-size: 100%;
-    width: 30px;
-    height: 30px;
-    margin-right: 7px;
+  @media ${device.laptop} {
+    display: none;
   }
 `;

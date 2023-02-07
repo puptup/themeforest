@@ -15,7 +15,6 @@ export const Title = styled.h6`
   font-size: ${({ theme }) => theme.typography.heading.fontSize.h6};
   line-height: ${({ theme }) => theme.typography.heading.lineHeight.h6};
   font-weight: ${({ theme }) => theme.typography.fontWeight.bold};
-  font-family: "Manrope", sans-serif;
   margin-bottom: ${({ theme }) => theme.spacing.betweenItems.xm};
 `;
 
@@ -53,7 +52,6 @@ export const SwitchButton = styled.button<SwitchButtonProps>`
   color: ${({ theme, pressed }) => (!pressed ? theme.color.primary : theme.color.white)};
   background-color: ${({ theme, pressed }) => (pressed ? theme.color.primary : theme.color.white)};
   border: 1px solid ${({ theme }) => theme.color.primary};
-  font-family: "Manrope", sans-serif;
   font-size: ${({ theme }) => theme.typography.heading.fontSize.h7};
   line-height: ${({ theme }) => theme.typography.heading.lineHeight.h7};
   font-weight: ${({ theme }) => theme.typography.fontWeight.semiBold};

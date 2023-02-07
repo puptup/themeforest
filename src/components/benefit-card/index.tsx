@@ -1,6 +1,5 @@
 import { benefitsIcons } from "@assets/benefits-icons";
 import { BenefitCardType } from "@types";
-import React from "react";
 
 import { Description, Icon, Title, Wrapper } from "./styled";
 

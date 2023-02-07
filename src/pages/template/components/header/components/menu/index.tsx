@@ -1,5 +1,4 @@
 import { NavLink } from "@ui/nav-link";
-import React from "react";
 
 import { links } from "../../constants";
 import { Container, Text } from "./styled";

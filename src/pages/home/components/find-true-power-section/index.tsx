@@ -1,8 +1,6 @@
 import img1 from "@assets/img_1.png";
 import { CircleButton } from "@ui/circle-button";
 import { MainWrapper } from "@ui/main-wrapper";
-import { TextWithColor } from "@ui/text-with-color";
-import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import {
@@ -19,7 +17,7 @@ export const FindTruePowerSection = () => {
   const navigate = useNavigate();
 
   const handleRoute = () => {
-    navigate("/solutions");
+    navigate("/services");
   };
 
   return (
@@ -28,8 +26,7 @@ export const FindTruePowerSection = () => {
         <Container>
           <HeaderBlock>
             <Title>
-              Find true power in your data with{" "}
-              <TextWithColor color="primary">Ensome</TextWithColor>
+              Find true power in your data with <span style={{ color: "#185CFF" }}>Ensome</span>
             </Title>
           </HeaderBlock>
           <ParagraphBlock>

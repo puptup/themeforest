@@ -1,24 +1,23 @@
 import { TestimonalCardType } from "@types";
-import React from "react";
 
-import { Description, HeadWrapper, Img, Name, PersonDetails, Role, Wrapper } from "./styled";
+import { ImgOutside } from "./variants/imgOutside";
+import { Small } from "./variants/small";
 
-type TestimonalCardProps = {
+export type TestimonalCardProps = {
+  card: TestimonalCardType;
+  variant: "small" | "img-outside";
+};
+
+export type AnyVariantsProps = {
   card: TestimonalCardType;
 };
 
-export const TestimonalCard = ({ card }: TestimonalCardProps) => {
-  const { image, name, role, text } = card;
-  return (
-    <Wrapper>
-      <HeadWrapper>
-        <Img src={image} />
-        <PersonDetails>
-          <Name>{name}</Name>
-          <Role>{role}</Role>
-        </PersonDetails>
-      </HeadWrapper>
-      <Description>{text}</Description>
-    </Wrapper>
-  );
+const cardByVariant = {
+  small: Small,
+  "img-outside": ImgOutside,
+};
+
+export const TestimonalCard = ({ card, variant }: TestimonalCardProps) => {
+  const CardVariant = cardByVariant[variant];
+  return <CardVariant card={card} />;
 };

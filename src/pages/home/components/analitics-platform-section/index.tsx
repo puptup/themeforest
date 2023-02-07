@@ -1,6 +1,4 @@
 import { MainWrapper } from "@ui/main-wrapper";
-import { TextWithColor } from "@ui/text-with-color";
-import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import { BlockWrapper, Button, Container, Description, HeadingWrapper, Title } from "./styled";
@@ -17,7 +15,7 @@ export const AnaliticsPlatformSection = () => {
       <Container>
         <HeadingWrapper>
           <Title>
-            The <TextWithColor color="primary">newest</TextWithColor> business analytics platform
+            The <span style={{ color: "#185CFF" }}>newest</span> business analytics platform
           </Title>
         </HeadingWrapper>
         <BlockWrapper>

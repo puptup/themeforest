@@ -1,7 +1,6 @@
 import { BenefitCard } from "@components/benefit-card";
 import { benefitsCards } from "@modules/benefits/constants";
 import { MainWrapper } from "@ui/main-wrapper";
-import React from "react";
 
 import { BenefitsContainer, Block, CardWrapper, Container, Description, Title } from "./styled";
 

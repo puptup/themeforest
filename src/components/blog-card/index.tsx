@@ -1,17 +1,17 @@
 import { BlogCardType } from "@types";
-import React from "react";
+import { Link } from "@ui/arrow-link";
 
-import { Block, Date, Image, Link, Text, Title, Wrapper } from "./styled";
+import { Block, Date, Image, Text, Title, Wrapper } from "./styled";
 
 type BlogCardProps = {
   card: BlogCardType;
-  variant?: "small";
+  variant?: "small" | "without-description";
 };
 
 export const BlogCard = ({ card, variant }: BlogCardProps) => {
   const { image, date, title, text, link } = card;
   return (
-    <Wrapper>
+    <Wrapper variant={variant}>
       <Image src={image} />
       <Block>
         <Date>{date}</Date>

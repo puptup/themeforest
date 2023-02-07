@@ -28,6 +28,13 @@ export type PricingCardType = {
   benefits: string[];
 };
 
+export type Pricing = "monthly" | "yearly";
+export type ChoosedPlan = {
+  name: string;
+  price: number;
+  benefits: string[];
+};
+
 export type BlogCardType = {
   id: string;
   image: string;
@@ -35,4 +42,19 @@ export type BlogCardType = {
   title: string;
   text: string;
   link: string;
+};
+
+export type ServiceCardType = {
+  id: string;
+  image: string;
+  title: string;
+  description: string;
+  fullText: string;
+};
+
+export type CountactUsFormValues = {
+  email: string;
+  name: string;
+  theme: string;
+  message: string;
 };

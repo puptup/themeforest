@@ -9,11 +9,16 @@ export const GlobalStyle = createGlobalStyle`
     /* border: 1px solid green; */
   }
 
-  button, h6, h5, h4, h3, h2, h1 {
+  button, h6, h5, h4, h3, h2, h1 , a {
     font-family: "Manrope", sans-serif;
   }
 
-  p, div{
+  p, div, input{
     font-family: "Open Sans", sans-serif;
+  }
+
+  .leaflet-container {
+    height: 460px;
+
   }
 `;

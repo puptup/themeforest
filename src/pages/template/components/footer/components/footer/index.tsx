@@ -1,10 +1,11 @@
-import { LogoByColor } from "@components/logo-by-color";
+import { logos } from "@assets/logo";
+import { useMobile } from "@hooks/useMobile";
+import { Link } from "@ui/link";
+import { Logo } from "@ui/logo";
 import { MainWrapper } from "@ui/main-wrapper";
-import React from "react";
 
 import { contactInfo, icons, infoBlocks } from "../../constants";
-import { ListWithTitle } from "../list-with-title";
-import { ListWithTitleAndLinks } from "../list-with-title-and-links";
+import { List } from "../list";
 import {
   Container,
   CopyRightContainer,
@@ -15,17 +16,20 @@ import {
   InfoBlocksWrapper,
   Line,
   LinksWrapper,
+  LinkText,
   LogoAndIconsWrapper,
   Text,
 } from "./styled";
 
 export const Footer = () => {
+  const isMobile = useMobile();
+
   return (
     <FooterWraper>
       <MainWrapper>
         <Container>
           <LogoAndIconsWrapper>
-            <LogoByColor color="blue" />
+            <Logo src={logos.WhiteLogo} />
             <Text>
               Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
               laboriosam, nisi ut aliquid ex ea commodi.
@@ -37,15 +41,29 @@ export const Footer = () => {
             </LinksWrapper>
           </LogoAndIconsWrapper>
           <InfoBlocksWrapper>
-            {infoBlocks.map((block) => (
-              <ListWithTitleAndLinks key={block.title} title={block.title} items={block.items} />
-            ))}
-            <ListWithTitle title="Contact Info" items={contactInfo} />
+            {infoBlocks.map((block) => {
+              const { title, items } = block;
+              return (
+                <List key={title} title={title}>
+                  {items.map((item) => (
+                    <Link key={title + item.path} to={item.path}>
+                      {item.title}
+                    </Link>
+                  ))}
+                </List>
+              );
+            })}
+            <List title="Contact Info">
+              {contactInfo.map((item, index) => (
+                <LinkText key={index}>{item}</LinkText>
+              ))}
+            </List>
           </InfoBlocksWrapper>
         </Container>
-        <Line />
+        {!isMobile && <Line />}
         <CopyRightContainer>
           <CopyRightText>Ensome© 2022 All Rights Reserved</CopyRightText>
+          {isMobile && <Line />}
           <CopyRigthBlock>
             <CopyRightText>Privacy policy</CopyRightText>
             <CopyRightText>Terms of us</CopyRightText>

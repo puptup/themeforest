@@ -10,8 +10,8 @@ export const links: Link[] = [
     title: "Solutions",
   },
   {
-    path: "/pages",
-    title: "Pages",
+    path: "/about-us",
+    title: "About us",
   },
   {
     path: "/elements",

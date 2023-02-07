@@ -1,5 +1,3 @@
-import React from "react";
-
 import { FirstCircle, SecondCircle, ThirdCircle } from "./styled";
 
 type CircleButtonProps = {

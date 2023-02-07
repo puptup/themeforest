@@ -1,5 +1,3 @@
-import React from "react";
-
 import { PopupWrapper } from "./styled";
 
 type PopupProps = {

@@ -29,15 +29,6 @@ export const spacing = {
     },
     borderRadius: "6px",
   },
-  benefitCard: {
-    big: {
-      width: "635px",
-      spaceBetweenItems: "15px",
-      textShow: true,
-      wrapperPadding: 0,
-      shadow: 0,
-    },
-  },
   block: {
     width: {
       xl: "540px",

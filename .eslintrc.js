@@ -47,6 +47,7 @@ module.exports = {
     "react-hooks/exhaustive-deps": "off",
     "react/jsx-fragments": "off",
     "react/jsx-no-useless-fragment": "off",
+    "import/no-extraneous-dependencies": "off",
     "prettier/prettier": [
       "error",
       {

@@ -1,4 +1,5 @@
-import { LogoByColor } from "@components/logo-by-color";
+import { logos } from "@assets/logo";
+import { Logo } from "@ui/logo";
 import { MainWrapper } from "@ui/main-wrapper";
 import React, { useCallback, useState } from "react";
 import { createPortal } from "react-dom";
@@ -23,7 +24,7 @@ export const Header = () => {
       <HeaderContainer>
         <MainWrapper>
           <HeaderWrapper>
-            <LogoByColor color="blue" />
+            <Logo src={logos.BlueLogo} />
             <Menu />
             <BurgerMenu />
             <Button size="l" onClick={handlePopup(true)}>
