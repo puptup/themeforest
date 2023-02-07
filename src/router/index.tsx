@@ -1,5 +1,6 @@
 import { AboutUsPage } from "@pages/about-us";
 import { ContactsPage } from "@pages/contacts";
+import { FAQSPage } from "@pages/faqs";
 import { HomePage } from "@pages/home";
 import { OurTeamPage } from "@pages/our-team";
 import { Service } from "@pages/service";
@@ -35,6 +36,10 @@ export const router = createBrowserRouter([
       {
         path: "/our-team",
         element: <OurTeamPage />,
+      },
+      {
+        path: "/faq",
+        element: <FAQSPage />,
       },
       {
         path: "*",
