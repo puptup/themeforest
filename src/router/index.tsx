@@ -1,6 +1,7 @@
 import { AboutUsPage } from "@pages/about-us";
 import { ContactsPage } from "@pages/contacts";
 import { HomePage } from "@pages/home";
+import { OurTeamPage } from "@pages/our-team";
 import { Service } from "@pages/service";
 import { ServicesPage } from "@pages/services";
 import { TemplatePage } from "@pages/template";
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
       {
         path: "/contacts",
         element: <ContactsPage />,
+      },
+      {
+        path: "/our-team",
+        element: <OurTeamPage />,
       },
       {
         path: "*",
