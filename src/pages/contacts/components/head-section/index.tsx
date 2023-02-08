@@ -1,6 +1,6 @@
 import { controlIcons } from "@assets/control-icons";
-import { ContactUsForm } from "@components/contact-us-form";
 import { contacts } from "@constants/contacts";
+import { ContactUsForm } from "@modules/contact-us-form";
 import { Link } from "@ui/link";
 import { MainWrapper } from "@ui/main-wrapper";
 

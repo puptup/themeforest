@@ -1,4 +1,4 @@
-import { Error } from "@components/contact-us-form/components";
+import { Error } from "@modules/contact-us-form/components";
 import { Button } from "@ui/button";
 
 import { Form, Input, InputBlock, InputDescription, InputsWrapper, Title } from "./styled";

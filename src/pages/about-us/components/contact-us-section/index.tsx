@@ -1,4 +1,4 @@
-import { ContactUsForm } from "@components/contact-us-form";
+import { ContactUsForm } from "@modules/contact-us-form";
 import { MainWrapper } from "@ui/main-wrapper";
 
 import {
