@@ -1,3 +1,4 @@
+import { device } from "@constants/devices";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
@@ -28,6 +29,11 @@ export const Title = styled.h4<TitleProps>`
   line-height: ${({ theme }) => theme.typography.heading.lineHeight.h4};
   font-weight: ${({ theme }) => theme.typography.fontWeight.bold};
   color: ${({ theme, active }) => (!active ? theme.color.black : theme.color.primary)};
+
+  @media ${device.laptop} {
+    font-size: ${({ theme }) => theme.typography.heading.fontSize.h6};
+    line-height: ${({ theme }) => theme.typography.heading.lineHeight.h6};
+  }
 `;
 
 export const Answer = styled.p`
@@ -35,4 +41,9 @@ export const Answer = styled.p`
   line-height: ${({ theme }) => theme.typography.paragraph.lineHeight.p1};
   font-weight: ${({ theme }) => theme.typography.fontWeight.regular};
   color: ${({ theme }) => theme.color.grey};
+
+  @media ${device.laptop} {
+    font-size: ${({ theme }) => theme.typography.paragraph.fontSize.p3};
+    line-height: ${({ theme }) => theme.typography.paragraph.lineHeight.p3};
+  }
 `;

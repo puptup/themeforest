@@ -27,7 +27,4 @@ export const Title = styled.h2`
 
 export const Swiper = styled(UISwiper)`
   padding: 5px;
-  @media ${device.laptop} {
-    width: 360px;
-  }
 `;

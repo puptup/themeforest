@@ -1,4 +1,6 @@
-import { MapContainer, Marker, TileLayer } from "react-leaflet";
+import { Marker, TileLayer } from "react-leaflet";
+
+import { MapContainer } from "./styled";
 
 const center = { lat: 47.023262060006026, lng: 13.408998146700345 };
 

@@ -1,5 +1,4 @@
-import { companiesLogos } from "@assets/companies";
-import { CompaniesListWrapper, CompanyLogo } from "@modules/statistics-section/styled";
+import { CompaniesList } from "@components/companies-list";
 import { MainWrapper } from "@ui/main-wrapper";
 
 import { Block, Container, Description, Title } from "./styled";
@@ -15,11 +14,7 @@ export const OurCustomersSection = () => {
             laudan, totam rem aperiam.
           </Description>
         </Block>
-        <CompaniesListWrapper>
-          {companiesLogos.map((logo, index) => (
-            <CompanyLogo key={index} src={logo} />
-          ))}
-        </CompaniesListWrapper>
+        <CompaniesList />
       </Container>
     </MainWrapper>
   );

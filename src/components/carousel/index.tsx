@@ -46,7 +46,7 @@ export const Carousel = ({ children, slidesPerView, title }: CarouselProps) => {
         breakpoints={{
           320: {
             slidesPerView: 1,
-            spaceBetween: 50,
+            spaceBetween: 10,
           },
           1110: {
             slidesPerView,

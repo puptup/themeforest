@@ -1,10 +1,8 @@
-import { companiesLogos } from "@assets/companies";
+import { CompaniesList } from "@components/companies-list";
 import { MainWrapper } from "@ui/main-wrapper";
 
 import {
   Block,
-  CompaniesListWrapper,
-  CompanyLogo,
   Container,
   Description,
   Number,
@@ -43,12 +41,7 @@ export const StatiscticsSection = () => {
             </Description>
           </ParagraphBlock>
         </StatisticsWrapper>
-
-        <CompaniesListWrapper>
-          {companiesLogos.map((logo, index) => (
-            <CompanyLogo key={index} src={logo} />
-          ))}
-        </CompaniesListWrapper>
+        <CompaniesList />
       </Container>
     </MainWrapper>
   );

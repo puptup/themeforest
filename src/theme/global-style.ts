@@ -16,9 +16,4 @@ export const GlobalStyle = createGlobalStyle`
   p, div, input{
     font-family: "Open Sans", sans-serif;
   }
-
-  .leaflet-container {
-    height: 460px;
-
-  }
 `;

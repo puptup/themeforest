@@ -1,7 +1,6 @@
 import { Error } from "@components/contact-us-form/components";
-import { Button } from "@ui/button";
 
-import { Form, Input, InputBlock, InputsWrapper, TwoInputs } from "./styled";
+import { Button, Form, Input, InputBlock, InputsWrapper, TwoInputs } from "./styled";
 
 export const SecondaryForm = () => {
   return (
@@ -26,7 +25,7 @@ export const SecondaryForm = () => {
           <Error name="message" />
         </InputBlock>
       </InputsWrapper>
-      <Button style={{ alignSelf: "flex-end" }} size="xl" type="submit">
+      <Button size="xl" type="submit">
         Send
       </Button>
     </Form>
