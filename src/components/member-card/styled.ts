@@ -6,6 +6,7 @@ type MemberCardWrapperProps = {
 };
 
 export const MemberCardWrapper = styled.div<MemberCardWrapperProps>`
+  cursor: pointer;
   width: 350px;
   height: 500px;
   padding: ${({ theme }) => theme.spacing.card.padding.l};

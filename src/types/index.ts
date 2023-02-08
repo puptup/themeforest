@@ -41,7 +41,6 @@ export type BlogCardType = {
   date: string;
   title: string;
   text: string;
-  link: string;
 };
 
 export type ServiceCardType = {
@@ -57,4 +56,11 @@ export type CountactUsFormValues = {
   name: string;
   theme: string;
   message: string;
+};
+
+export type SolutionCardType = {
+  id: string;
+  icon: string;
+  title: string;
+  description: string;
 };

@@ -26,8 +26,6 @@ export const NewSolutionsWrapper = styled.div`
   align-items: center;
   position: relative;
   gap: ${({ theme }) => theme.spacing.betweenItems.xl};
-  padding-top: ${({ theme }) => theme.spacing.betweenSections.xxs};
-  padding-bottom: ${({ theme }) => theme.spacing.betweenSections.xs};
 `;
 
 export const Block = styled.div`

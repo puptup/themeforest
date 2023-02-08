@@ -23,8 +23,8 @@ export const TeamSection = () => {
     <MainWrapper>
       <Container>
         <CardsContainer>
-          {membersCards.slice(0, countShownCards).map(({ name, role, image }, index) => (
-            <MemberCard key={index} name={name} role={role} image={image} />
+          {membersCards.slice(0, countShownCards).map(({ name, role, image, id }, index) => (
+            <MemberCard key={index} name={name} role={role} image={image} id={id} />
           ))}
         </CardsContainer>
         <div ref={observableElement} />

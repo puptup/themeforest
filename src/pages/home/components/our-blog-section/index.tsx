@@ -23,10 +23,9 @@ export const OurBlogSection = () => {
           <>
             <Title>Our blog</Title>
             <CardsWrapper>
-              {blogCards.map((card) => {
-                const { id } = card;
-                return <BlogCard key={id} card={card} variant="without-description" />;
-              })}
+              {blogCards.map((card) => (
+                <BlogCard key={card.id} card={card} />
+              ))}
             </CardsWrapper>
             <Button size="xl">Learn more</Button>
           </>

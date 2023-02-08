@@ -1,12 +1,12 @@
 import { NeedHelpSection } from "@modules/need-help-section";
 import { SubscribeSection } from "@modules/subscribe";
 
-import { HeadSection } from "./components/head-section";
+import { FaqsSection } from "./components/faqs-section";
 
 export const FAQSPage = () => {
   return (
     <>
-      <HeadSection />
+      <FaqsSection />
       <NeedHelpSection />
       <SubscribeSection />
     </>

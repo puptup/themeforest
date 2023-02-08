@@ -14,8 +14,8 @@ export const links: Link[] = [
     title: "About us",
   },
   {
-    path: "/elements",
-    title: "Elements",
+    path: "/services",
+    title: "Services",
   },
   {
     path: "/blog",
