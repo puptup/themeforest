@@ -27,7 +27,7 @@ export const Service = () => {
           "Sed ut perspiciatis unde omnis iste natus error volupta accusantium doloremque laudantium, totam remiga aperiam, eaque ipsa.",
         ]}
       />
-      <ServicePostSection />
+      <ServicePostSection title={title} />
       <ContactInformationSection />
       <SubscribeSection />
     </>
