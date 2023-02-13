@@ -1,11 +1,13 @@
+import { companyesIcons } from "@assets/footer-icons";
 import { logos } from "@assets/logo";
+import { DropdownListMobile } from "@components/dropdown-list-mobile";
+import { contacts } from "@constants/contacts";
+import { quickLinks, serviceLinks } from "@constants/links";
 import { useMobile } from "@hooks/useMobile";
 import { Link } from "@ui/link";
 import { Logo } from "@ui/logo";
 import { MainWrapper } from "@ui/main-wrapper";
 
-import { contactInfo, icons, infoBlocks } from "../../constants";
-import { List } from "../list";
 import {
   Container,
   CopyRightContainer,
@@ -35,29 +37,33 @@ export const Footer = () => {
               laboriosam, nisi ut aliquid ex ea commodi.
             </Text>
             <LinksWrapper>
-              {icons.map((elem, index) => (
+              {companyesIcons.map((elem, index) => (
                 <Icon key={index} src={elem.icon} />
               ))}
             </LinksWrapper>
           </LogoAndIconsWrapper>
           <InfoBlocksWrapper>
-            {infoBlocks.map((block) => {
-              const { title, items } = block;
-              return (
-                <List key={title} title={title}>
-                  {items.map((item) => (
-                    <Link key={title + item.path} to={item.path}>
-                      {item.title}
-                    </Link>
-                  ))}
-                </List>
-              );
-            })}
-            <List title="Contact Info">
-              {contactInfo.map((item, index) => (
-                <LinkText key={index}>{item}</LinkText>
+            <DropdownListMobile title="Quick links">
+              {quickLinks.map(({ path, title }) => (
+                <Link key={path} to={path}>
+                  {title}
+                </Link>
               ))}
-            </List>
+            </DropdownListMobile>
+            <DropdownListMobile title="Service links">
+              {serviceLinks.map(({ path, title }) => (
+                <Link key={path} to={path}>
+                  {title}
+                </Link>
+              ))}
+            </DropdownListMobile>
+            <DropdownListMobile title="Contact Info">
+              {contacts.map(({ title, path }) => (
+                <LinkText key={path} href={path} target="_blank" rel="noreferrer">
+                  {title}
+                </LinkText>
+              ))}
+            </DropdownListMobile>
           </InfoBlocksWrapper>
         </Container>
         {!isMobile && <Line />}

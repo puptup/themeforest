@@ -2,6 +2,7 @@ import { device } from "@constants/devices";
 import styled from "styled-components";
 
 export const FirstCircle = styled.div`
+  cursor: pointer;
   position: absolute;
   top: -70px;
   right: 20%;

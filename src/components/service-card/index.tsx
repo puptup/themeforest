@@ -1,3 +1,4 @@
+import { Links } from "@constants/links";
 import { ServiceCardType } from "@types";
 import { Link } from "@ui/arrow-link";
 
@@ -16,7 +17,7 @@ export const ServiceCard = ({ card }: ServiceCardProps) => {
         <Title>{title}</Title>
         <Description>{description}</Description>
       </TextBlock>
-      <Link to={`/services/${id}`}>Read more</Link>
+      <Link to={`${Links.services}/${id}`}>Read more</Link>
     </Wrapper>
   );
 };

@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
     gap: ${({ theme }) => theme.spacing.betweenItems.xxs};
     align-items: center;
     flex-direction: row;
-    width: 100%;
+    width: fit-content;
   }
 `;
 
@@ -48,7 +48,6 @@ export const Title = styled.h4`
 `;
 
 export const Text = styled.p`
-  font-family: "Open Sans", sans-serif;
   font-size: ${({ theme }) => theme.typography.paragraph.fontSize.p2};
   line-height: ${({ theme }) => theme.typography.paragraph.lineHeight.p2};
   font-weight: ${({ theme }) => theme.typography.fontWeight.regular};

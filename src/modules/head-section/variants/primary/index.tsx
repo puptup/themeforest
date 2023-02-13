@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unused-prop-types */
 import { controlIcons } from "@assets/control-icons";
+import { Links } from "@constants/links";
 import { Link } from "@ui/link";
 import { MainWrapper } from "@ui/main-wrapper";
 
@@ -16,7 +17,8 @@ export const PrimaryVariant = ({ pageName, title, description }: PrimaryVariantP
   return (
     <MainWrapper>
       <History>
-        <Link to="/">Home</Link> <img src={controlIcons.Divider} alt="divider" /> {pageName}
+        <Link to={`${Links.home}`}>Home</Link> <img src={controlIcons.Divider} alt="divider" />{" "}
+        {pageName}
       </History>
       <Head>
         <PageName>{pageName}</PageName>

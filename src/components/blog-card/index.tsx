@@ -1,3 +1,4 @@
+import { Links } from "@constants/links";
 import { BlogCardType } from "@types";
 import { Link } from "@ui/arrow-link";
 
@@ -16,7 +17,7 @@ export const BlogCard = ({ card }: BlogCardProps) => {
         <Date>{date}</Date>
         <Title>{title}</Title>
         <Text>{text}</Text>
-        <Link to={`/blog/${id}`}>Read more</Link>
+        <Link to={`${Links.blog}/${id}`}>Read more</Link>
       </Block>
     </Wrapper>
   );

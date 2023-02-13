@@ -1,14 +1,12 @@
+/* eslint-disable @typescript-eslint/no-shadow */
 import { controlIcons } from "@assets/control-icons";
-import { device } from "@constants/devices";
-import React, { useState } from "react";
+import { DropdownListMobile } from "@components/dropdown-list-mobile";
+import { mobileHeaderLinks } from "@constants/links";
+import { Link } from "@ui/arrow-link";
+import { useState } from "react";
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
-  display: none;
-  @media ${device.laptop} {
-    display: block;
-  }
-`;
+export const Wrapper = styled.div``;
 
 export const Icon = styled.img`
   cursor: pointer;
@@ -50,7 +48,19 @@ export const BurgerMenu = () => {
           <Icon src={controlIcons.Dismiss} onClick={handleShowPopup(false)} />
         )}
       </Wrapper>
-      {showPopup && <BurgerWrapper>123</BurgerWrapper>}
+      {showPopup && (
+        <BurgerWrapper>
+          {mobileHeaderLinks.map(({ title, values }) => (
+            <DropdownListMobile title={title} textColor="black" lineColor="grey">
+              {values.map(({ path, title }) => (
+                <Link to={path} color="black" onClick={handleShowPopup(false)}>
+                  {title}
+                </Link>
+              ))}
+            </DropdownListMobile>
+          ))}
+        </BurgerWrapper>
+      )}
     </>
   );
 };

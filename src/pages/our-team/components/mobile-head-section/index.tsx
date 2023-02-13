@@ -1,5 +1,6 @@
 import { controlIcons } from "@assets/control-icons";
 import IMG from "@assets/img_10.png";
+import { Links } from "@constants/links";
 import { Link } from "@ui/link";
 import { MainWrapper } from "@ui/main-wrapper";
 
@@ -18,7 +19,8 @@ export const MobileHeadSection = () => {
     <>
       <MainWrapper>
         <History>
-          <Link to="/">Home</Link> <img src={controlIcons.Divider} alt="divider" /> Our team
+          <Link to={`${Links.home}`}>Home</Link> <img src={controlIcons.Divider} alt="divider" />{" "}
+          Our team
         </History>
         <Container>
           <PageName>Our team</PageName>

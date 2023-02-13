@@ -49,6 +49,7 @@ export const Input = styled(Field)`
   border-radius: 6px;
   border: 1px solid black;
   width: 100%;
+  background: inherit;
 `;
 
 export const Title = styled.h3`

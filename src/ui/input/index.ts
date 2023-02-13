@@ -18,13 +18,13 @@ export const Input = styled.input`
 `;
 
 type InputWrapperProps = {
-  color: Colors;
+  color?: Colors;
   background: Colors;
   size: BlockWidthType;
 };
 
 export const InputWrapper = styled.form<InputWrapperProps>`
-  color: ${({ theme, color }) => theme.color[color]};
+  color: ${({ theme, color }) => (color ? theme.color[color] : theme.color.black)};
   width: ${({ theme, size }) => theme.spacing.block.width[size]};
   display: flex;
   border: 0;

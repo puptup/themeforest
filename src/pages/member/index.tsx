@@ -1,3 +1,4 @@
+import { Links } from "@constants/links";
 import { membersCardsFull } from "@constants/membersFull";
 import { HeadSection } from "@modules/head-section";
 import { SubscribeSection } from "@modules/subscribe";
@@ -11,7 +12,7 @@ export const MemberPage = () => {
   const { id } = useParams();
   const member = useMemo(() => membersCardsFull.filter((item) => item.id === id)[0], [id]);
 
-  if (!member) return <Navigate to="/our-team" />;
+  if (!member) return <Navigate to={`${Links.ourTeam}`} />;
 
   return (
     <>
@@ -19,7 +20,7 @@ export const MemberPage = () => {
         variant="tertiary"
         pageName={member.name}
         title={member.name}
-        additionalLink="/our-team"
+        additionalLink={Links.ourTeam}
         additionalLinkName="Our team"
       />
       <MemberSection member={member} />

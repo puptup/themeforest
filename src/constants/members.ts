@@ -103,4 +103,10 @@ export const membersCards = [
     role: "Data scientist",
     name: "Eduard Vosgi",
   },
+  {
+    id: "1",
+    image: members.sargis,
+    role: "Data analyst",
+    name: "Sargis Grigor",
+  },
 ];

@@ -1,3 +1,4 @@
+import { Links } from "@constants/links";
 import { Link } from "@ui/arrow-link";
 
 import { Description, Icon, TextWrapper, Title, Wrapper } from "./styled";
@@ -17,7 +18,7 @@ export const SolutionCard = ({ icon, title, description, id }: SolutionCardProps
         <Title>{title}</Title>
         <Description>{description}</Description>
       </TextWrapper>
-      <Link to={`/solutions/${id}`}>Read more</Link>
+      <Link to={`${Links.solutions}/${id}`}>Read more</Link>
     </Wrapper>
   );
 };

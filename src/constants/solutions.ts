@@ -10,7 +10,7 @@ export const solutionsCards: SolutionCardType[] = [
       "Extract, transform, load (ETL) or extract, load, transform (ELT); data governance (security, availability, quality) implementation.",
   },
   {
-    id: "data-integration",
+    id: "data-integration2",
     icon: solutionsIcons.calendar,
     title: "Data integration",
     description:

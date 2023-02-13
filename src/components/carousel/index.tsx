@@ -41,12 +41,11 @@ export const Carousel = ({ children, slidesPerView, title }: CarouselProps) => {
       </ContainerWrapper>
       <Swiper
         ref={sliderRef}
-        roundLengths
         allowTouchMove={false}
         breakpoints={{
           320: {
             slidesPerView: 1,
-            spaceBetween: 10,
+            spaceBetween: 100,
           },
           1110: {
             slidesPerView,

@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unused-prop-types */
 import { controlIcons } from "@assets/control-icons";
+import { Links } from "@constants/links";
 import { Link } from "@ui/link";
 import { MainWrapper } from "@ui/main-wrapper";
 
@@ -17,7 +18,7 @@ export const SecondaryVariant = ({ pageName, title, description }: SecondaryVari
     <HeadSectionWrapper>
       <MainWrapper>
         <LinksWrapper>
-          <Link to="/">Home</Link>
+          <Link to={`${Links.home}`}>Home</Link>
           <img src={controlIcons.Divider} alt="divider" />
           <span>{pageName}</span>
         </LinksWrapper>

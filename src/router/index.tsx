@@ -1,68 +1,71 @@
+import { Links } from "@constants/links";
 import { AboutUsPage } from "@pages/about-us";
 import { BlogPage } from "@pages/blog";
+import { BlogPostPage } from "@pages/blog-post";
 import { ContactsPage } from "@pages/contacts";
 import { FAQSPage } from "@pages/faqs";
 import { HomePage } from "@pages/home";
 import { MemberPage } from "@pages/member";
 import { OurTeamPage } from "@pages/our-team";
-import { Service } from "@pages/service";
+import { Service } from "@pages/service-post";
 import { ServicesPage } from "@pages/services";
+import { SolutionPage } from "@pages/solution-post";
 import { SolutionsPage } from "@pages/solutions";
 import { TemplatePage } from "@pages/template";
 import { createBrowserRouter } from "react-router-dom";
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: Links.home,
     element: <TemplatePage />,
     children: [
       {
-        path: "/",
+        path: Links.home,
         element: <HomePage />,
       },
       {
-        path: "/services",
+        path: Links.services,
         element: <ServicesPage />,
       },
       {
-        path: "/services/:id",
+        path: `${Links.services}/:id`,
         element: <Service />,
       },
       {
-        path: "/about-us",
+        path: Links.aboutUs,
         element: <AboutUsPage />,
       },
       {
-        path: "/contacts",
+        path: Links.contacts,
         element: <ContactsPage />,
       },
       {
-        path: "/our-team",
+        path: Links.ourTeam,
         element: <OurTeamPage />,
       },
       {
-        path: "/our-team/:id",
+        path: `${Links.ourTeam}/:id`,
         element: <MemberPage />,
       },
       {
-        path: "/faq",
+        path: Links.faq,
         element: <FAQSPage />,
       },
       {
-        path: "/solutions",
+        path: Links.solutions,
         element: <SolutionsPage />,
       },
       {
-        path: "/solutions/:id",
-        element: <div />,
+        path: `${Links.solutions}/:id`,
+        element: <SolutionPage />,
       },
       {
-        path: "/blog",
+        path: Links.blog,
         element: <BlogPage />,
       },
       {
-        path: "/blog",
-        element: <div />,
+        path: `${Links.blog}/:id`,
+        element: <BlogPostPage />,
       },
       {
         path: "*",

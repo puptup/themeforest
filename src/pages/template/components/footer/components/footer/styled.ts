@@ -1,5 +1,4 @@
 import { device } from "@constants/devices";
-import { Link as RouterLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const FooterWraper = styled.div`
@@ -91,14 +90,11 @@ export const Text = styled.p`
   }
 `;
 
-export const Link = styled(RouterLink)`
+export const LinkText = styled.a`
   text-decoration: none;
-`;
-
-export const LinkText = styled.h6`
   font-size: ${({ theme }) => theme.typography.heading.fontSize.h7};
   line-height: ${({ theme }) => theme.typography.heading.lineHeight.h7};
-  font-weight: ${({ theme }) => theme.typography.fontWeight.bold};
+  font-weight: ${({ theme }) => theme.typography.fontWeight.medium};
   color: ${({ theme }) => theme.color.grey};
 `;
 
@@ -108,5 +104,16 @@ export const FollowUsWrapper = styled.div`
   justify-content: space-between;
   @media ${device.laptop} {
     display: block;
+  }
+`;
+
+export const Title = styled.h6`
+  font-size: ${({ theme }) => theme.typography.heading.fontSize.h7};
+  line-height: ${({ theme }) => theme.typography.heading.lineHeight.h7};
+  font-weight: ${({ theme }) => theme.typography.fontWeight.bold};
+
+  @media ${device.laptop} {
+    font-size: ${({ theme }) => theme.typography.heading.fontSize.h6};
+    line-height: ${({ theme }) => theme.typography.heading.lineHeight.h6};
   }
 `;

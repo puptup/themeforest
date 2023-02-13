@@ -1,5 +1,6 @@
 import { controlIcons } from "@assets/control-icons";
 import { contacts } from "@constants/contacts";
+import { Links } from "@constants/links";
 import { ContactUsForm } from "@modules/contact-us-form";
 import { Link } from "@ui/link";
 import { MainWrapper } from "@ui/main-wrapper";
@@ -20,7 +21,7 @@ export const HeadSection = () => {
   return (
     <MainWrapper>
       <History>
-        <Link to="/">Home</Link>
+        <Link to={`${Links.home}`}>Home</Link>
         <img src={controlIcons.Divider} alt="divider" /> Contacts
       </History>
       <Container>
@@ -30,13 +31,15 @@ export const HeadSection = () => {
         <ContactUsForm variant="secondary" />
       </Container>
       <InfoBlock>
-        {contacts.map(({ title, icon, value }) => (
+        {contacts.map(({ title, icon, subTitle, path }) => (
           <div key={title}>
             <InfoWrapper>
               <Icon src={icon} />
-              <InfoTitle>{title}</InfoTitle>
+              <InfoTitle>{subTitle}</InfoTitle>
             </InfoWrapper>
-            <InfoDescription>{value}</InfoDescription>
+            <InfoDescription href={path} target="_blank">
+              {title}
+            </InfoDescription>
           </div>
         ))}
       </InfoBlock>

@@ -60,7 +60,9 @@ export const InfoTitle = styled.h6`
   font-weight: ${({ theme }) => theme.typography.fontWeight.semiBold};
 `;
 
-export const InfoDescription = styled.p`
+export const InfoDescription = styled.a`
+  cursor: pointer;
+  text-decoration: none;
   font-size: ${({ theme }) => theme.typography.paragraph.fontSize.p2};
   line-height: ${({ theme }) => theme.typography.paragraph.lineHeight.p2};
   font-weight: ${({ theme }) => theme.typography.fontWeight.regular};

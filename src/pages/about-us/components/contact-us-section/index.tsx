@@ -1,3 +1,4 @@
+import { contacts } from "@constants/contacts";
 import { ContactUsForm } from "@modules/contact-us-form";
 import { MainWrapper } from "@ui/main-wrapper";
 
@@ -25,18 +26,14 @@ export const ContactUsSection = () => {
               </Description>
             </Block>
             <Block>
-              <div>
-                <Description>Email address</Description>
-                <Info>ensome@info.co.us</Info>
-              </div>
-              <div>
-                <Description>Phone number</Description>
-                <Info>+1601-201-5580</Info>
-              </div>
-              <div>
-                <Description>Address</Description>
-                <Info>1642 Washington Avenue, Jackson, MS, Mississippi, 39201</Info>
-              </div>
+              {contacts.map(({ title, path, subTitle }) => (
+                <div key={path}>
+                  <Description>{subTitle}</Description>
+                  <Info href={path} target="_blank">
+                    {title}
+                  </Info>
+                </div>
+              ))}
             </Block>
           </DescriptionBlock>
           <ContactUsForm variant="primary" />

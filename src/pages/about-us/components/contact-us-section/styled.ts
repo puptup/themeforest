@@ -36,7 +36,9 @@ export const Description = styled.p`
   color: ${({ theme }) => theme.color.grey};
 `;
 
-export const Info = styled.p`
+export const Info = styled.a`
+  text-decoration: none;
+  cursor: pointer;
   font-size: ${({ theme }) => theme.typography.paragraph.fontSize.p2};
   line-height: ${({ theme }) => theme.typography.paragraph.lineHeight.p2};
   font-weight: ${({ theme }) => theme.typography.fontWeight.bold};

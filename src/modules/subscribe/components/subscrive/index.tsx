@@ -4,7 +4,7 @@ import { useMobile } from "@hooks/useMobile";
 import { Button } from "@ui/button";
 import { Input, InputWrapper } from "@ui/input";
 import { MainWrapper } from "@ui/main-wrapper";
-import React, { ChangeEvent, MouseEvent, useRef, useState } from "react";
+import { ChangeEvent, MouseEvent, useRef, useState } from "react";
 
 import { Block, Container, Description, SectionWrapper, Title } from "./styled";
 

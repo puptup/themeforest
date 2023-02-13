@@ -1,10 +1,5 @@
 import { benefitsIcons } from "@assets/benefits-icons";
 
-export type Link = {
-  path: string;
-  title: string;
-};
-
 export type BenefitCardType = {
   iconName: keyof typeof benefitsIcons;
   title: string;
@@ -41,6 +36,9 @@ export type BlogCardType = {
   date: string;
   title: string;
   text: string;
+  author: string;
+  views: number;
+  tags: string[];
 };
 
 export type ServiceCardType = {
@@ -63,4 +61,11 @@ export type SolutionCardType = {
   icon: string;
   title: string;
   description: string;
+};
+
+export type ArticleBlockType = {
+  title: string;
+  description: string | string[];
+  image?: string;
+  list?: string[];
 };

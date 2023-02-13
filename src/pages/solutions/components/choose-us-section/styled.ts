@@ -37,9 +37,8 @@ export const Block = styled.div`
 
   @media ${device.laptop} {
     width: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
     gap: ${({ theme }) => theme.spacing.betweenItems.m};
+    padding: ${({ theme }) => theme.spacing.betweenItems.m} 16px;
   }
 `;
 

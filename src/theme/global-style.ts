@@ -5,8 +5,6 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-    /* border: 1px solid green; */
   }
 
   button, h6, h5, h4, h3, h2, h1 , a {
@@ -15,5 +13,9 @@ export const GlobalStyle = createGlobalStyle`
 
   p, div, input{
     font-family: "Open Sans", sans-serif;
+  }
+
+  .swiper-wrapper{
+    max-width: 1000px
   }
 `;

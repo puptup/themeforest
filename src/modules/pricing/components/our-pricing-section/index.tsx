@@ -1,8 +1,8 @@
 import { PricingCard } from "@components/pricing-card";
 import { pricingCards } from "@modules/pricing/constants";
-import { ChoosedPlan, Pricing, PricingCardType } from "@types";
+import { ChoosedPlan } from "@types";
 import { MainWrapper } from "@ui/main-wrapper";
-import React, { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import { createPortal } from "react-dom";
 
 import { Popup } from "../popup";

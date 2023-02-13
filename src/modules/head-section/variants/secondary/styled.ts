@@ -1,3 +1,4 @@
+import { device } from "@constants/devices";
 import styled from "styled-components";
 
 export const LinksWrapper = styled.div`
@@ -15,6 +16,7 @@ export const HeadSectionWrapper = styled.section`
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 `;
 
 export const Title = styled.h1`
@@ -31,4 +33,8 @@ export const Description = styled.p`
   color: ${({ theme }) => theme.color.grey};
   width: ${({ theme }) => theme.spacing.block.width.xl};
   margin-bottom: ${({ theme }) => theme.spacing.betweenItems.xs};
+
+  @media ${device.laptop} {
+    width: 100%;
+  }
 `;
