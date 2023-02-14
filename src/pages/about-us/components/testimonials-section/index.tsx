@@ -3,7 +3,6 @@ import { TestimonalCard } from "@components/testimonial-card";
 import { testimonialsCards } from "@constants/testimonialsCards";
 import { useLocalization } from "@hooks/useLocalization";
 import { useMobile } from "@hooks/useMobile";
-import { Language } from "@localization";
 import { MainWrapper } from "@ui/main-wrapper";
 
 import { Contariner } from "./styled";
@@ -13,9 +12,9 @@ const tPath = "aboutUs.testimonialsSection.";
 export const TestimonialsSection = () => {
   const isMobile = useMobile();
 
-  const { t, i18n } = useLocalization();
+  const { t, language } = useLocalization();
 
-  const cards = testimonialsCards[i18n.language as Language];
+  const cards = testimonialsCards[language];
 
   return (
     <MainWrapper>
