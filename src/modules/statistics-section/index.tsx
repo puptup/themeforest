@@ -1,5 +1,6 @@
 import { CompaniesList } from "@components/companies-list";
 import { MainWrapper } from "@ui/main-wrapper";
+import { useTranslation } from "react-i18next";
 
 import {
   Block,
@@ -13,32 +14,32 @@ import {
   Title,
 } from "./styled";
 
+const tPath = "statisticsSection.";
+
 export const StatiscticsSection = () => {
+  const { t } = useTranslation();
+
   return (
     <MainWrapper>
       <Container>
-        <Title>We provide services that guarantee your success</Title>
+        <Title>{t(`${tPath}title`)}</Title>
         <StatisticsWrapper>
           <StatisticsBlocksWrapper>
             <Block>
               <Number>1830+</Number>
-              <StatisticDescription>Project executed</StatisticDescription>
+              <StatisticDescription>{t(`${tPath}projectExecuted`)}</StatisticDescription>
             </Block>
             <Block>
               <Number>843+</Number>
-              <StatisticDescription>Satisfied customers</StatisticDescription>
+              <StatisticDescription>{t(`${tPath}satisfiedCustomers`)}</StatisticDescription>
             </Block>
             <Block>
               <Number>390</Number>
-              <StatisticDescription>Data management</StatisticDescription>
+              <StatisticDescription>{t(`${tPath}dataManagement`)}</StatisticDescription>
             </Block>
           </StatisticsBlocksWrapper>
           <ParagraphBlock>
-            <Description>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque
-              laudantium, totam rem aperiam, eaque ipsa quaeab illo inventore. Donec tincidunt
-              tempor quam, non mollis quam finibus nec.
-            </Description>
+            <Description>{t(`${tPath}description`)}</Description>
           </ParagraphBlock>
         </StatisticsWrapper>
         <CompaniesList />

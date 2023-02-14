@@ -1,3 +1,4 @@
+import { Language } from "@localization";
 import { ChoosedPlan, PricingCardType } from "@types";
 import React, { useState } from "react";
 
@@ -18,9 +19,10 @@ type Pricing = "monthly" | "yearly";
 type PricingCardProps = {
   card: PricingCardType;
   openPopup: (plan: ChoosedPlan) => () => void;
+  lng: Language;
 };
 
-export const PricingCard = ({ card, openPopup }: PricingCardProps) => {
+export const PricingCard = ({ card, openPopup, lng }: PricingCardProps) => {
   const { name, pricePerMonth, pricePerYear, benefits } = card;
   const [pricing, setPricing] = useState<Pricing>("monthly");
 
@@ -37,10 +39,10 @@ export const PricingCard = ({ card, openPopup }: PricingCardProps) => {
         <Price>${pricing === "monthly" ? pricePerMonth : pricePerYear}</Price>
         <SwitcherWrapper>
           <SwitchButton pressed={pricing === "monthly"} onClick={handleSwitch("monthly")}>
-            Mo
+            {lng !== "ru" ? "Mo" : "Мес"}
           </SwitchButton>
           <SwitchButton pressed={pricing === "yearly"} onClick={handleSwitch("yearly")}>
-            Yr
+            {lng !== "ru" ? "Yr" : "Год"}
           </SwitchButton>
         </SwitcherWrapper>
       </Block>
@@ -53,7 +55,7 @@ export const PricingCard = ({ card, openPopup }: PricingCardProps) => {
           price: pricing === "monthly" ? pricePerMonth : pricePerYear!,
         })}
       >
-        Choose plan
+        {lng !== "ru" ? "Choose plan" : "Выбрать план"}
       </Button>
       <BenefitsWrapper>
         {benefits.map((element, index) => (

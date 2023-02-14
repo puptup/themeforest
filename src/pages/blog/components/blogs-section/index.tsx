@@ -1,29 +1,20 @@
 import { BlogCard } from "@components/blog-card";
 import { blogCards } from "@constants/blogCards";
+import { Language } from "@localization";
 import { Button } from "@ui/button";
 import { MainWrapper } from "@ui/main-wrapper";
 import { useState } from "react";
-import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 
-export const CardsWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: ${({ theme }) => theme.spacing.betweenItems.l};
-`;
-
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: ${({ theme }) => theme.spacing.betweenItems.xxl};
-  padding: ${({ theme }) => theme.spacing.betweenSections.xxxl} 0;
-`;
+import { CardsWrapper, Container } from "./styled";
 
 export const BlogsSection = () => {
   const [shownCards, setShownCards] = useState(6);
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language as Language;
 
   const handleMoreArticles = () => {
-    if (blogCards.length > shownCards) {
+    if (blogCards[lang].length > shownCards) {
       setShownCards(shownCards + 3);
     }
   };
@@ -32,12 +23,12 @@ export const BlogsSection = () => {
     <MainWrapper>
       <Container>
         <CardsWrapper>
-          {blogCards.slice(0, shownCards).map((card) => (
+          {blogCards[lang].slice(0, shownCards).map((card) => (
             <BlogCard key={card.id} card={card} />
           ))}
         </CardsWrapper>
         <Button size="xl" onClick={handleMoreArticles}>
-          More articles
+          {t("blog.moreArticles")}
         </Button>
       </Container>
     </MainWrapper>

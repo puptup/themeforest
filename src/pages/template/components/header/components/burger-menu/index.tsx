@@ -4,31 +4,13 @@ import { DropdownListMobile } from "@components/dropdown-list-mobile";
 import { mobileHeaderLinks } from "@constants/links";
 import { Link } from "@ui/arrow-link";
 import { useState } from "react";
-import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 
-export const Wrapper = styled.div``;
-
-export const Icon = styled.img`
-  cursor: pointer;
-`;
-
-export const BurgerWrapper = styled.div`
-  position: absolute;
-  background-color: ${({ theme }) => theme.color.white};
-  height: 100vh;
-  width: 100%;
-  z-index: 2;
-  top: ${({ theme }) => theme.spacing.betweenSections.m};
-  left: 0;
-  padding: 0 16px;
-`;
-
-export const Links = styled.ul`
-  list-style: none;
-`;
+import { BurgerWrapper, Icon, Wrapper } from "./styled";
 
 export const BurgerMenu = () => {
   const [showPopup, setShowPopup] = useState(false);
+  const { t } = useTranslation();
 
   const handleShowPopup = (state: boolean) => () => {
     setShowPopup(state);
@@ -51,10 +33,10 @@ export const BurgerMenu = () => {
       {showPopup && (
         <BurgerWrapper>
           {mobileHeaderLinks.map(({ title, values }) => (
-            <DropdownListMobile title={title} textColor="black" lineColor="grey">
+            <DropdownListMobile title={t(title)} textColor="black" lineColor="grey">
               {values.map(({ path, title }) => (
                 <Link to={path} color="black" onClick={handleShowPopup(false)}>
-                  {title}
+                  {t(title)}
                 </Link>
               ))}
             </DropdownListMobile>

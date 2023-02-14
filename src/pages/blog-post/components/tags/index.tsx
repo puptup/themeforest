@@ -1,18 +1,8 @@
-import { TagButton, TagContainer, Title } from "./styled";
+import { tags } from "@constants/tags";
+import { Language } from "@localization";
+import { useTranslation } from "react-i18next";
 
-const tags = [
-  "All topics",
-  "Data",
-  "Future",
-  "App",
-  "Management",
-  "CMR",
-  "Big data",
-  "Media",
-  "CIO",
-  "Startup",
-  "Team",
-];
+import { TagButton, TagContainer, Title } from "./styled";
 
 type TagsProps = {
   activeTag: string;
@@ -20,11 +10,13 @@ type TagsProps = {
 };
 
 export const Tags = ({ activeTag, handleTag }: TagsProps) => {
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language as Language;
   return (
     <div>
-      <Title>Tags</Title>
+      <Title>{t("blogPost.tags")}</Title>
       <TagContainer>
-        {tags.map((el, index) => (
+        {tags[lang].map((el, index) => (
           <TagButton key={index} active={activeTag === el} onClick={handleTag(el)}>
             {el}
           </TagButton>

@@ -1,10 +1,14 @@
 import { MainWrapper } from "@ui/main-wrapper";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 import { Button, ContactUsWrapper, Container, Description, Title, Wrapper } from "./styled";
 
+const tPath = "needHelpSection.";
+
 export const NeedHelpSection = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleNavigate = () => {
     navigate("/contacts");
@@ -15,13 +19,10 @@ export const NeedHelpSection = () => {
       <MainWrapper>
         <Container>
           <Wrapper>
-            <Title>Do you need help?</Title>
-            <Description>
-              Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
-              laboriosam, nisi ut aliquid ex ea commodi.
-            </Description>
+            <Title>{t(`${tPath}title`)}</Title>
+            <Description>{t(`${tPath}description`)}</Description>
             <Button size="xl" onClick={handleNavigate}>
-              Contact us
+              {t(`${tPath}contactUs`)}
             </Button>
           </Wrapper>
         </Container>

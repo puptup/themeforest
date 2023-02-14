@@ -1,36 +1,11 @@
-import { controlIcons } from "@assets/control-icons";
 import IMG from "@assets/img_10.png";
-import { Links } from "@constants/links";
-import { Link } from "@ui/link";
 import { MainWrapper } from "@ui/main-wrapper";
 
-import {
-  Container,
-  Description,
-  DescriptionContainer,
-  History,
-  Img,
-  PageName,
-  Title,
-} from "./styled";
+import { Description, DescriptionContainer, Img } from "./styled";
 
 export const MobileHeadSection = () => {
   return (
     <>
-      <MainWrapper>
-        <History>
-          <Link to={`${Links.home}`}>Home</Link> <img src={controlIcons.Divider} alt="divider" />{" "}
-          Our team
-        </History>
-        <Container>
-          <PageName>Our team</PageName>
-          <Title>Get to know us closer</Title>
-          <Description>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-            laudantium, totam rem aperiam, eaque ipsa quae ab illo.
-          </Description>
-        </Container>
-      </MainWrapper>
       <Img src={IMG} />
       <MainWrapper>
         <DescriptionContainer>

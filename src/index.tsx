@@ -1,3 +1,5 @@
+import "@localization";
+
 import { router } from "@router";
 import { theme } from "@theme";
 import { GlobalStyle } from "@theme/global-style";

@@ -1,5 +1,6 @@
 import IMG1 from "@assets/img_0011.png";
 import IMG2 from "@assets/img_0011small.png";
+import { useTranslation } from "react-i18next";
 
 import {
   Block,
@@ -15,43 +16,38 @@ import {
   TitleWrapper,
 } from "./styled";
 
+const tPath = "solutions.chooseUsSection.";
+
 export const ChooseUsSection = () => {
+  const { t } = useTranslation();
+
   return (
     <ChooseUsSectionWrapper>
       <HalfImg src={IMG1} />
       <Block>
         <FullImg src={IMG2} />
-        <Title>Why choose us?</Title>
+        <Title>{t(`${tPath}title`)}</Title>
         <DescriptionWrapper>
           <DescriptionItem>
             <TitleWrapper>
               <CheckMark />
-              <DescriptionTitle>Machine learning</DescriptionTitle>
+              <DescriptionTitle>{t(`${tPath}machineLearning`)}</DescriptionTitle>
             </TitleWrapper>
-            <Description>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-              lauda, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.
-            </Description>
+            <Description>{t(`${tPath}machineLearningDescription`)}</Description>
           </DescriptionItem>
           <DescriptionItem>
             <TitleWrapper>
               <CheckMark />
-              <DescriptionTitle>Embed analytics</DescriptionTitle>
+              <DescriptionTitle>{t(`${tPath}embedAnalytics`)}</DescriptionTitle>
             </TitleWrapper>
-            <Description>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-              lauda, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.
-            </Description>
+            <Description>{t(`${tPath}embedAnalyticsDescription`)}</Description>
           </DescriptionItem>
           <DescriptionItem>
             <TitleWrapper>
               <CheckMark />
-              <DescriptionTitle>Access control</DescriptionTitle>
+              <DescriptionTitle>{t(`${tPath}accessControl`)}</DescriptionTitle>
             </TitleWrapper>
-            <Description>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-              lauda, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.
-            </Description>
+            <Description>{t(`${tPath}accessControlDescription`)}</Description>
           </DescriptionItem>
         </DescriptionWrapper>
       </Block>

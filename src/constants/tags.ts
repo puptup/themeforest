@@ -1,0 +1,28 @@
+export const tags = {
+  en: [
+    "All topics",
+    "Data",
+    "Future",
+    "App",
+    "Management",
+    "CMR",
+    "Big data",
+    "Media",
+    "CIO",
+    "Startup",
+    "Team",
+  ],
+  ru: [
+    "All topics",
+    "Data",
+    "Future",
+    "App",
+    "Management",
+    "CMR",
+    "Big data",
+    "Media",
+    "CIO",
+    "Startup",
+    "Team",
+  ],
+};

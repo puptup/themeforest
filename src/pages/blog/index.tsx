@@ -1,18 +1,18 @@
 import { HeadSection } from "@modules/head-section";
 import { SubscribeSection } from "@modules/subscribe";
+import { useTranslation } from "react-i18next";
 
 import { BlogsSection } from "./components/blogs-section";
 
 export const BlogPage = () => {
+  const { t } = useTranslation();
   return (
     <>
       <HeadSection
         variant="secondary"
-        pageName="Blog"
-        title="Blog"
-        description={[
-          "Sed ut perspiciatis unde omnis iste natus error volupta accusantium doloremque laudantium, totam remiga aperiam, eaque ipsa.",
-        ]}
+        pageName={t("blog.pageName")}
+        title={t("blog.pageTitle")}
+        description={[t("blog.description")]}
       />
       <BlogsSection />
       <SubscribeSection />

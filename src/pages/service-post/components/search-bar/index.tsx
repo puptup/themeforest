@@ -1,25 +1,31 @@
 import { Links } from "@constants/links";
 import { serviceCards } from "@constants/serviceCards";
+import { Language } from "@localization";
 import { ServiceCardType } from "@types";
 import { Button } from "@ui/button";
 import { Input, InputWrapper } from "@ui/input";
 import { ChangeEvent, FormEvent, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 import { ItemWrapper, SearchedCardsWrapper, Wrapper } from "./styled";
 
-const findTitles = (string: string) =>
-  serviceCards.filter((item) => item.title.toLowerCase().includes(string.toLowerCase()));
+const findTitles = (string: string, lng: Language) =>
+  serviceCards[lng].filter((item) => item.title.toLowerCase().includes(string.toLowerCase()));
+
+const tPath = "servicePost.searchBar.";
 
 export const SearchBar = () => {
   const navigate = useNavigate();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language as Language;
   const [state, setState] = useState("");
   const [cards, setCards] = useState<ServiceCardType[]>();
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setState(e.target.value);
     if (e.target.value.length) {
-      setCards(findTitles(e.target.value));
+      setCards(findTitles(e.target.value, lang));
     } else {
       setCards(undefined);
     }
@@ -37,9 +43,9 @@ export const SearchBar = () => {
   return (
     <Wrapper>
       <InputWrapper onSubmit={handleSubmit} size="l" background="blue3">
-        <Input placeholder="Search" value={state} onChange={handleChange} />
+        <Input placeholder={t(`${tPath}search`) as string} value={state} onChange={handleChange} />
         <Button size="m" type="submit">
-          Search
+          {t(`${tPath}search`)}
         </Button>
       </InputWrapper>
 
@@ -52,7 +58,7 @@ export const SearchBar = () => {
               </ItemWrapper>
             ))
           ) : (
-            <div>Nothing found</div>
+            <div>{t(`${tPath}nofingFound`)}</div>
           )}
         </SearchedCardsWrapper>
       )}

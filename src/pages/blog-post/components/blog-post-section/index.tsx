@@ -1,8 +1,10 @@
 import { useMobile } from "@hooks/useMobile";
+import { Language } from "@localization";
 import { BlogCardType } from "@types";
 import { MainWrapper } from "@ui/main-wrapper";
 import { getPopularPosts, getRelatedPosts } from "@utils/getBlogPosts";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import { Categories } from "../categories";
 import { PopularPosts } from "../popular-posts";
@@ -22,6 +24,8 @@ export const BlogPostSection = ({ post }: BlogPostSectionProps) => {
   const isMobile = useMobile();
   const [tag, setTag] = useState<string>(AllTopics);
   const [searchString, setSearchString] = useState("");
+  const { i18n } = useTranslation();
+  const lang = i18n.language as Language;
 
   useEffect(() => {
     if (tag !== AllTopics) {
@@ -30,12 +34,12 @@ export const BlogPostSection = ({ post }: BlogPostSectionProps) => {
   }, [post.id]);
 
   const popularPosts = useMemo(() => {
-    return getPopularPosts(searchString || post.tags[0]);
-  }, [post.id, searchString]);
+    return getPopularPosts(searchString || post.tags[0], lang);
+  }, [post.id, searchString, lang]);
 
   const relatedPosts = useMemo(
-    () => getRelatedPosts(tag === AllTopics ? post.tags[0] : tag),
-    [post.id, tag]
+    () => getRelatedPosts(tag === AllTopics ? post.tags[0] : tag, lang),
+    [post.id, tag, lang]
   );
 
   const handleTag = useCallback(

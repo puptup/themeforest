@@ -2,6 +2,7 @@ import FaceBook from "@assets/footer-icons/facebook.svg";
 import Linkedin from "@assets/footer-icons/linkedin.svg";
 import Twitter from "@assets/footer-icons/twitter.svg";
 import { MainWrapper } from "@ui/main-wrapper";
+import { useTranslation } from "react-i18next";
 
 import { Block, Container, LinksContainer, NameSubTitle, NameTitle, SotialIcon } from "./styled";
 
@@ -20,28 +21,30 @@ type MemberSectionProps = {
   };
 };
 
+const tPath = "member.memberSection.";
+
 export const MemberSection = ({ member }: MemberSectionProps) => {
   const { image, role, name, description, links } = member;
-
+  const { t } = useTranslation();
   return (
     <MainWrapper>
       <Container>
         <img src={image} alt="1" />
         <Block>
           <div>
-            <NameTitle>Name</NameTitle>
+            <NameTitle>{t(`${tPath}name`)}</NameTitle>
             <NameSubTitle>{name}</NameSubTitle>
           </div>
           <div>
-            <NameTitle>Position</NameTitle>
+            <NameTitle>{t(`${tPath}position`)}</NameTitle>
             <NameSubTitle>{role}</NameSubTitle>
           </div>
           <div>
-            <NameTitle>Description</NameTitle>
+            <NameTitle>{t(`${tPath}description`)}</NameTitle>
             <NameSubTitle>{description}</NameSubTitle>
           </div>
           <div>
-            <NameTitle>Social networks</NameTitle>
+            <NameTitle>{t(`${tPath}socialNetworks`)}</NameTitle>
             <LinksContainer>
               <SotialIcon href={links.linkedin} icon={Linkedin} target="_blank" />
               <SotialIcon href={links.twitter} icon={Twitter} target="_blank" />

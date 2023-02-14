@@ -4,6 +4,7 @@ import { CreateOrderActions, CreateOrderData } from "@paypal/paypal-js/types/com
 import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
 import { ChoosedPlan } from "@types";
 import React, { MouseEvent } from "react";
+import { useTranslation } from "react-i18next";
 
 import { Benefit, Block, DescriptionWrapper, Price, Title, Wrapper } from "./styled";
 
@@ -14,6 +15,7 @@ type PopupProps = {
 
 export const Popup = ({ plan, closePopup }: PopupProps) => {
   const { name, price, benefits } = plan;
+  const { t } = useTranslation();
 
   const handleClick = (e: MouseEvent) => {
     e.stopPropagation();
@@ -37,8 +39,12 @@ export const Popup = ({ plan, closePopup }: PopupProps) => {
       <Wrapper onClick={closePopup}>
         <Block onClick={handleClick}>
           <DescriptionWrapper>
-            <Title>Plan: {name}</Title>
-            <Price>Price: ${price}</Price>
+            <Title>
+              {t("pricingSection.plan")}: {name}
+            </Title>
+            <Price>
+              {t("pricingSection.price")}: ${price}
+            </Price>
             <div>
               {benefits.map((item, index) => (
                 <Benefit key={index}>{item}</Benefit>

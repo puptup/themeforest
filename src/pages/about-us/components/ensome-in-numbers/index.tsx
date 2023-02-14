@@ -1,4 +1,5 @@
 import { MainWrapper } from "@ui/main-wrapper";
+import { useTranslation } from "react-i18next";
 
 import {
   Container,
@@ -11,31 +12,34 @@ import {
   Wrapper,
 } from "./styled";
 
+const tPath = "aboutUs.ensomeInNumbers.";
+
 export const EnsomeInNumbersSection = () => {
+  const { t } = useTranslation();
   return (
     <EnsomeInNumbersContainer>
       <MainWrapper>
         <Container>
-          <Title>Ensome in numbers</Title>
+          <Title>{t(`${tPath}title`)}</Title>
           <NumbersBlock>
             <Wrapper>
               <Number>1830+</Number>
-              <Description>Project executed</Description>
+              <Description>{t(`${tPath}projectExecuted`)}</Description>
             </Wrapper>
             <Separator />
             <Wrapper>
               <Number>220</Number>
-              <Description>Data analytics</Description>
+              <Description>{t(`${tPath}dataAnalytics`)}</Description>
             </Wrapper>
             <Separator />
             <Wrapper>
               <Number>390</Number>
-              <Description>Data management</Description>
+              <Description>{t(`${tPath}dataManagement`)}</Description>
             </Wrapper>
             <Separator />
             <Wrapper>
               <Number>834+</Number>
-              <Description>Satisfied customers</Description>
+              <Description>{t(`${tPath}satisfiedCustomers`)}</Description>
             </Wrapper>
           </NumbersBlock>
         </Container>

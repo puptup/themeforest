@@ -1,41 +1,22 @@
-import { device } from "@constants/devices";
-import { getServicePost } from "@constants/posts/servicePost";
+import { Language } from "@localization";
 import { MainWrapper } from "@ui/main-wrapper";
+import { getServicePost } from "@utils/getServicePost";
 import { useMemo } from "react";
-import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 
 import { ArticleGenerator } from "../article-generator";
 import { SearchBar } from "../search-bar";
 import { Services } from "../services";
+import { Article, Container, PostWrapper } from "./styled";
 
 type ServicePostSectionProps = {
   title: string;
 };
 
-export const PostWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-  width: 635px;
-  @media ${device.laptop} {
-    width: 100%;
-  }
-`;
-
-export const Container = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: ${({ theme }) => theme.spacing.betweenSections.xxxl} 0;
-`;
-
-export const Article = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.betweenItems.l};
-`;
-
 export const ServicePostSection = ({ title }: ServicePostSectionProps) => {
-  const post = useMemo(() => getServicePost(title), [title]);
+  const { i18n } = useTranslation();
+  const lang = i18n.language as Language;
+  const post = useMemo(() => getServicePost(title, lang), [title, lang]);
 
   return (
     <MainWrapper>

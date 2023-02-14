@@ -1,10 +1,14 @@
 import { MainWrapper } from "@ui/main-wrapper";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 import { BlockWrapper, Button, Container, Description, HeadingWrapper, Title } from "./styled";
 
+const tPath = "home.analitics.";
+
 export const AnaliticsPlatformSection = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const routeChange = () => {
     navigate("/solutions");
@@ -14,17 +18,12 @@ export const AnaliticsPlatformSection = () => {
     <MainWrapper>
       <Container>
         <HeadingWrapper>
-          <Title>
-            The <span style={{ color: "#185CFF" }}>newest</span> business analytics platform
-          </Title>
+          <Title>{t(`${tPath}title`)}</Title>
         </HeadingWrapper>
         <BlockWrapper>
-          <Description>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-            lauda, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.
-          </Description>
+          <Description>{t(`${tPath}description`)}</Description>
           <Button size="xl" onClick={routeChange}>
-            Discover more
+            {t(`${tPath}discoverMore`)}
           </Button>
         </BlockWrapper>
       </Container>

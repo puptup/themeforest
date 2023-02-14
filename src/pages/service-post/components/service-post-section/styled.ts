@@ -1,3 +1,4 @@
+import { device } from "@constants/devices";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -6,15 +7,18 @@ export const Container = styled.div`
   padding: ${({ theme }) => theme.spacing.betweenSections.xxxl} 0;
 `;
 
-export const LeftBlock = styled.div`
-  width: 635px;
+export const PostWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.betweenSections.s};
+  gap: 60px;
+  width: 635px;
+  @media ${device.laptop} {
+    width: 100%;
+  }
 `;
 
-export const RightBlock = styled.div`
+export const Article = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.betweenSections.s};
+  gap: ${({ theme }) => theme.spacing.betweenItems.l};
 `;

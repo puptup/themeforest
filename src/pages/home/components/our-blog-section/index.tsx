@@ -3,13 +3,18 @@ import { Carousel } from "@components/carousel";
 import { blogCards } from "@constants/blogCards";
 import { Links } from "@constants/links";
 import { useMobile } from "@hooks/useMobile";
+import { Language } from "@localization";
 import { MainWrapper } from "@ui/main-wrapper";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 import { Button, CardsWrapper, Container, Title } from "./styled";
 
+const tPath = "home.ourBlog.";
+
 export const OurBlogSection = () => {
   const isMobile = useMobile();
+  const { t, i18n } = useTranslation();
 
   const navigate = useNavigate();
 
@@ -17,26 +22,28 @@ export const OurBlogSection = () => {
     navigate(Links.blog);
   };
 
+  const cards = blogCards[i18n.language as Language];
+
   return (
     <MainWrapper>
       <Container>
-        {isMobile && <Title>Our blog</Title>}
+        {isMobile && <Title>{t(`${tPath}title`)}</Title>}
         {!isMobile ? (
-          <Carousel title="Our blog" slidesPerView={3}>
-            {blogCards.map((card) => (
+          <Carousel title={t(`${tPath}title`)} slidesPerView={3}>
+            {cards.map((card) => (
               <BlogCard key={card.id} card={card} />
             ))}
           </Carousel>
         ) : (
           <CardsWrapper>
-            {blogCards.slice(0, 3).map((card) => (
+            {cards.slice(0, 3).map((card) => (
               <BlogCard key={card.id} card={card} />
             ))}
           </CardsWrapper>
         )}
         {isMobile && (
           <Button size="xl" onClick={handleNavigate}>
-            Learn more
+            {t(`${tPath}learnMore`)}
           </Button>
         )}
       </Container>

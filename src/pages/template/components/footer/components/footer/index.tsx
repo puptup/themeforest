@@ -7,6 +7,7 @@ import { useMobile } from "@hooks/useMobile";
 import { Link } from "@ui/link";
 import { Logo } from "@ui/logo";
 import { MainWrapper } from "@ui/main-wrapper";
+import { useTranslation } from "react-i18next";
 
 import {
   Container,
@@ -25,6 +26,7 @@ import {
 
 export const Footer = () => {
   const isMobile = useMobile();
+  const { t } = useTranslation();
 
   return (
     <FooterWraper>
@@ -32,10 +34,7 @@ export const Footer = () => {
         <Container>
           <LogoAndIconsWrapper>
             <Logo src={logos.WhiteLogo} />
-            <Text>
-              Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
-              laboriosam, nisi ut aliquid ex ea commodi.
-            </Text>
+            <Text>{t("footer.description")}</Text>
             <LinksWrapper>
               {companyesIcons.map((elem, index) => (
                 <Icon key={index} src={elem.icon} />
@@ -43,24 +42,24 @@ export const Footer = () => {
             </LinksWrapper>
           </LogoAndIconsWrapper>
           <InfoBlocksWrapper>
-            <DropdownListMobile title="Quick links">
+            <DropdownListMobile title={t("footer.quickLinks")}>
               {quickLinks.map(({ path, title }) => (
                 <Link key={path} to={path}>
-                  {title}
+                  {t(title)}
                 </Link>
               ))}
             </DropdownListMobile>
-            <DropdownListMobile title="Service links">
+            <DropdownListMobile title={t("footer.serviceLinks")}>
               {serviceLinks.map(({ path, title }) => (
                 <Link key={path} to={path}>
-                  {title}
+                  {t(title)}
                 </Link>
               ))}
             </DropdownListMobile>
-            <DropdownListMobile title="Contact Info">
+            <DropdownListMobile title={t("footer.contactInfo")}>
               {contacts.map(({ title, path }) => (
                 <LinkText key={path} href={path} target="_blank" rel="noreferrer">
-                  {title}
+                  {t(title)}
                 </LinkText>
               ))}
             </DropdownListMobile>
@@ -68,11 +67,11 @@ export const Footer = () => {
         </Container>
         {!isMobile && <Line />}
         <CopyRightContainer>
-          <CopyRightText>Ensome© 2022 All Rights Reserved</CopyRightText>
+          <CopyRightText>{t("footer.rightsReserved")}</CopyRightText>
           {isMobile && <Line />}
           <CopyRigthBlock>
-            <CopyRightText>Privacy policy</CopyRightText>
-            <CopyRightText>Terms of us</CopyRightText>
+            <CopyRightText>{t("footer.privacyPolicy")}</CopyRightText>
+            <CopyRightText>{t("footer.termsOfUs")}</CopyRightText>
           </CopyRigthBlock>
         </CopyRightContainer>
       </MainWrapper>

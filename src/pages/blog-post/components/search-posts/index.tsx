@@ -1,6 +1,7 @@
 import { Button } from "@ui/button";
 import { Input, InputWrapper } from "@ui/input";
 import { FormEvent, useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 type SearchBarProps = {
   handleSearch: (newTag: string) => void;
@@ -8,6 +9,7 @@ type SearchBarProps = {
 
 export const SearchBar = ({ handleSearch }: SearchBarProps) => {
   const ref = useRef<HTMLInputElement>(null);
+  const { t } = useTranslation();
 
   const handleSumbit = (e: FormEvent) => {
     e.preventDefault();
@@ -20,7 +22,7 @@ export const SearchBar = ({ handleSearch }: SearchBarProps) => {
     <InputWrapper onSubmit={handleSumbit} size="l" background="blue3">
       <Input placeholder="Search" ref={ref} />
       <Button size="m" type="submit">
-        Search
+        {t("blogPost.searchButton")}
       </Button>
     </InputWrapper>
   );

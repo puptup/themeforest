@@ -12,31 +12,31 @@ export enum Links {
 export const mainLinks = [
   {
     path: Links.home,
-    title: "Home",
+    title: "mainLinks.home",
   },
   {
     path: Links.solutions,
-    title: "Solutions",
+    title: "mainLinks.solutions",
   },
   {
     path: Links.aboutUs,
-    title: "About us",
+    title: "mainLinks.aboutUs",
   },
   {
     path: Links.ourTeam,
-    title: "Our team",
+    title: "mainLinks.ourTeam",
   },
   {
     path: Links.services,
-    title: "Services",
+    title: "mainLinks.services",
   },
   {
     path: Links.blog,
-    title: "Blog",
+    title: "mainLinks.blog",
   },
   {
     path: Links.contacts,
-    title: "Contacts",
+    title: "mainLinks.contacts",
   },
 ];
 
@@ -44,94 +44,94 @@ export const quickLinks = [
   ...mainLinks,
   {
     path: Links.faq,
-    title: "FAQ",
+    title: "mainLinks.faq",
   },
 ];
 
 export const serviceLinks = [
   {
     path: "/pages",
-    title: "Pages",
+    title: "serviceLinks.pages",
   },
   {
     path: "/elements",
-    title: "Elements",
+    title: "serviceLinks.elements",
   },
   {
     path: "/pricing",
-    title: "Pricing",
+    title: "serviceLinks.pricing",
   },
   {
     path: "/site-map",
-    title: "Site map",
+    title: "serviceLinks.siteMap",
   },
 ];
 
 export const mobileHeaderLinks = [
   {
-    title: "Home",
+    title: "mainLinks.home",
     values: [
       {
         path: Links.home,
-        title: "Home 1",
+        title: "mainLinks.home",
       },
       {
         path: Links.home,
-        title: "Home 2",
+        title: "mainLinks.home",
       },
       {
         path: Links.home,
-        title: "Home 3",
+        title: "mainLinks.home",
       },
     ],
   },
   {
-    title: "Solutions",
+    title: "mainLinks.solutions",
     values: [
       {
         path: `${Links.solutions}/data-integration`,
-        title: "Data integration",
+        title: "header.solutionsLinks.dataIntegration",
       },
       {
         path: `${Links.solutions}/data-visualization`,
-        title: "Data visualization",
+        title: "header.solutionsLinks.dataVizualization",
       },
       {
         path: `${Links.solutions}/big-data`,
-        title: "Big data",
+        title: "header.solutionsLinks.bigData",
       },
     ],
   },
   {
-    title: "Pages",
+    title: "serviceLinks.pages",
     values: [
       {
         path: Links.aboutUs,
-        title: "About us",
+        title: "mainLinks.aboutUs",
       },
       {
         path: Links.faq,
-        title: "FAQ",
+        title: "mainLinks.faq",
       },
       {
         path: Links.ourTeam,
-        title: "Our team",
+        title: "mainLinks.ourTeam",
       },
       {
         path: Links.services,
-        title: "Services",
+        title: "mainLinks.services",
       },
       {
         path: Links.solutions,
-        title: "Solutions",
+        title: "mainLinks.solutions",
       },
       {
         path: Links.blog,
-        title: "Blog",
+        title: "mainLinks.blog",
       },
       {
         path: Links.contacts,
-        title: "Contacts",
+        title: "mainLinks.contacts",
       },
     ],
   },

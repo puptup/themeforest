@@ -16,7 +16,7 @@ export const Header = () => {
   const handleNavigateHome = () => {
     navigate("/");
   };
-  console.log(isMobile);
+
   return (
     <>
       <HeaderContainer>

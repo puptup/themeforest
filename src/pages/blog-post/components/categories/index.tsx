@@ -1,40 +1,17 @@
 import { DropdownList } from "@components/dropdown-list";
+import { categories } from "@constants/categories";
+import { Language } from "@localization";
+import { useTranslation } from "react-i18next";
 
 import { CategoryTitle, Title } from "./styled";
 
-const categories = [
-  {
-    title: "Software development",
-    value:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-  },
-  {
-    title: "Information security",
-    value:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-  },
-  {
-    title: "Internet of things",
-    value:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-  },
-  {
-    title: "Digital transformation",
-    value:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-  },
-  {
-    title: "Healthcare it",
-    value:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-  },
-];
-
 export const Categories = () => {
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language as Language;
   return (
     <div>
-      <Title>Categories</Title>
-      {categories.map(({ title, value }) => (
+      <Title>{t("blogPost.categories")}</Title>
+      {categories[lang].map(({ title, value }) => (
         <DropdownList
           title={<CategoryTitle>{title}</CategoryTitle>}
           textColor="black"

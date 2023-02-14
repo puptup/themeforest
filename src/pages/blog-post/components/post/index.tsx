@@ -1,26 +1,18 @@
 import Img from "@assets/img_7.png";
 import { postIcons } from "@assets/post-icons";
 import { BlogCardType } from "@types";
-import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 
-import { Icon, Image, Info, InfoWrapper, Quote, Text, TextWrapper, Title } from "./styled";
+import { Icon, Image, Info, InfoWrapper, Quote, Tag, Text, TextWrapper, Title } from "./styled";
 
 type PostProps = {
   post: BlogCardType;
 };
 
-export const Tag = styled.span`
-  border: 1px solid #f1f6fa;
-  color: ${({ theme }) => theme.color.primary};
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 24px;
-  padding: 4px 11px;
-`;
-
 export const Post = ({ post }: PostProps) => {
   const { date, author, views, tags, title } = post;
+  const { t } = useTranslation();
+
   return (
     <div>
       <Image src={Img} />
@@ -40,9 +32,8 @@ export const Post = ({ post }: PostProps) => {
           non iaculis{" "}
           <i>
             “Vivamus lectus enim, convallis nec dapibus vel, semper id ante. Morbi pulvinar sapien
-            nulla, eu dignissim enim ullamcorper vitae”
+            nulla, eu dignissim enim ullamcorper vitae”.
           </i>
-          .
         </Text>
         <Text>
           Ut sit amet neque vel mauris consequat aliquam at in arcu. Ut vulputate, augue luctus
@@ -77,13 +68,10 @@ export const Post = ({ post }: PostProps) => {
       </TextWrapper>
       <InfoWrapper>
         <Info>
-          <Icon src={postIcons.dataLine} /> {views} Views
+          <Icon src={postIcons.dataLine} /> {views} {t("blogPost.views")}
         </Info>
         <Info>
-          <Icon src={postIcons.share} /> Share:
-        </Info>
-        <Info>
-          <Icon src={postIcons.tag} /> Tags:
+          <Icon src={postIcons.tag} /> {t("blogPost.tags")}:
           {tags.map((el, index) => (
             <Tag key={index}>{el}</Tag>
           ))}

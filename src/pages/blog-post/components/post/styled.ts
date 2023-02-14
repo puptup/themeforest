@@ -67,3 +67,13 @@ export const InfoWrapper = styled.div`
   display: flex;
   gap: ${({ theme }) => theme.spacing.betweenItems.l};
 `;
+
+export const Tag = styled.span`
+  border: 1px solid #f1f6fa;
+  color: ${({ theme }) => theme.color.primary};
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 24px;
+  padding: 4px 11px;
+`;

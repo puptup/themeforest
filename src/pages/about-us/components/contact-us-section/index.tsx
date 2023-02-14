@@ -1,6 +1,7 @@
 import { contacts } from "@constants/contacts";
 import { ContactUsForm } from "@modules/contact-us-form";
 import { MainWrapper } from "@ui/main-wrapper";
+import { useTranslation } from "react-i18next";
 
 import {
   Block,
@@ -12,25 +13,25 @@ import {
   Title,
 } from "./styled";
 
+const tPath = "aboutUs.contactUsSection.";
+
 export const ContactUsSection = () => {
+  const { t } = useTranslation();
   return (
     <ContactUsContainer>
       <MainWrapper>
         <Container>
           <DescriptionBlock>
             <Block>
-              <Title>Left questions? Contacts us now for a free consultation and free trial!</Title>
-              <Description>
-                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
-                laboriosam, nisi ut aliquid ex ea commodi.
-              </Description>
+              <Title>{t(`${tPath}title`)}</Title>
+              <Description>{t(`${tPath}description`)}</Description>
             </Block>
             <Block>
               {contacts.map(({ title, path, subTitle }) => (
                 <div key={path}>
-                  <Description>{subTitle}</Description>
+                  <Description>{t(subTitle)}</Description>
                   <Info href={path} target="_blank">
-                    {title}
+                    {t(title)}
                   </Info>
                 </div>
               ))}

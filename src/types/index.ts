@@ -1,7 +1,5 @@
-import { benefitsIcons } from "@assets/benefits-icons";
-
 export type BenefitCardType = {
-  iconName: keyof typeof benefitsIcons;
+  iconName: string;
   title: string;
   id: string;
   text: string;
@@ -46,7 +44,6 @@ export type ServiceCardType = {
   image: string;
   title: string;
   description: string;
-  fullText: string;
 };
 
 export type CountactUsFormValues = {

@@ -47,6 +47,7 @@ module.exports = {
       '@router': path.resolve(__dirname, './src/router'),
       '@hooks': path.resolve(__dirname, './src/hooks'),
       '@components': path.resolve(__dirname, './src/components'),
+      '@localization': path.resolve(__dirname, './src/localization'),
     },
   },
   devServer: {

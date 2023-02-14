@@ -1,9 +1,11 @@
+/* eslint-disable @typescript-eslint/no-shadow */
 import { controlIcons } from "@assets/control-icons";
 import { contacts } from "@constants/contacts";
 import { Links } from "@constants/links";
 import { ContactUsForm } from "@modules/contact-us-form";
 import { Link } from "@ui/link";
 import { MainWrapper } from "@ui/main-wrapper";
+import { useTranslation } from "react-i18next";
 
 import {
   Container,
@@ -18,15 +20,19 @@ import {
 } from "./styled";
 
 export const HeadSection = () => {
+  const { t } = useTranslation();
+
+  const title = t("contactsPage.title");
   return (
     <MainWrapper>
       <History>
-        <Link to={`${Links.home}`}>Home</Link>
-        <img src={controlIcons.Divider} alt="divider" /> Contacts
+        <Link to={`${Links.home}`}>{t("mainLinks.home")}</Link>
+        <img src={controlIcons.Divider} alt="divider" /> {t("mainLinks.contacts")}
       </History>
       <Container>
         <Title>
-          How can we <PrimaryText>help you?</PrimaryText>
+          {`${title.split(" ").slice(0, -2).join(" ")} `}
+          <PrimaryText>{title.split(" ").slice(-2).join(" ")}</PrimaryText>
         </Title>
         <ContactUsForm variant="secondary" />
       </Container>
@@ -35,10 +41,10 @@ export const HeadSection = () => {
           <div key={title}>
             <InfoWrapper>
               <Icon src={icon} />
-              <InfoTitle>{subTitle}</InfoTitle>
+              <InfoTitle>{t(subTitle)}</InfoTitle>
             </InfoWrapper>
             <InfoDescription href={path} target="_blank">
-              {title}
+              {t(title)}
             </InfoDescription>
           </div>
         ))}

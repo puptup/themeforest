@@ -1,47 +1,27 @@
 import { DropdownList } from "@components/dropdown-list";
+import { serviceCards } from "@constants/serviceCards";
+import { Language } from "@localization";
+import { useTranslation } from "react-i18next";
 
 import { CategoryTitle, Title, Wrapper } from "./styled";
 
-const services = [
-  {
-    title: "Machine learning",
-    value:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-  },
-  {
-    title: "Embed analytics",
-    value:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-  },
-  {
-    title: "Data analytics",
-    value:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-  },
-  {
-    title: "Big data consulting",
-    value:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-  },
-  {
-    title: "Artificial intelligence",
-    value:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-  },
-];
+const tPath = "servicePost.services.";
 
 export const Services = () => {
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language as Language;
+
   return (
     <Wrapper>
-      <Title>Services</Title>
-      {services.map(({ title, value }) => (
+      <Title>{t(`${tPath}title`)}</Title>
+      {serviceCards[lang].map(({ title, description }) => (
         <DropdownList
           key={title}
           title={<CategoryTitle>{title}</CategoryTitle>}
           textColor="black"
           lineColor="black"
         >
-          <p>{value}</p>
+          <p>{description}</p>
         </DropdownList>
       ))}
     </Wrapper>
