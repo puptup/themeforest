@@ -1,11 +1,11 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import emailjs from "@emailjs/browser";
+import { useLocalization } from "@hooks/useLocalization";
 import { useMobile } from "@hooks/useMobile";
 import { Button } from "@ui/button";
 import { Input, InputWrapper } from "@ui/input";
 import { MainWrapper } from "@ui/main-wrapper";
 import { ChangeEvent, MouseEvent, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
 
 import { Block, Container, Description, SectionWrapper, Title } from "./styled";
 
@@ -15,7 +15,7 @@ export const SubscribeSection = () => {
   const [inputValue, setInputValue] = useState("");
   const ref = useRef<HTMLFormElement>(null);
   const isMobile = useMobile();
-  const { t } = useTranslation();
+  const { t } = useLocalization();
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);

@@ -1,5 +1,5 @@
+import { useLocalization } from "@hooks/useLocalization";
 import { MainWrapper } from "@ui/main-wrapper";
-import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 import { BlockWrapper, Button, Container, Description, HeadingWrapper, Title } from "./styled";
@@ -8,7 +8,7 @@ const tPath = "home.analitics.";
 
 export const AnaliticsPlatformSection = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t } = useLocalization();
 
   const routeChange = () => {
     navigate("/solutions");

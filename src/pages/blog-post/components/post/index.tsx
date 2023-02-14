@@ -1,7 +1,7 @@
 import Img from "@assets/img_7.png";
 import { postIcons } from "@assets/post-icons";
+import { useLocalization } from "@hooks/useLocalization";
 import { BlogCardType } from "@types";
-import { useTranslation } from "react-i18next";
 
 import { Icon, Image, Info, InfoWrapper, Quote, Tag, Text, TextWrapper, Title } from "./styled";
 
@@ -11,7 +11,7 @@ type PostProps = {
 
 export const Post = ({ post }: PostProps) => {
   const { date, author, views, tags, title } = post;
-  const { t } = useTranslation();
+  const { t } = useLocalization();
 
   return (
     <div>

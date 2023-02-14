@@ -1,8 +1,7 @@
-import { Language } from "@localization";
+import { useLocalization } from "@hooks/useLocalization";
 import { MainWrapper } from "@ui/main-wrapper";
 import { getServicePost } from "@utils/getServicePost";
 import { useMemo } from "react";
-import { useTranslation } from "react-i18next";
 
 import { ArticleGenerator } from "../article-generator";
 import { SearchBar } from "../search-bar";
@@ -14,9 +13,9 @@ type ServicePostSectionProps = {
 };
 
 export const ServicePostSection = ({ title }: ServicePostSectionProps) => {
-  const { i18n } = useTranslation();
-  const lang = i18n.language as Language;
-  const post = useMemo(() => getServicePost(title, lang), [title, lang]);
+  const { language } = useLocalization();
+
+  const post = useMemo(() => getServicePost(title, language), [title, language]);
 
   return (
     <MainWrapper>

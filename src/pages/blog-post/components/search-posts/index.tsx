@@ -1,7 +1,7 @@
+import { useLocalization } from "@hooks/useLocalization";
 import { Button } from "@ui/button";
 import { Input, InputWrapper } from "@ui/input";
 import { FormEvent, useRef } from "react";
-import { useTranslation } from "react-i18next";
 
 type SearchBarProps = {
   handleSearch: (newTag: string) => void;
@@ -9,7 +9,7 @@ type SearchBarProps = {
 
 export const SearchBar = ({ handleSearch }: SearchBarProps) => {
   const ref = useRef<HTMLInputElement>(null);
-  const { t } = useTranslation();
+  const { t } = useLocalization();
 
   const handleSumbit = (e: FormEvent) => {
     e.preventDefault();

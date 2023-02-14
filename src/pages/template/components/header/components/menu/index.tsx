@@ -1,15 +1,15 @@
 import { mainLinks } from "@constants/links";
+import { useLocalization } from "@hooks/useLocalization";
 import { NavLink } from "@ui/nav-link";
 import { useState } from "react";
 import { createPortal } from "react-dom";
-import { useTranslation } from "react-i18next";
 
 import { Popup } from "../popup";
 import { Button, ButtonWrapper, Container, Text } from "./styled";
 
 export const Menu = () => {
   const [showVideo, setShowVideo] = useState(false);
-  const { t } = useTranslation();
+  const { t } = useLocalization();
 
   const handlePopup = (state: boolean) => () => {
     setShowVideo(state);

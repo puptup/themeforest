@@ -2,10 +2,10 @@
 import { controlIcons } from "@assets/control-icons";
 import { contacts } from "@constants/contacts";
 import { Links } from "@constants/links";
+import { useLocalization } from "@hooks/useLocalization";
 import { ContactUsForm } from "@modules/contact-us-form";
 import { Link } from "@ui/link";
 import { MainWrapper } from "@ui/main-wrapper";
-import { useTranslation } from "react-i18next";
 
 import {
   Container,
@@ -20,7 +20,7 @@ import {
 } from "./styled";
 
 export const HeadSection = () => {
-  const { t } = useTranslation();
+  const { t } = useLocalization();
 
   const title = t("contactsPage.title");
   return (

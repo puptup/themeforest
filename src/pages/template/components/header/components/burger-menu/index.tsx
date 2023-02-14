@@ -2,15 +2,15 @@
 import { controlIcons } from "@assets/control-icons";
 import { DropdownListMobile } from "@components/dropdown-list-mobile";
 import { mobileHeaderLinks } from "@constants/links";
+import { useLocalization } from "@hooks/useLocalization";
 import { Link } from "@ui/arrow-link";
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 
 import { BurgerWrapper, Icon, Wrapper } from "./styled";
 
 export const BurgerMenu = () => {
   const [showPopup, setShowPopup] = useState(false);
-  const { t } = useTranslation();
+  const { t } = useLocalization();
 
   const handleShowPopup = (state: boolean) => () => {
     setShowPopup(state);

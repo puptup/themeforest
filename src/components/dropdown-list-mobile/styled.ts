@@ -10,7 +10,6 @@ type WrapperProps = {
 export const Wrapper = styled.div<WrapperProps>`
   display: flex;
   flex-direction: column;
-
   gap: ${({ theme }) => theme.spacing.betweenItems.l};
   color: ${({ theme, textColor }) => theme.color[textColor]};
   width: 100%;

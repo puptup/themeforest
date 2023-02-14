@@ -2,10 +2,9 @@ import { BlogCard } from "@components/blog-card";
 import { Carousel } from "@components/carousel";
 import { blogCards } from "@constants/blogCards";
 import { Links } from "@constants/links";
+import { useLocalization } from "@hooks/useLocalization";
 import { useMobile } from "@hooks/useMobile";
-import { Language } from "@localization";
 import { MainWrapper } from "@ui/main-wrapper";
-import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 import { Button, CardsWrapper, Container, Title } from "./styled";
@@ -14,7 +13,7 @@ const tPath = "home.ourBlog.";
 
 export const OurBlogSection = () => {
   const isMobile = useMobile();
-  const { t, i18n } = useTranslation();
+  const { t, language } = useLocalization();
 
   const navigate = useNavigate();
 
@@ -22,7 +21,7 @@ export const OurBlogSection = () => {
     navigate(Links.blog);
   };
 
-  const cards = blogCards[i18n.language as Language];
+  const cards = blogCards[language];
 
   return (
     <MainWrapper>

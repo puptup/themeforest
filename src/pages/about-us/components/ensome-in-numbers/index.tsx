@@ -1,5 +1,5 @@
+import { useLocalization } from "@hooks/useLocalization";
 import { MainWrapper } from "@ui/main-wrapper";
-import { useTranslation } from "react-i18next";
 
 import {
   Container,
@@ -15,7 +15,8 @@ import {
 const tPath = "aboutUs.ensomeInNumbers.";
 
 export const EnsomeInNumbersSection = () => {
-  const { t } = useTranslation();
+  const { t } = useLocalization();
+
   return (
     <EnsomeInNumbersContainer>
       <MainWrapper>

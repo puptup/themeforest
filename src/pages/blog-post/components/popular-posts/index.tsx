@@ -1,7 +1,6 @@
 import { PopularPost } from "@components/popular-post-card";
-import { Language } from "@localization";
+import { useLocalization } from "@hooks/useLocalization";
 import { BlogCardType } from "@types";
-import { useTranslation } from "react-i18next";
 
 import { PopularPostsWrapper, Title } from "./styled";
 
@@ -10,14 +9,13 @@ type PopularPostsProps = {
 };
 
 export const PopularPosts = ({ posts }: PopularPostsProps) => {
-  const { t, i18n } = useTranslation();
-  const lang = i18n.language as Language;
+  const { t, language } = useLocalization();
 
   return (
     <PopularPostsWrapper>
       <Title>{t("blogPost.popularPosts")}</Title>
       {posts.map((post) => (
-        <PopularPost key={post.id} post={post} lng={lang} />
+        <PopularPost key={post.id} post={post} lng={language} />
       ))}
     </PopularPostsWrapper>
   );

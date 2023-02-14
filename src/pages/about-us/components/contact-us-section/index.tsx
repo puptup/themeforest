@@ -1,7 +1,7 @@
 import { contacts } from "@constants/contacts";
+import { useLocalization } from "@hooks/useLocalization";
 import { ContactUsForm } from "@modules/contact-us-form";
 import { MainWrapper } from "@ui/main-wrapper";
-import { useTranslation } from "react-i18next";
 
 import {
   Block,
@@ -16,7 +16,8 @@ import {
 const tPath = "aboutUs.contactUsSection.";
 
 export const ContactUsSection = () => {
-  const { t } = useTranslation();
+  const { t } = useLocalization();
+
   return (
     <ContactUsContainer>
       <MainWrapper>

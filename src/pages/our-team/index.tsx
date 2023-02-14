@@ -1,7 +1,7 @@
+import { useLocalization } from "@hooks/useLocalization";
 import { useMobile } from "@hooks/useMobile";
 import { HeadSection } from "@modules/head-section";
 import { SubscribeSection } from "@modules/subscribe";
-import { useTranslation } from "react-i18next";
 
 import { MobileHeadSection } from "./components/mobile-head-section";
 import { TeamSection } from "./components/team-section";
@@ -10,7 +10,7 @@ const tPath = "ourTeam.";
 
 export const OurTeamPage = () => {
   const isMobile = useMobile();
-  const { t } = useTranslation();
+  const { t } = useLocalization();
 
   return (
     <>

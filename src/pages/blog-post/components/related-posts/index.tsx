@@ -1,6 +1,6 @@
 import { RelatedPost } from "@components/related-post-card";
+import { useLocalization } from "@hooks/useLocalization";
 import { BlogCardType } from "@types";
-import { useTranslation } from "react-i18next";
 
 import { RelatedPostsWrapper, Title } from "./styled";
 
@@ -9,7 +9,7 @@ type RelatedPostsProps = {
 };
 
 export const RelatedPosts = ({ posts }: RelatedPostsProps) => {
-  const { t } = useTranslation();
+  const { t } = useLocalization();
 
   return (
     <RelatedPostsWrapper>

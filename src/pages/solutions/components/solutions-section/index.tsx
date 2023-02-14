@@ -1,15 +1,14 @@
 import { SolutionCard } from "@components/solution-card";
 import { solutionsCards } from "@constants/solutions";
-import { Language } from "@localization";
+import { useLocalization } from "@hooks/useLocalization";
 import { MainWrapper } from "@ui/main-wrapper";
-import { useTranslation } from "react-i18next";
 
 import { SolutionsContainer } from "./styled";
 
 export const SolutionsSection = () => {
-  const { i18n } = useTranslation();
-  const lang = i18n.language as Language;
-  const cards = solutionsCards[lang];
+  const { language } = useLocalization();
+
+  const cards = solutionsCards[language];
 
   return (
     <MainWrapper>
@@ -21,7 +20,7 @@ export const SolutionsSection = () => {
             title={title}
             icon={icon}
             description={description}
-            lng={lang}
+            lng={language}
           />
         ))}
       </SolutionsContainer>

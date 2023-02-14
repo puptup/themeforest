@@ -1,18 +1,17 @@
 import { Carousel } from "@components/carousel";
 import { TestimonalCard } from "@components/testimonial-card";
 import { testimonialsCards } from "@constants/testimonialsCards";
-import { Language } from "@localization";
+import { useLocalization } from "@hooks/useLocalization";
 import { MainWrapper } from "@ui/main-wrapper";
-import { useTranslation } from "react-i18next";
 
 import { Container } from "./styled";
 
 const tPath = "solutions.testimonialsSection.";
 
 export const TestimonialsSection = () => {
-  const { t, i18n } = useTranslation();
+  const { t, language } = useLocalization();
 
-  const cards = testimonialsCards[i18n.language as Language];
+  const cards = testimonialsCards[language];
 
   return (
     <MainWrapper>

@@ -1,9 +1,9 @@
+import { useLocalization } from "@hooks/useLocalization";
 import { useMobile } from "@hooks/useMobile";
 import { HeadSection } from "@modules/head-section";
 import { NeedHelpSection } from "@modules/need-help-section";
 import { StatiscticsSection } from "@modules/statistics-section";
 import { SubscribeSection } from "@modules/subscribe";
-import { useTranslation } from "react-i18next";
 
 import { ContactUsSection } from "./components/contact-us-section";
 import { DescriptionSection } from "./components/description-section";
@@ -16,7 +16,7 @@ const tPath = "aboutUs.";
 
 export const AboutUsPage = () => {
   const isMobile = useMobile();
-  const { t } = useTranslation();
+  const { t } = useLocalization();
   return (
     <>
       {!isMobile ? (

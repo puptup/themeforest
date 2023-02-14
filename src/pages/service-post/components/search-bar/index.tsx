@@ -1,11 +1,11 @@
 import { Links } from "@constants/links";
 import { serviceCards } from "@constants/serviceCards";
+import { useLocalization } from "@hooks/useLocalization";
 import { Language } from "@localization";
 import { ServiceCardType } from "@types";
 import { Button } from "@ui/button";
 import { Input, InputWrapper } from "@ui/input";
 import { ChangeEvent, FormEvent, useState } from "react";
-import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 import { ItemWrapper, SearchedCardsWrapper, Wrapper } from "./styled";
@@ -17,15 +17,15 @@ const tPath = "servicePost.searchBar.";
 
 export const SearchBar = () => {
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation();
-  const lang = i18n.language as Language;
+  const { t, language } = useLocalization();
+
   const [state, setState] = useState("");
   const [cards, setCards] = useState<ServiceCardType[]>();
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setState(e.target.value);
     if (e.target.value.length) {
-      setCards(findTitles(e.target.value, lang));
+      setCards(findTitles(e.target.value, language));
     } else {
       setCards(undefined);
     }

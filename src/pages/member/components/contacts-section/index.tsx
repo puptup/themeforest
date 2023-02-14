@@ -1,6 +1,6 @@
+import { useLocalization } from "@hooks/useLocalization";
 import { ContactUsForm } from "@modules/contact-us-form";
 import { MainWrapper } from "@ui/main-wrapper";
-import { useTranslation } from "react-i18next";
 
 import { Container, Title } from "./styled";
 
@@ -11,7 +11,7 @@ type ContactsSectionProps = {
 const tPath = "member.contactsSection.";
 
 export const ContactsSection = ({ name }: ContactsSectionProps) => {
-  const { t } = useTranslation();
+  const { t } = useLocalization();
   return (
     <MainWrapper>
       <Container>

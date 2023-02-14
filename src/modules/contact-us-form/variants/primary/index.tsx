@@ -1,13 +1,13 @@
+import { useLocalization } from "@hooks/useLocalization";
 import { Error } from "@modules/contact-us-form/components";
 import { Button } from "@ui/button";
-import { useTranslation } from "react-i18next";
 
 import { Form, Input, InputBlock, InputDescription, InputsWrapper, Title } from "./styled";
 
 const tPath = "contactUsForm.description.";
 
 export const PrimaryForm = () => {
-  const { t } = useTranslation();
+  const { t } = useLocalization();
 
   return (
     <Form>

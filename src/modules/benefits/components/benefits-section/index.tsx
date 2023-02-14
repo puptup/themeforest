@@ -1,16 +1,14 @@
 import { BenefitCard } from "@components/benefit-card";
 import { benefitsCards } from "@constants/benefitsCards";
-import { Language } from "@localization";
+import { useLocalization } from "@hooks/useLocalization";
 import { MainWrapper } from "@ui/main-wrapper";
-import { useTranslation } from "react-i18next";
 
 import { BenefitsContainer, Block, CardWrapper, Container, Description, Title } from "./styled";
 
 const tPath = "benefits.";
 
 export const BenefitsSection = () => {
-  const { t, i18n } = useTranslation();
-  const lang = i18n.language as Language;
+  const { t, language } = useLocalization();
 
   return (
     <BenefitsContainer>
@@ -21,7 +19,7 @@ export const BenefitsSection = () => {
             <Description>{t(`${tPath}description`)}</Description>
           </Block>
           <CardWrapper>
-            {benefitsCards[lang].map((card) => {
+            {benefitsCards[language].map((card) => {
               return <BenefitCard key={card.id} card={card} />;
             })}
           </CardWrapper>

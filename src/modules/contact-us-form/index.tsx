@@ -1,8 +1,7 @@
-import { Language } from "@localization";
+import { useLocalization } from "@hooks/useLocalization";
 import { CountactUsFormValues } from "@types";
 import { ContactUsSchemaValidation } from "@utils/validations";
 import { Formik } from "formik";
-import { useTranslation } from "react-i18next";
 
 import { formByVariant } from "./variants";
 
@@ -23,14 +22,13 @@ export const submitMassage = (values: CountactUsFormValues) => {
 
 export const ContactUsForm = ({ variant }: ContactUsFormProps) => {
   const Form = formByVariant[variant];
-  const { i18n } = useTranslation();
-  const lang = i18n.language as Language;
+  const { language } = useLocalization();
 
   return (
     <Formik
       initialValues={initialValues}
       onSubmit={submitMassage}
-      validationSchema={ContactUsSchemaValidation[lang]}
+      validationSchema={ContactUsSchemaValidation[language]}
     >
       {() => <Form />}
     </Formik>

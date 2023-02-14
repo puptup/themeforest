@@ -1,10 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
+import { useLocalization } from "@hooks/useLocalization";
 import { options } from "@modules/pricing/api";
 import { CreateOrderActions, CreateOrderData } from "@paypal/paypal-js/types/components/buttons";
 import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
 import { ChoosedPlan } from "@types";
 import React, { MouseEvent } from "react";
-import { useTranslation } from "react-i18next";
 
 import { Benefit, Block, DescriptionWrapper, Price, Title, Wrapper } from "./styled";
 
@@ -15,7 +15,7 @@ type PopupProps = {
 
 export const Popup = ({ plan, closePopup }: PopupProps) => {
   const { name, price, benefits } = plan;
-  const { t } = useTranslation();
+  const { t } = useLocalization();
 
   const handleClick = (e: MouseEvent) => {
     e.stopPropagation();

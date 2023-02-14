@@ -1,6 +1,6 @@
 import IMG1 from "@assets/img_2.png";
 import IMG2 from "@assets/img_3.png";
-import { useTranslation } from "react-i18next";
+import { useLocalization } from "@hooks/useLocalization";
 import { useNavigate } from "react-router-dom";
 
 import { Block, Button, Description, FullImg, HalfImg, NewSolutionsWrapper, Title } from "./styled";
@@ -9,7 +9,7 @@ const tPath = "home.newSolutions.";
 
 export const NewSolutionsSection = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t } = useLocalization();
 
   const routeChange = () => {
     navigate("/solutions");

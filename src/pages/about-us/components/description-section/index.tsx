@@ -1,14 +1,14 @@
 import IMG2 from "@assets/img_10.png";
 import IMG1 from "@assets/img_11.png";
+import { useLocalization } from "@hooks/useLocalization";
 import { MainWrapper } from "@ui/main-wrapper";
-import { useTranslation } from "react-i18next";
 
 import { Block, Container, Description, Img, TextBlock, Title } from "./styled";
 
 const tPath = "aboutUs.descriptionSection.";
 
 export const DescriptionSection = () => {
-  const { t } = useTranslation();
+  const { t } = useLocalization();
 
   return (
     <MainWrapper>

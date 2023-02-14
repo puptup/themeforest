@@ -1,12 +1,12 @@
+import { useLocalization } from "@hooks/useLocalization";
 import { Error } from "@modules/contact-us-form/components";
-import { useTranslation } from "react-i18next";
 
 import { Button, Form, Input, InputBlock, InputsWrapper, TwoInputs } from "./styled";
 
 const tPath = "contactUsForm.placeHolder.";
 
 export const SecondaryForm = () => {
-  const { t } = useTranslation();
+  const { t } = useLocalization();
 
   return (
     <Form>

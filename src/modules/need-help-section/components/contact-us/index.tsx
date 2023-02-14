@@ -1,5 +1,5 @@
+import { useLocalization } from "@hooks/useLocalization";
 import { MainWrapper } from "@ui/main-wrapper";
-import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 import { Button, ContactUsWrapper, Container, Description, Title, Wrapper } from "./styled";
@@ -8,7 +8,7 @@ const tPath = "needHelpSection.";
 
 export const NeedHelpSection = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t } = useLocalization();
 
   const handleNavigate = () => {
     navigate("/contacts");

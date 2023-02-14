@@ -1,8 +1,8 @@
 import FaceBook from "@assets/footer-icons/facebook.svg";
 import Linkedin from "@assets/footer-icons/linkedin.svg";
 import Twitter from "@assets/footer-icons/twitter.svg";
+import { useLocalization } from "@hooks/useLocalization";
 import { MainWrapper } from "@ui/main-wrapper";
-import { useTranslation } from "react-i18next";
 
 import { Block, Container, LinksContainer, NameSubTitle, NameTitle, SotialIcon } from "./styled";
 
@@ -25,7 +25,7 @@ const tPath = "member.memberSection.";
 
 export const MemberSection = ({ member }: MemberSectionProps) => {
   const { image, role, name, description, links } = member;
-  const { t } = useTranslation();
+  const { t } = useLocalization();
   return (
     <MainWrapper>
       <Container>

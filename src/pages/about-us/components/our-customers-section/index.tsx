@@ -1,13 +1,13 @@
 import { CompaniesList } from "@components/companies-list";
+import { useLocalization } from "@hooks/useLocalization";
 import { MainWrapper } from "@ui/main-wrapper";
-import { useTranslation } from "react-i18next";
 
 import { Block, Container, Description, Title } from "./styled";
 
 const tPath = "aboutUs.ourCustomersSection.";
 
 export const OurCustomersSection = () => {
-  const { t } = useTranslation();
+  const { t } = useLocalization();
 
   return (
     <MainWrapper>

@@ -1,20 +1,18 @@
 import { BlogCard } from "@components/blog-card";
 import { blogCards } from "@constants/blogCards";
-import { Language } from "@localization";
+import { useLocalization } from "@hooks/useLocalization";
 import { Button } from "@ui/button";
 import { MainWrapper } from "@ui/main-wrapper";
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 
 import { CardsWrapper, Container } from "./styled";
 
 export const BlogsSection = () => {
   const [shownCards, setShownCards] = useState(6);
-  const { t, i18n } = useTranslation();
-  const lang = i18n.language as Language;
+  const { t, language } = useLocalization();
 
   const handleMoreArticles = () => {
-    if (blogCards[lang].length > shownCards) {
+    if (blogCards[language].length > shownCards) {
       setShownCards(shownCards + 3);
     }
   };
@@ -23,7 +21,7 @@ export const BlogsSection = () => {
     <MainWrapper>
       <Container>
         <CardsWrapper>
-          {blogCards[lang].slice(0, shownCards).map((card) => (
+          {blogCards[language].slice(0, shownCards).map((card) => (
             <BlogCard key={card.id} card={card} />
           ))}
         </CardsWrapper>

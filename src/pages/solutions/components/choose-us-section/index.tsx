@@ -1,6 +1,6 @@
 import IMG1 from "@assets/img_0011.png";
 import IMG2 from "@assets/img_0011small.png";
-import { useTranslation } from "react-i18next";
+import { useLocalization } from "@hooks/useLocalization";
 
 import {
   Block,
@@ -19,7 +19,7 @@ import {
 const tPath = "solutions.chooseUsSection.";
 
 export const ChooseUsSection = () => {
-  const { t } = useTranslation();
+  const { t } = useLocalization();
 
   return (
     <ChooseUsSectionWrapper>

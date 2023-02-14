@@ -1,8 +1,8 @@
 import img1 from "@assets/img_1.png";
 import { Links } from "@constants/links";
+import { useLocalization } from "@hooks/useLocalization";
 import { CircleButton } from "@ui/circle-button";
 import { MainWrapper } from "@ui/main-wrapper";
-import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 import {
@@ -19,7 +19,7 @@ const tPath = "home.findTruePower.";
 
 export const FindTruePowerSection = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t } = useLocalization();
 
   const handleRoute = () => {
     navigate(Links.services);

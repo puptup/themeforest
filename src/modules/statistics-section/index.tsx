@@ -1,6 +1,6 @@
 import { CompaniesList } from "@components/companies-list";
+import { useLocalization } from "@hooks/useLocalization";
 import { MainWrapper } from "@ui/main-wrapper";
-import { useTranslation } from "react-i18next";
 
 import {
   Block,
@@ -17,7 +17,7 @@ import {
 const tPath = "statisticsSection.";
 
 export const StatiscticsSection = () => {
-  const { t } = useTranslation();
+  const { t } = useLocalization();
 
   return (
     <MainWrapper>

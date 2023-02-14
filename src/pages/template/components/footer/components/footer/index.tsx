@@ -3,11 +3,11 @@ import { logos } from "@assets/logo";
 import { DropdownListMobile } from "@components/dropdown-list-mobile";
 import { contacts } from "@constants/contacts";
 import { quickLinks, serviceLinks } from "@constants/links";
+import { useLocalization } from "@hooks/useLocalization";
 import { useMobile } from "@hooks/useMobile";
 import { Link } from "@ui/link";
 import { Logo } from "@ui/logo";
 import { MainWrapper } from "@ui/main-wrapper";
-import { useTranslation } from "react-i18next";
 
 import {
   Container,
@@ -26,7 +26,7 @@ import {
 
 export const Footer = () => {
   const isMobile = useMobile();
-  const { t } = useTranslation();
+  const { t } = useLocalization();
 
   return (
     <FooterWraper>

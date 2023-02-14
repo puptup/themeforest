@@ -1,19 +1,17 @@
 import { ServiceCard } from "@components/service-card";
 import { serviceCards } from "@constants/serviceCards";
-import { Language } from "@localization";
+import { useLocalization } from "@hooks/useLocalization";
 import { HeadSection } from "@modules/head-section";
 import { MainWrapper } from "@ui/main-wrapper";
-import { useTranslation } from "react-i18next";
 
 import { ServicesCardWrapper } from "./styled";
 
 const tPath = "services.";
 
 export const ServicesSection = () => {
-  const { t, i18n } = useTranslation();
-  const lang = i18n.language as Language;
+  const { t, language } = useLocalization();
 
-  const cards = serviceCards[lang];
+  const cards = serviceCards[language];
 
   return (
     <MainWrapper>
@@ -25,7 +23,7 @@ export const ServicesSection = () => {
       />
       <ServicesCardWrapper>
         {cards.map((card) => (
-          <ServiceCard card={card} key={card.id} lng={lang} />
+          <ServiceCard card={card} key={card.id} lng={language} />
         ))}
       </ServicesCardWrapper>
     </MainWrapper>
