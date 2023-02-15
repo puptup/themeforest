@@ -49,44 +49,44 @@ export const solutionsCards = {
     {
       id: "data-integration",
       icon: solutionsIcons.book,
-      title: "Data integration",
+      title: "Интеграция данных",
       description:
-        "Extract, transform, load (ETL) or extract, load, transform (ELT); data governance (security, availability, quality) implementation.",
+        "Извлечение, преобразование, загрузка (ETL) или извлечение, загрузка, преобразование (ELT); реализация управления данными (безопасность, доступность, качество).",
     },
     {
       id: "data-integration2",
       icon: solutionsIcons.calendar,
-      title: "Data integration",
+      title: "Интеграция данных",
       description:
-        "Data preparation and management; machine learning (ML); designing and implanting artificial intelligence (AI) solutions.",
+        "Подготовка и управление данными; машинное обучение (МО); разработка и внедрение решений искусственного интеллекта (ИИ).",
     },
     {
       id: "big-data",
       icon: solutionsIcons.clipboard,
       title: "Big data",
       description:
-        "Big data infrastructure setup and support.; big data quality and security management; big data capture, analysis and reporting.",
+        "Настройка и поддержка инфраструктуры больших данных; управление качеством и безопасностью больших данных; сбор больших данных, анализ и отчетность.",
     },
     {
       id: "data-warehousing",
       icon: solutionsIcons.database,
-      title: "Data warehousing",
+      title: "Хранилище данных",
       description:
-        "The process of constructing and using a data warehouse. Data warehouse and data marts design and implementation.",
+        "Процесс построения и использования хранилища данных. Дизайн и внедрение хранилища данных и киосков данных",
     },
     {
       id: "self-service-bi",
       icon: solutionsIcons.whisker,
-      title: "Self-service BI",
+      title: "Сервис самообслуживания",
       description:
-        "Business intelligence; data analytics infrastructure design and implementation; scheduled analytics querying and reporting.",
+        "Бизнес-аналитика; проектирование и внедрение инфраструктуры аналитики данных; запланированные аналитические запросы и отчеты.",
     },
     {
       id: "data-visualization",
       icon: solutionsIcons.pie,
-      title: "Data visualization",
+      title: "Визуализация данных",
       description:
-        "Interactive dashboarding; custom and pre-built visuals; multiple visualization techniques (symbol maps, line charts, pie charts...)",
+        "Интерактивная информационная панель; настраиваемые и готовые визуальные элементы; несколько методов визуализации (карты символов, линейные диаграммы, круговые диаграммы...)",
     },
   ],
 };

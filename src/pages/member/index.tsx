@@ -1,5 +1,5 @@
 import { Links } from "@constants/links";
-import { membersCardsFull } from "@constants/membersFull";
+import { membersCards } from "@constants/members";
 import { useLocalization } from "@hooks/useLocalization";
 import { HeadSection } from "@modules/head-section";
 import { SubscribeSection } from "@modules/subscribe";
@@ -16,7 +16,7 @@ export const MemberPage = () => {
   const { t, language } = useLocalization();
 
   const member = useMemo(
-    () => membersCardsFull[language].filter((item) => item.id === id)[0],
+    () => membersCards[language].filter((item) => item.id === id)[0],
     [id, language]
   );
 

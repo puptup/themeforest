@@ -8,5 +8,6 @@ export const useLocalization = () => {
   return {
     t,
     language,
+    changeLanguageTo: i18n.changeLanguage,
   };
 };

@@ -49,6 +49,8 @@ export const Title = styled.h2`
   font-size: ${({ theme }) => theme.typography.heading.fontSize.h2};
   line-height: ${({ theme }) => theme.typography.heading.lineHeight.h2};
   font-weight: ${({ theme }) => theme.typography.fontWeight.bold};
+  width: ${({ theme }) => theme.spacing.block.width.xl};
+  text-align: center;
   color: ${({ theme }) => theme.color.black};
 
   @media ${device.laptop} {

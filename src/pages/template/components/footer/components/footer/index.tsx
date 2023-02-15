@@ -26,14 +26,18 @@ import {
 
 export const Footer = () => {
   const isMobile = useMobile();
-  const { t } = useLocalization();
+  const { t, language, changeLanguageTo } = useLocalization();
+
+  const handleLanguage = () => {
+    changeLanguageTo(language === "ru" ? "en" : "ru");
+  };
 
   return (
     <FooterWraper>
       <MainWrapper>
         <Container>
           <LogoAndIconsWrapper>
-            <Logo src={logos.WhiteLogo} />
+            <Logo src={logos.WhiteLogo} onClick={handleLanguage} />
             <Text>{t("footer.description")}</Text>
             <LinksWrapper>
               {companyesIcons.map((elem, index) => (

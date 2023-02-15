@@ -22,7 +22,7 @@ export const BlogsSection = () => {
       <Container>
         <CardsWrapper>
           {blogCards[language].slice(0, shownCards).map((card) => (
-            <BlogCard key={card.id} card={card} />
+            <BlogCard key={card.id} card={card} lng={language} />
           ))}
         </CardsWrapper>
         <Button size="xl" onClick={handleMoreArticles}>

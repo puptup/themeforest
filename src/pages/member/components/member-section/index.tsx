@@ -40,7 +40,7 @@ export const MemberSection = ({ member }: MemberSectionProps) => {
             <NameSubTitle>{role}</NameSubTitle>
           </div>
           <div>
-            <NameTitle>{t(`${tPath}description`)}</NameTitle>
+            <NameTitle>{t(`${tPath}decription`)}</NameTitle>
             <NameSubTitle>{description}</NameSubTitle>
           </div>
           <div>

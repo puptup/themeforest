@@ -28,29 +28,29 @@ export const categories = {
   ],
   ru: [
     {
-      title: "Software development",
+      title: "Разработка ПО",
       value:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет",
     },
     {
-      title: "Information security",
+      title: "Информационная безопасность",
       value:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет",
     },
     {
-      title: "Internet of things",
+      title: "Интернет вещей",
       value:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет",
     },
     {
-      title: "Digital transformation",
+      title: "Цифровая трансформация",
       value:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет",
     },
     {
-      title: "Healthcare it",
+      title: "Здравоохранение",
       value:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет",
     },
   ],
 };

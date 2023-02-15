@@ -1,6 +1,5 @@
 import { useLocalization } from "@hooks/useLocalization";
 import { useMobile } from "@hooks/useMobile";
-import { Language } from "@localization";
 import { BlogCardType } from "@types";
 import { MainWrapper } from "@ui/main-wrapper";
 import { getPopularPosts, getRelatedPosts } from "@utils/getBlogPosts";

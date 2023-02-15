@@ -48,6 +48,7 @@ export const ThirdCircle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
   font-size: ${({ theme }) => theme.typography.heading.fontSize.h7};
   line-height: ${({ theme }) => theme.typography.heading.lineHeight.h7};

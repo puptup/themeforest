@@ -44,203 +44,205 @@ export const russianTranslation = {
 
   home: {
     findTruePower: {
-      title: "Find true power in your data with ",
+      title: "Откройте для себя истинную силу ваших данных с помощью ",
       ensome: "Ensome",
       description:
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque lauda, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.",
-      learnMore: "Learn more",
+        "Открывший счастливой собой чтобы никого то говорил несло, равно картину которое, боль само. Воспользоваться того превратное физическими воспользоваться человек кто картину.",
+      learnMore: "Узнать больше",
     },
     analitics: {
-      title: "The newest business analytics platform",
+      title: "Новейшая платформа бизнес-аналитики",
       description:
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque lauda, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.",
-      discoverMore: "Discover more",
+        "Открывший счастливой собой чтобы никого то говорил несло, равно картину которое, боль само. Воспользоваться того превратное физическими воспользоваться человек кто картину.",
+      discoverMore: "Узнать больше",
     },
     newSolutions: {
-      title: "Radically new solutions for data",
+      title: "Принципиально новые решения для данных",
       description:
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque lauda, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.",
-      discoverMore: "Discover more",
+        "Открывший счастливой собой чтобы никого то говорил несло, равно картину которое, боль само. Воспользоваться того превратное физическими воспользоваться человек кто картину.",
+      discoverMore: "Узнать больше",
     },
     ourBlog: {
-      title: "Our blog",
-      learnMore: "Learn more",
+      title: "Наш блог",
+      learnMore: "Узнать больше",
     },
     testimonials: {
-      title: "Testimonials",
+      title: "Отзывы",
     },
   },
   aboutUs: {
-    pageName: "About us",
+    pageName: "О нас",
     contactUsSection: {
-      title: "Left questions? Contacts us now for a free consultation and free trial!",
+      title:
+        "Остались вопросы? Свяжитесь с нами сейчас для бесплатной консультации и бесплатной пробной версии!",
       description:
-        "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.",
+        "Равным образом реализация намеченных плановых заданий требуют определения и уточнения дальнейших направлений развития. ",
     },
     descriptionSection: {
-      whoWeAre: "Who we are",
+      whoWeAre: "Кто мы такие",
       whoWeAreDescription:
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Donec tincidunt tempor quam, non mollis quam finibus nec. Quisque finibus consequat felis vel pretium. Aliquam gravida nisi vel convallis ultricies. Integer ante sapien, consequat et dolor vel, cursus lacinia lectus.",
-      ourMission: "Our mission",
+        "Открывший счастливой собой чтобы никого то говорил несло, равно картину которое, боль само. Воспользоваться того превратное физическими воспользоваться человек кто картину.",
+      ourMission: "Наша миссия",
       ourMissionDescription:
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Donec tincidunt tempor quam, non mollis quam finibus nec. Quisque finibus consequat felis vel pretium. Aliquam gravida nisi vel convallis ultricies. Integer ante sapien, consequat et dolor vel, cursus lacinia lectus.",
+        "Открывший счастливой собой чтобы никого то говорил несло, равно картину которое, боль само. Воспользоваться того превратное физическими воспользоваться человек кто картину.",
     },
     ensomeInNumbers: {
-      title: "Ensome in numbers",
-      projectExecuted: "Project executed",
-      dataAnalytics: "Data analytics",
-      dataManagement: "Data management",
-      satisfiedCustomers: "Satisfied customers",
+      title: "Ensome в числах",
+      projectExecuted: "Проектов выполнено",
+      dataAnalytics: "Аналитика данных",
+      dataManagement: "Управление данными",
+      satisfiedCustomers: "Довольные клиенты",
     },
     testimonialsSection: {
-      title: "Testimonials",
+      title: "Отзывы",
     },
     mobileHeadSection: {
-      pageName: "About us",
-      title: "We work with 15 years of experience",
+      pageName: "О нас",
+      title: "Мы работаем с 15-летним опытом",
       description:
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.",
+        "Открывший счастливой собой чтобы никого то говорил несло, равно картину которое, боль само. Воспользоваться того превратное физическими воспользоваться человек кто картину.",
     },
     ourCustomersSection: {
-      title: "Our customers",
+      title: "Наши клиенты",
       description:
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.",
+        "Открывший счастливой собой чтобы никого то говорил несло, равно картину которое, боль само. Воспользоваться того превратное физическими воспользоваться человек кто картину.",
     },
   },
   solutions: {
-    pageName: "Solutions",
-    pageTitle: "Data analitics solutions",
-    pageDescription: "Getting ready for your success, we provide truly outstanding IT solutions.",
+    pageName: "Решения",
+    pageTitle: "Решения для анализа данных",
+    pageDescription:
+      "Готовясь к вашему успеху, мы предоставляем действительно выдающиеся ИТ-решения.",
     testimonialsSection: {
-      title: "Testimonials",
+      title: "Отзывы",
     },
     chooseUsSection: {
-      title: "Why choose us?",
-      machineLearning: "Machine learning",
+      title: "Почему выбрали нас?",
+      machineLearning: "Машинное обучение",
       machineLearningDescription:
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.",
-      embedAnalytics: "Embed analytics",
+        "Открывший счастливой собой чтобы никого то говорил несло, равно картину которое, боль само. Воспользоваться того превратное физическими воспользоваться человек кто картину.",
+      embedAnalytics: "Встроенная аналитика",
       embedAnalyticsDescription:
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.",
-      accessControl: "Access control",
+        "Открывший счастливой собой чтобы никого то говорил несло, равно картину которое, боль само. Воспользоваться того превратное физическими воспользоваться человек кто картину.",
+      accessControl: "Контроль доступа",
       accessControlDescription:
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.",
+        "Открывший счастливой собой чтобы никого то говорил несло, равно картину которое, боль само. Воспользоваться того превратное физическими воспользоваться человек кто картину.",
     },
   },
   services: {
-    pageName: "Services",
-    pageTitle: "Data Analytics Services",
+    pageName: "Сервисы",
+    pageTitle: "Услуги по анализу данных",
     pageDescription:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.",
+      "Открывший счастливой собой чтобы никого то говорил несло, равно картину которое, боль само. Воспользоваться того превратное физическими воспользоваться человек кто картину.",
   },
   servicePost: {
     description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.",
+      "Открывший счастливой собой чтобы никого то говорил несло, равно картину которое, боль само. Воспользоваться того превратное физическими воспользоваться человек кто картину.",
     services: {
-      title: "Services",
+      title: "Сервисы",
     },
     searchBar: {
-      search: "Search",
-      nofingFound: "Nothing found",
+      search: "Поиск",
+      nofingFound: "Ничего не найдено",
     },
     concactInformation: {
-      title: "Contact information",
-      description: "Fill up the form and our Team will get back to you with 25 hours.",
+      title: "Контактная информация",
+      description: "Заполните форму, и наша команда свяжется с вами в течение 25 часов.",
     },
   },
   ourTeam: {
-    pageName: "Our team",
-    title: "Get to know us closer",
+    pageName: "Наша команда",
+    title: "Познакомьтесь с нами ближе",
     description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.",
+      "Открывший счастливой собой чтобы никого то говорил несло, равно картину которое, боль само. Воспользоваться того превратное физическими воспользоваться человек кто картину.",
   },
   member: {
     memberSection: {
-      name: "Name",
-      position: "Position",
-      decription: "Description",
-      socialNetworks: "Social networks",
+      name: "Имя",
+      position: "Должность",
+      decription: "Описание",
+      socialNetworks: "Социальные сети",
     },
     contactsSection: {
-      title: "Want {{name}} to share his experience with you?",
+      title: "Хотите, чтобы {{name}} поделился своим опытом с вами?",
     },
   },
   faqs: {
     pageName: "FAQs",
-    pageTitle: "Frequently asked questions",
+    pageTitle: "Часто задаваемые вопросы",
     description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.",
+      "Открывший счастливой собой чтобы никого то говорил несло, равно картину которое, боль само. Воспользоваться того превратное физическими воспользоваться человек кто картину.",
   },
   contactsPage: {
-    title: "How can we help you?",
+    title: "Как мы можем вам помочь?",
   },
   blog: {
-    pageName: "Blog",
-    pageTitle: "Blog",
+    pageName: "Блог",
+    pageTitle: "Блог",
     description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.",
-    moreArticles: "More articles",
+      "Открывший счастливой собой чтобы никого то говорил несло, равно картину которое, боль само. Воспользоваться того превратное физическими воспользоваться человек кто картину.",
+    moreArticles: "Больше новостей",
   },
   blogPost: {
-    searchButton: "Search",
-    relatedPosts: "Related Posts",
-    popularPosts: "Popular Posts",
-    categories: "Categories",
-    views: "Views",
-    tags: "Tags",
+    searchButton: "Поиск",
+    relatedPosts: "Похожие посты",
+    popularPosts: "Популярные посты",
+    categories: "Категории",
+    views: "Просмотров",
+    tags: "Теги",
   },
 
   benefits: {
-    title: "The benefits of Ensome",
+    title: "Преимущества Ensome",
     description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.",
+      "Открывший счастливой собой чтобы никого то говорил несло, равно картину которое, боль само. Воспользоваться того превратное физическими воспользоваться человек кто картину.",
   },
 
   contactUsForm: {
-    contactUs: "Contact us",
+    contactUs: "Свяжитесь с нами",
     placeHolder: {
-      name: "Your name",
-      email: "Your email",
-      theme: "Theme",
-      message: "Your message",
+      name: "Ваше имя",
+      email: "Ваша почта",
+      theme: "Тема сообщения",
+      message: "Сообщение",
     },
     description: {
-      name: "Name",
-      email: "Email",
-      theme: "Theme",
-      message: "Message",
+      name: "Имя",
+      email: "Почта",
+      theme: "Тема",
+      message: "Сообщение",
     },
-    send: "Send",
-    submit: "Submit",
+    send: "Отправить",
+    submit: "Отправить",
   },
 
   needHelpSection: {
-    title: "Do you need help?",
+    title: "Вам нужна помощь?",
     description:
-      "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.",
-    contactUs: "Contact us",
+      "Равным образом реализация намеченных плановых заданий требуют определения и уточнения дальнейших направлений развития. ",
+    contactUs: "Свяжитесь с нами",
   },
 
   pricingSection: {
-    ourPricing: "Our pricing",
-    plan: "Plan",
-    price: "Price",
+    ourPricing: "Наши цены",
+    plan: "План",
+    price: "Цена",
   },
 
   statisticsSection: {
-    title: "We provide services that guarantee your success",
-    projectExecuted: "Project executed",
-    dataManagement: "Data management",
-    satisfiedCustomers: "Satisfied customers",
+    title: "Мы предоставляем услуги, которые гарантируют ваш успех",
+    projectExecuted: "Проектов выполнено",
+    dataManagement: "Управление данными",
+    satisfiedCustomers: "Довольные клиенты",
     description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.",
+      "Открывший счастливой собой чтобы никого то говорил несло, равно картину которое, боль само. Воспользоваться того превратное физическими воспользоваться человек кто картину.",
   },
 
   subscribeSection: {
-    title: "Subscribe to our newsletter",
+    title: "Подписывайтесь на наши новости",
     description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.",
-    placeholder: "Your email",
-    send: "Send",
+      "Открывший счастливой собой чтобы никого то говорил несло, равно картину которое, боль само. Воспользоваться того превратное физическими воспользоваться человек кто картину.",
+    placeholder: "Ваша почта",
+    send: "Отправить",
   },
 };

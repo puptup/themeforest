@@ -50,44 +50,44 @@ export const serviceCards = {
     {
       id: "machine-learning",
       image: isometricIcons.brain,
-      title: "Machine learning",
+      title: "Машинное обучение",
       description:
-        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
+        "Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке новых предложений.  ",
     },
     {
       id: "embed-analytics",
       image: isometricIcons.tranding,
-      title: "Embed analytics",
+      title: "Встроенная аналитика",
       description:
-        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
+        "Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке новых предложений.  ",
     },
     {
       id: "access-control",
       image: isometricIcons.key,
-      title: "Access control",
+      title: "Контроль данных",
       description:
-        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
+        "Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке новых предложений.  ",
     },
     {
       id: "data-analytics",
       image: isometricIcons.area,
-      title: "Data analytics",
+      title: "Анализ данных",
       description:
-        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
+        "Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке новых предложений.  ",
     },
     {
       id: "big-data-consulting",
       image: isometricIcons.pie,
-      title: "Big data consulting",
+      title: "Консультации",
       description:
-        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
+        "Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке новых предложений.  ",
     },
     {
       id: "artificial-intelligence",
       image: isometricIcons.bot,
-      title: "Artificial intelligence",
+      title: "Искусственный интеллект",
       description:
-        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
+        "Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке новых предложений.  ",
     },
   ],
 };

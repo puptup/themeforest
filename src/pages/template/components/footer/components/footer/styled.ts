@@ -47,7 +47,7 @@ export const LinksWrapper = styled.div`
 
 export const InfoBlocksWrapper = styled.div`
   display: flex;
-  gap: ${({ theme }) => theme.spacing.betweenItems.xxxl};
+
   @media ${device.laptop} {
     flex-direction: column;
     gap: ${({ theme }) => theme.spacing.betweenItems.xs};

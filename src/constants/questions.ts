@@ -31,7 +31,7 @@ export const questions = {
         "Phasellus tristique eu nisl eu consectetur. Morbi urna massa, imperdiet in mauris et, euismod vestibulum lacus. Integer enim elit, tincidunt aliquam ligula id, lacinia auctor orci. Sed quis lobortis eros. ",
     },
     {
-      question: "What is data visualisation",
+      question: "What is data visualisation?",
       answer:
         "Phasellus tristique eu nisl eu consectetur. Morbi urna massa, imperdiet in mauris et, euismod vestibulum lacus. Integer enim elit, tincidunt aliquam ligula id, lacinia auctor orci. Sed quis lobortis eros. ",
     },
@@ -39,39 +39,39 @@ export const questions = {
 
   ru: [
     {
-      question: "What are data analytics?",
+      question: "Что такое аналитика данных?",
       answer:
-        "Phasellus tristique eu nisl eu consectetur. Morbi urna massa, imperdiet in mauris et, euismod vestibulum lacus. Integer enim elit, tincidunt aliquam ligula id, lacinia auctor orci. Sed quis lobortis eros. ",
+        "Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке новых предложений. Не следует, однако забывать, что укрепление и развитие ",
     },
     {
-      question: "What is data mining?",
+      question: "Что такое интеллектуальный анализ данных?",
       answer:
-        "Phasellus tristique eu nisl eu consectetur. Morbi urna massa, imperdiet in mauris et, euismod vestibulum lacus. Integer enim elit, tincidunt aliquam ligula id, lacinia auctor orci. Sed quis lobortis eros. ",
+        "Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке новых предложений. Не следует, однако забывать, что укрепление и развитие ",
     },
     {
-      question: "What is business intelligence?",
+      question: "Что такое бизнес-аналитика?",
       answer:
-        "Phasellus tristique eu nisl eu consectetur. Morbi urna massa, imperdiet in mauris et, euismod vestibulum lacus. Integer enim elit, tincidunt aliquam ligula id, lacinia auctor orci. Sed quis lobortis eros. ",
+        "Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке новых предложений. Не следует, однако забывать, что укрепление и развитие ",
     },
     {
-      question: "What is exploratory data analysis (EDA)?",
+      question: "Что такое исследовательский анализ данных (EDA)?",
       answer:
-        "Phasellus tristique eu nisl eu consectetur. Morbi urna massa, imperdiet in mauris et, euismod vestibulum lacus. Integer enim elit, tincidunt aliquam ligula id, lacinia auctor orci. Sed quis lobortis eros. ",
+        "Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке новых предложений. Не следует, однако забывать, что укрепление и развитие ",
     },
     {
-      question: "What is confirmatory data analysis (CDA)?",
+      question: "Что такое подтверждающий анализ данных (CDA)?",
       answer:
-        "Phasellus tristique eu nisl eu consectetur. Morbi urna massa, imperdiet in mauris et, euismod vestibulum lacus. Integer enim elit, tincidunt aliquam ligula id, lacinia auctor orci. Sed quis lobortis eros. ",
+        "Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке новых предложений. Не следует, однако забывать, что укрепление и развитие ",
     },
     {
-      question: "What are predictive analytics?",
+      question: "Что такое прогнозная аналитика?",
       answer:
-        "Phasellus tristique eu nisl eu consectetur. Morbi urna massa, imperdiet in mauris et, euismod vestibulum lacus. Integer enim elit, tincidunt aliquam ligula id, lacinia auctor orci. Sed quis lobortis eros. ",
+        "Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке новых предложений. Не следует, однако забывать, что укрепление и развитие ",
     },
     {
-      question: "What is data visualisation",
+      question: "Что такое визуализация данных?",
       answer:
-        "Phasellus tristique eu nisl eu consectetur. Morbi urna massa, imperdiet in mauris et, euismod vestibulum lacus. Integer enim elit, tincidunt aliquam ligula id, lacinia auctor orci. Sed quis lobortis eros. ",
+        "Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке новых предложений. Не следует, однако забывать, что укрепление и развитие ",
     },
   ],
 };

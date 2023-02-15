@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unused-prop-types */
 import { controlIcons } from "@assets/control-icons";
 import { Links } from "@constants/links";
+import { useLocalization } from "@hooks/useLocalization";
 import { Link } from "@ui/link";
 import { MainWrapper } from "@ui/main-wrapper";
 
@@ -20,6 +21,8 @@ export const TertiaryVariant = ({
   additionalLinkName,
   additionalLink,
 }: TertiaryVariantProps) => {
+  const { t } = useLocalization();
+
   return (
     <HeadSectionWrapper>
       <MainWrapper>
@@ -27,7 +30,7 @@ export const TertiaryVariant = ({
           <Block>
             <Title>{title}</Title>
             <LinksWrapper>
-              <Link to={`${Links.home}`}>Home</Link>
+              <Link to={`${Links.home}`}>{t("mainLinks.home")}</Link>
               <img src={controlIcons.Divider} alt="divider" />
               {additionalLink && (
                 <>

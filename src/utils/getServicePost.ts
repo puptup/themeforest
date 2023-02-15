@@ -40,39 +40,40 @@ const post = {
       ],
     },
   ],
+
   ru: [
     {
-      title: "Customer",
+      title: "Клиент",
       image: Img1,
       description:
-        "Vestibulum varius mattis sagittis. Cras pharetra rutrum ante. Pellentesque pulvinar, odio ut convallis lobortis, massa ante mattis neque, a sagittis orci leo in quam. Ut convallis ex orci, nec sodales urna convallis ac. Sed cursus non dolor eu aliquam. Aenean et nisl in magna imperdiet auctor in vehicula arcu. ",
+        "Не следует, однако забывать, что дальнейшее развитие различных форм деятельности требуют определения и уточнения систем массового участия. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий позволяет оценить значение форм развития.",
     },
     {
-      title: "Challenge",
+      title: "Проблема",
       description:
-        "Vestibulum varius mattis sagittis. Cras pharetra rutrum ante. Pellentesque pulvinar, odio ut convallis lobortis, massa ante mattis neque, a sagittis orci leo in quam. Ut convallis ex orci, nec sodales urna convallis ac. Sed cursus non dolor eu aliquam. Aenean et nisl in magna imperdiet auctor in vehicula arcu: ",
+        "Не следует, однако забывать, что дальнейшее развитие различных форм деятельности требуют определения и уточнения систем массового участия. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий позволяет оценить значение форм развития.",
     },
     {
-      title: "Solution",
+      title: "Решение",
       image: Img2,
       description: [
-        "Vestibulum varius mattis sagittis. Cras pharetra rutrum ante. Pellentesque pulvinar, odio ut convallis lobortis, massa ante mattis neque, a sagittis orci leo in quam. Ut convallis ex orci, nec sodales urna convallis ac. Sed cursus non dolor eu aliquam. Aenean et nisl in magna imperdiet auctor in vehicula arcu.",
-        "Phasellus sed venenatis leo. Cras pulvinar, eros sed dictum semper, orci ipsum scelerisque tortor, at euismod sem lectus sed ex. Praesent purus orci, rutrum ac aliquet nec, egestas sit amet nibh.",
+        "Не следует, однако забывать, что дальнейшее развитие различных форм деятельности требуют определения и уточнения систем массового участия. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий позволяет оценить значение форм развития.",
+        "Не следует, однако забывать, что дальнейшее развитие различных форм деятельности требуют определения и уточнения систем массового участия. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий позволяет оценить значение форм развития.",
       ],
     },
     {
-      title: "Results",
+      title: "Результаты",
       description: [
-        "Cras aliquet felis nec lobortis pellentesque. Nam accumsan felis feugiat lorem volutpat, at mollis ipsum congue. Morbi non feugiat odio, ut facilisis eros. Duis in consequat mauris, vel interdum odio. Vestibulum et ex in neque bibendum vestibulum. Sed eget pharetra nunc. Duis mollis ante mauris, vitae volutpat libero rhoncus vitae.",
-        "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean luctus ultrices eros, vel sollicitudin arcu fringilla quis.",
-        "Vestibulum porttitor euismod sagittis. Pellentesque scelerisque purus nisi, ac convallis neque bibendum eget. Pellentesque augue nunc, ullamcorper vel sollicitudin sed, auctor nec libero. ",
+        "Не следует, однако забывать, что дальнейшее развитие различных форм деятельности требуют определения и уточнения систем массового участия. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий позволяет оценить значение форм развития.",
+        "Не следует, однако забывать, что дальнейшее развитие различных форм деятельности требуют определения и уточнения систем массового участия. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий позволяет оценить значение форм развития.",
+        "Не следует, однако забывать, что дальнейшее развитие различных форм деятельности требуют определения и уточнения систем массового участия. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий позволяет оценить значение форм развития.",
       ],
     },
     {
-      title: "Technologies",
+      title: "Технологии",
       description: [
-        "Cras aliquet felis nec lobortis pellentesque. Nam accumsan felis feugiat lorem volutpat, at mollis ipsum congue. Morbi non feugiat odio, ut facilisis eros. Duis in consequat mauris, vel interdum odio. Vestibulum et ex in neque bibendum vestibulum. Sed eget pharetra nunc. Duis mollis ante mauris, vitae volutpat libero rhoncus vitae.",
-        "Vestibulum porttitor euismod sagittis. Pellentesque scelerisque purus nisi, ac convallis neque bibendum eget. Pellentesque augue nunc, ullamcorper vel sollicitudin sed, auctor nec libero. ",
+        "Не следует, однако забывать, что дальнейшее развитие различных форм деятельности требуют определения и уточнения систем массового участия. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий позволяет оценить значение форм развития.",
+        "Не следует, однако забывать, что дальнейшее развитие различных форм деятельности требуют определения и уточнения систем массового участия. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий позволяет оценить значение форм развития.",
       ],
     },
   ],
