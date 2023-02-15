@@ -30,6 +30,7 @@ export const Footer = () => {
 
   const handleLanguage = () => {
     changeLanguageTo(language === "ru" ? "en" : "ru");
+    localStorage.setItem("lang", language === "ru" ? "en" : "ru");
   };
 
   return (
