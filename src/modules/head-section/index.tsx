@@ -1,7 +1,3 @@
-// primary faqs, solutions , services
-// secondary our-team,
-// tertiary blog, about-us
-
 import { PrimaryVariant, PrimaryVariantProps } from "./variants/primary";
 import { SecondaryVariant, SecondaryVariantProps } from "./variants/secondary";
 import { TertiaryVariant, TertiaryVariantProps } from "./variants/tertiary";

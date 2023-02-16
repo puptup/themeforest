@@ -5,7 +5,6 @@ import { contacts } from "@constants/contacts";
 import { quickLinks, serviceLinks } from "@constants/links";
 import { useLocalization } from "@hooks/useLocalization";
 import { useMobile } from "@hooks/useMobile";
-import { Link } from "@ui/link";
 import { Logo } from "@ui/logo";
 import { MainWrapper } from "@ui/main-wrapper";
 
@@ -18,6 +17,7 @@ import {
   Icon,
   InfoBlocksWrapper,
   Line,
+  Link,
   LinksWrapper,
   LinkText,
   LogoAndIconsWrapper,

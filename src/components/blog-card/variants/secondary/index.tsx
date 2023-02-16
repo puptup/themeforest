@@ -1,33 +1,25 @@
-import { Links } from "@constants/links";
+/* eslint-disable react/no-unused-prop-types */
 import { Language } from "@localization";
 import { BlogCardType } from "@types";
-import { Link } from "@ui/arrow-link";
-import { useNavigate } from "react-router-dom";
 
 import { Date, Image, InfoWrapper, Text, Title, Wrapper } from "./styled";
 
 type SecondaryVariantProps = {
   card: BlogCardType;
   lang: Language;
+  handleLinkClick: (id: string) => () => void;
 };
 
-export const SecondaryVariant = ({ card, lang }: SecondaryVariantProps) => {
+export const SecondaryVariant = ({ card, handleLinkClick }: SecondaryVariantProps) => {
   const { date, image, title, text, id } = card;
 
-  const navigate = useNavigate();
-
-  const handleNavigate = () => {
-    navigate(`${Links.blog}/${id}`);
-  };
-
   return (
-    <Wrapper onClick={handleNavigate}>
+    <Wrapper onClick={handleLinkClick(id)}>
       <Image src={image} />
       <InfoWrapper>
         <Date>{date}</Date>
         <Title>{title}</Title>
         <Text>{text}</Text>
-        <Link to={`${Links.blog}/${id}`}>{lang !== "ru" ? "Read more" : "Читать далее"}</Link>
       </InfoWrapper>
     </Wrapper>
   );

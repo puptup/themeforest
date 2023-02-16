@@ -1,5 +1,5 @@
 import { ControlDirectionButton } from "@ui/control-direction-button";
-import React, { useCallback, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { SwiperRef, SwiperSlide } from "swiper/react";
 
 import { ContainerWrapper, ControlButtonsWrapper, Swiper, Title } from "./styled";

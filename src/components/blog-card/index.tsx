@@ -7,10 +7,11 @@ type BlogCardProps = {
   variant: "primary" | "secondary" | "tertiary";
   card: BlogCardType;
   lang: Language;
+  handleLinkClick: (id: string) => () => void;
 };
 
-export const BlogCard = ({ variant, card, lang }: BlogCardProps) => {
+export const BlogCard = ({ variant, card, lang, handleLinkClick }: BlogCardProps) => {
   const Card = cardVariant[variant];
 
-  return <Card card={card} lang={lang} />;
+  return <Card card={card} lang={lang} handleLinkClick={handleLinkClick} />;
 };

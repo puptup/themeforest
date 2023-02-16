@@ -2,9 +2,9 @@
 import { controlIcons } from "@assets/control-icons";
 import { Links } from "@constants/links";
 import { useLocalization } from "@hooks/useLocalization";
-import { Link } from "@ui/link";
 import { MainWrapper } from "@ui/main-wrapper";
 
+import { Link } from "../styled";
 import { Description, Head, History, PageName, Title } from "./styled";
 
 export type PrimaryVariantProps = {

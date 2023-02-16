@@ -1,16 +1,15 @@
 import { controlIcons } from "@assets/control-icons";
 import { Colors } from "@theme/fields/color";
-import { Link as RouterLink } from "react-router-dom";
 import styled from "styled-components";
 
 type LinkProps = {
   color?: Colors;
 };
 
-export const Link = styled(RouterLink)<LinkProps>`
+export const Link = styled.a<LinkProps>`
   color: ${({ theme, color }) => (!color ? theme.color.primary : theme.color[color])};
+  cursor: pointer;
   text-decoration: none;
-  font-family: "Manrope", sans-serif;
   font-size: ${({ theme }) => theme.typography.heading.fontSize.h7};
   line-height: ${({ theme }) => theme.typography.heading.lineHeight.h7};
   font-weight: ${({ theme }) => theme.typography.fontWeight.bold};

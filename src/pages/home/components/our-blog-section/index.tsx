@@ -5,6 +5,7 @@ import { Links } from "@constants/links";
 import { useLocalization } from "@hooks/useLocalization";
 import { useMobile } from "@hooks/useMobile";
 import { MainWrapper } from "@ui/main-wrapper";
+import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { Button, CardsWrapper, Container, Title } from "./styled";
@@ -21,6 +22,13 @@ export const OurBlogSection = () => {
     navigate(Links.blog);
   };
 
+  const handleLinkClick = useCallback(
+    (id: string) => () => {
+      navigate(`${Links.blog}/${id}`);
+    },
+    []
+  );
+
   const cards = blogCards[language];
 
   return (
@@ -30,13 +38,25 @@ export const OurBlogSection = () => {
         {!isMobile ? (
           <Carousel title={t(`${tPath}title`)} slidesPerView={3}>
             {cards.map((card) => (
-              <BlogCard key={card.id} card={card} variant="primary" lang={language} />
+              <BlogCard
+                key={card.id}
+                card={card}
+                variant="primary"
+                lang={language}
+                handleLinkClick={handleLinkClick}
+              />
             ))}
           </Carousel>
         ) : (
           <CardsWrapper>
             {cards.slice(0, 3).map((card) => (
-              <BlogCard key={card.id} card={card} variant="primary" lang={language} />
+              <BlogCard
+                key={card.id}
+                card={card}
+                variant="primary"
+                lang={language}
+                handleLinkClick={handleLinkClick}
+              />
             ))}
           </CardsWrapper>
         )}

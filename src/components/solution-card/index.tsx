@@ -1,4 +1,4 @@
-import { Links } from "@constants/links";
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { Language } from "@localization";
 import { Link } from "@ui/arrow-link";
 
@@ -10,9 +10,17 @@ type SolutionCardProps = {
   description: string;
   id: string;
   lng: Language;
+  handleLinkClick: (id: string) => () => void;
 };
 
-export const SolutionCard = ({ icon, title, description, id, lng }: SolutionCardProps) => {
+export const SolutionCard = ({
+  icon,
+  title,
+  description,
+  id,
+  lng,
+  handleLinkClick,
+}: SolutionCardProps) => {
   return (
     <Wrapper>
       <Icon src={icon} />
@@ -20,7 +28,7 @@ export const SolutionCard = ({ icon, title, description, id, lng }: SolutionCard
         <Title>{title}</Title>
         <Description>{description}</Description>
       </TextWrapper>
-      <Link to={`${Links.solutions}/${id}`}>{lng !== "ru" ? "Read more" : "Читать далее"}</Link>
+      <Link onClick={handleLinkClick(id)}>{lng !== "ru" ? "Read more" : "Читать далее"}</Link>
     </Wrapper>
   );
 };

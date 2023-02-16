@@ -1,5 +1,3 @@
-import { useNavigate } from "react-router-dom";
-
 import { MemberCardWrapper, Name, Role } from "./styled";
 
 type MemberCardProps = {
@@ -7,17 +5,12 @@ type MemberCardProps = {
   name: string;
   role: string;
   image: string;
+  handleLinkClick: (id: string) => () => void;
 };
 
-export const MemberCard = ({ id, name, role, image }: MemberCardProps) => {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate(`/our-team/${id}`);
-  };
-
+export const MemberCard = ({ id, name, role, image, handleLinkClick }: MemberCardProps) => {
   return (
-    <MemberCardWrapper background={image} onClick={handleClick}>
+    <MemberCardWrapper background={image} onClick={handleLinkClick(id)}>
       <div>
         <Name>{name}</Name>
         <Role>{role}</Role>

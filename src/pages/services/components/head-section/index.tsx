@@ -1,8 +1,11 @@
 import { ServiceCard } from "@components/service-card";
+import { Links } from "@constants/links";
 import { serviceCards } from "@constants/serviceCards";
 import { useLocalization } from "@hooks/useLocalization";
 import { HeadSection } from "@modules/head-section";
 import { MainWrapper } from "@ui/main-wrapper";
+import { useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { ServicesCardWrapper } from "./styled";
 
@@ -10,6 +13,14 @@ const tPath = "services.";
 
 export const ServicesSection = () => {
   const { t, language } = useLocalization();
+  const navigate = useNavigate();
+
+  const handleLinkClick = useCallback(
+    (id: string) => () => {
+      navigate(`${Links.services}/${id}`);
+    },
+    []
+  );
 
   const cards = serviceCards[language];
 
@@ -23,7 +34,7 @@ export const ServicesSection = () => {
       />
       <ServicesCardWrapper>
         {cards.map((card) => (
-          <ServiceCard card={card} key={card.id} lng={language} />
+          <ServiceCard handleLinkClick={handleLinkClick} card={card} key={card.id} lng={language} />
         ))}
       </ServicesCardWrapper>
     </MainWrapper>
