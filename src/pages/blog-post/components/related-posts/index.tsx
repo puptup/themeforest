@@ -1,4 +1,4 @@
-import { RelatedPost } from "@components/related-post-card";
+import { BlogCard } from "@components/blog-card";
 import { useLocalization } from "@hooks/useLocalization";
 import { BlogCardType } from "@types";
 
@@ -9,13 +9,13 @@ type RelatedPostsProps = {
 };
 
 export const RelatedPosts = ({ posts }: RelatedPostsProps) => {
-  const { t } = useLocalization();
+  const { t, language } = useLocalization();
 
   return (
     <RelatedPostsWrapper>
       <Title>{t("blogPost.relatedPosts")}</Title>
       {posts.map((post) => (
-        <RelatedPost key={post.id} post={post} />
+        <BlogCard key={post.id} card={post} lang={language} variant="secondary" />
       ))}
     </RelatedPostsWrapper>
   );

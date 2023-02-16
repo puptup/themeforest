@@ -1,4 +1,4 @@
-import { PopularPost } from "@components/popular-post-card";
+import { BlogCard } from "@components/blog-card/";
 import { useLocalization } from "@hooks/useLocalization";
 import { BlogCardType } from "@types";
 
@@ -15,7 +15,7 @@ export const PopularPosts = ({ posts }: PopularPostsProps) => {
     <PopularPostsWrapper>
       <Title>{t("blogPost.popularPosts")}</Title>
       {posts.map((post) => (
-        <PopularPost key={post.id} post={post} lng={language} />
+        <BlogCard key={post.id} card={post} lang={language} variant="tertiary" />
       ))}
     </PopularPostsWrapper>
   );

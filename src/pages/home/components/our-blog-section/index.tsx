@@ -30,13 +30,13 @@ export const OurBlogSection = () => {
         {!isMobile ? (
           <Carousel title={t(`${tPath}title`)} slidesPerView={3}>
             {cards.map((card) => (
-              <BlogCard key={card.id} card={card} />
+              <BlogCard key={card.id} card={card} variant="primary" lang={language} />
             ))}
           </Carousel>
         ) : (
           <CardsWrapper>
             {cards.slice(0, 3).map((card) => (
-              <BlogCard key={card.id} card={card} />
+              <BlogCard key={card.id} card={card} variant="primary" lang={language} />
             ))}
           </CardsWrapper>
         )}

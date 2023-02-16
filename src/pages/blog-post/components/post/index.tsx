@@ -23,7 +23,6 @@ const ArticleGenerator = ({ block }: ArticleGeneratorProps) => {
   switch (type) {
     case "text": {
       const splittedText = value.split("\n");
-      console.log(value, splittedText);
       return (
         <>
           {splittedText.map((text, index) => (

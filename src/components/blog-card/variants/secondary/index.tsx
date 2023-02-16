@@ -1,15 +1,18 @@
 import { Links } from "@constants/links";
+import { Language } from "@localization";
 import { BlogCardType } from "@types";
+import { Link } from "@ui/arrow-link";
 import { useNavigate } from "react-router-dom";
 
 import { Date, Image, InfoWrapper, Text, Title, Wrapper } from "./styled";
 
-type RelatedPostProps = {
-  post: BlogCardType;
+type SecondaryVariantProps = {
+  card: BlogCardType;
+  lang: Language;
 };
 
-export const RelatedPost = ({ post }: RelatedPostProps) => {
-  const { date, image, title, text, id } = post;
+export const SecondaryVariant = ({ card, lang }: SecondaryVariantProps) => {
+  const { date, image, title, text, id } = card;
 
   const navigate = useNavigate();
 
@@ -24,6 +27,7 @@ export const RelatedPost = ({ post }: RelatedPostProps) => {
         <Date>{date}</Date>
         <Title>{title}</Title>
         <Text>{text}</Text>
+        <Link to={`${Links.blog}/${id}`}>{lang !== "ru" ? "Read more" : "Читать далее"}</Link>
       </InfoWrapper>
     </Wrapper>
   );

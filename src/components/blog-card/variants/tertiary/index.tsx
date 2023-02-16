@@ -5,20 +5,20 @@ import { Link } from "@ui/arrow-link";
 
 import { Date, Image, InfoWrapper, Title, Wrapper } from "./styled";
 
-type RelatedPostProps = {
-  post: BlogCardType;
-  lng: Language;
+type TertiaryVariantProps = {
+  card: BlogCardType;
+  lang: Language;
 };
 
-export const PopularPost = ({ post, lng }: RelatedPostProps) => {
-  const { date, image, title, id } = post;
+export const TertiaryVariant = ({ card, lang }: TertiaryVariantProps) => {
+  const { date, image, title, id } = card;
   return (
     <Wrapper>
       <Image src={image} />
       <InfoWrapper>
         <Date>{date}</Date>
         <Title>{title}</Title>
-        <Link to={`${Links.blog}/${id}`}>{lng !== "ru" ? "Read more" : "Читать далее"}</Link>
+        <Link to={`${Links.blog}/${id}`}>{lang !== "ru" ? "Read more" : "Читать далее"}</Link>
       </InfoWrapper>
     </Wrapper>
   );

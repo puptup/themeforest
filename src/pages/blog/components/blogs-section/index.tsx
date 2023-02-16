@@ -1,4 +1,4 @@
-import { BlogCard } from "@components/blog-card";
+import { BlogCard } from "@components/blog-card/";
 import { blogCards } from "@constants/blogCards";
 import { useLocalization } from "@hooks/useLocalization";
 import { Button } from "@ui/button";
@@ -22,7 +22,7 @@ export const BlogsSection = () => {
       <Container>
         <CardsWrapper>
           {blogCards[language].slice(0, shownCards).map((card) => (
-            <BlogCard key={card.id} card={card} lng={language} />
+            <BlogCard key={card.id} card={card} lang={language} variant="primary" />
           ))}
         </CardsWrapper>
         <Button size="xl" onClick={handleMoreArticles}>
