@@ -1,6 +1,6 @@
-import { DropdownList } from "@components/dropdown-list";
 import { categories } from "@constants/categories";
 import { useLocalization } from "@hooks/useLocalization";
+import { DropdownList } from "tmfcomponents";
 
 import { CategoryTitle, Title } from "./styled";
 

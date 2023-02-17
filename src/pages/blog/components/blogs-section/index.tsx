@@ -1,11 +1,9 @@
-import { BlogCard } from "@components/blog-card/";
 import { blogCards } from "@constants/blogCards";
 import { Links } from "@constants/links";
 import { useLocalization } from "@hooks/useLocalization";
-import { Button } from "@ui/button";
-import { MainWrapper } from "@ui/main-wrapper";
 import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { BlogCard, Button, MainWrapper } from "tmfcomponents";
 
 import { CardsWrapper, Container } from "./styled";
 

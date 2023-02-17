@@ -1,9 +1,9 @@
-import { BlogCard } from "@components/blog-card/";
 import { Links } from "@constants/links";
 import { useLocalization } from "@hooks/useLocalization";
 import { BlogCardType } from "@types";
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
+import { BlogCard } from "tmfcomponents";
 
 import { PopularPostsWrapper, Title } from "./styled";
 

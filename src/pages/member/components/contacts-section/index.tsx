@@ -1,6 +1,6 @@
 import { useLocalization } from "@hooks/useLocalization";
 import { ContactUsForm } from "@modules/contact-us-form";
-import { MainWrapper } from "@ui/main-wrapper";
+import { MainWrapper } from "tmfcomponents";
 
 import { Container, Title } from "./styled";
 

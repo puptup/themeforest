@@ -1,5 +1,5 @@
 import { device } from "@constants/devices";
-import { Button as UIButton } from "@ui/button";
+import { Button as UIButton } from "tmfcomponents";
 import styled from "styled-components";
 
 export const Container = styled.div`

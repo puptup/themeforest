@@ -1,6 +1,6 @@
 import { useLocalization } from "@hooks/useLocalization";
 import { Error } from "@modules/contact-us-form/components";
-import { Button } from "@ui/button";
+import { Button } from "tmfcomponents";
 
 import { Form, Input, InputBlock, InputDescription, InputsWrapper, Title } from "./styled";
 

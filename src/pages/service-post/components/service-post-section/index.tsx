@@ -1,7 +1,7 @@
 import { useLocalization } from "@hooks/useLocalization";
-import { MainWrapper } from "@ui/main-wrapper";
 import { getServicePost } from "@utils/getServicePost";
 import { useMemo } from "react";
+import { MainWrapper } from "tmfcomponents";
 
 import { ArticleGenerator } from "../article-generator";
 import { SearchBar } from "../search-bar";

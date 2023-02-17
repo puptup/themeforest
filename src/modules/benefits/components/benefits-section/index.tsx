@@ -1,7 +1,6 @@
-import { BenefitCard } from "@components/benefit-card";
 import { benefitsCards } from "@constants/benefitsCards";
 import { useLocalization } from "@hooks/useLocalization";
-import { MainWrapper } from "@ui/main-wrapper";
+import { BenefitCard, MainWrapper } from "tmfcomponents";
 
 import { BenefitsContainer, Block, CardWrapper, Container, Description, Title } from "./styled";
 

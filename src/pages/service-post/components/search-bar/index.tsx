@@ -3,10 +3,9 @@ import { serviceCards } from "@constants/serviceCards";
 import { useLocalization } from "@hooks/useLocalization";
 import { Language } from "@localization";
 import { ServiceCardType } from "@types";
-import { Button } from "@ui/button";
-import { Input, InputWrapper } from "@ui/input";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Button, Input, InputWrapper } from "tmfcomponents";
 
 import { ItemWrapper, SearchedCardsWrapper, Wrapper } from "./styled";
 

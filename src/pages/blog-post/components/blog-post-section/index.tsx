@@ -1,9 +1,9 @@
 import { useLocalization } from "@hooks/useLocalization";
 import { useMobile } from "@hooks/useMobile";
 import { BlogCardType } from "@types";
-import { MainWrapper } from "@ui/main-wrapper";
 import { getPopularPosts, getRelatedPosts } from "@utils/getBlogPosts";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { MainWrapper } from "tmfcomponents";
 
 import { Categories } from "../categories";
 import { PopularPosts } from "../popular-posts";

@@ -1,10 +1,9 @@
-import { PricingCard } from "@components/pricing-card";
 import { useLocalization } from "@hooks/useLocalization";
 import { pricingCards } from "@modules/pricing/constants";
 import { ChoosedPlan } from "@types";
-import { MainWrapper } from "@ui/main-wrapper";
 import { useCallback, useState } from "react";
 import { createPortal } from "react-dom";
+import { MainWrapper, PricingCard } from "tmfcomponents";
 
 import { Popup } from "../popup";
 import { Container, Heading } from "./styled";

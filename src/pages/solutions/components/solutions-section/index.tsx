@@ -1,10 +1,9 @@
-import { SolutionCard } from "@components/solution-card";
 import { Links } from "@constants/links";
 import { solutionsCards } from "@constants/solutions";
 import { useLocalization } from "@hooks/useLocalization";
-import { MainWrapper } from "@ui/main-wrapper";
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
+import { MainWrapper, SolutionCard } from "tmfcomponents";
 
 import { SolutionsContainer } from "./styled";
 

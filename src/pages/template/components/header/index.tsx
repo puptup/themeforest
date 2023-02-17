@@ -1,8 +1,7 @@
 import { logos } from "@assets/logo";
 import { useMobile } from "@hooks/useMobile";
-import { Logo } from "@ui/logo";
-import { MainWrapper } from "@ui/main-wrapper";
 import { useNavigate } from "react-router-dom";
+import { Logo, MainWrapper } from "tmfcomponents";
 
 import { BurgerMenu } from "./components/burger-menu";
 import { Menu } from "./components/menu";

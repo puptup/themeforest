@@ -2,7 +2,7 @@ import FaceBook from "@assets/footer-icons/facebook.svg";
 import Linkedin from "@assets/footer-icons/linkedin.svg";
 import Twitter from "@assets/footer-icons/twitter.svg";
 import { useLocalization } from "@hooks/useLocalization";
-import { MainWrapper } from "@ui/main-wrapper";
+import { MainWrapper } from "tmfcomponents";
 
 import { Block, Container, LinksContainer, NameSubTitle, NameTitle, SotialIcon } from "./styled";
 

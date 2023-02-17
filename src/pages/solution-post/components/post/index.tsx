@@ -1,9 +1,8 @@
-import { ScrollIndicator } from "@components/scroll-indicator";
 import { useLocalization } from "@hooks/useLocalization";
 import { useMobile } from "@hooks/useMobile";
-import { MainWrapper } from "@ui/main-wrapper";
 import { getSolutionPost } from "@utils/getSolutionPost";
 import { useCallback, useMemo, useState } from "react";
+import { MainWrapper, ScrollIndicator } from "tmfcomponents";
 
 import { ArticleGenerator } from "../article-generator";
 import { Block, Container, PostWrapper } from "./styled";

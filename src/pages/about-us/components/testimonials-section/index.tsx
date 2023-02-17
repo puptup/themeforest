@@ -1,9 +1,7 @@
-import { Carousel } from "@components/carousel";
-import { TestimonalCard } from "@components/testimonial-card";
 import { testimonialsCards } from "@constants/testimonialsCards";
 import { useLocalization } from "@hooks/useLocalization";
 import { useMobile } from "@hooks/useMobile";
-import { MainWrapper } from "@ui/main-wrapper";
+import { Carousel, MainWrapper, TestimonalCard } from "tmfcomponents";
 
 import { Contariner } from "./styled";
 

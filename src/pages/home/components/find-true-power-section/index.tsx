@@ -1,9 +1,8 @@
 import img1 from "@assets/img_1.png";
 import { Links } from "@constants/links";
 import { useLocalization } from "@hooks/useLocalization";
-import { CircleButton } from "@ui/circle-button";
-import { MainWrapper } from "@ui/main-wrapper";
 import { useNavigate } from "react-router-dom";
+import { CircleButton, MainWrapper } from "tmfcomponents";
 
 import {
   Container,

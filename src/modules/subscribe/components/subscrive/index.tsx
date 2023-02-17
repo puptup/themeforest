@@ -2,10 +2,8 @@
 import emailjs from "@emailjs/browser";
 import { useLocalization } from "@hooks/useLocalization";
 import { useMobile } from "@hooks/useMobile";
-import { Button } from "@ui/button";
-import { Input, InputWrapper } from "@ui/input";
-import { MainWrapper } from "@ui/main-wrapper";
 import { ChangeEvent, MouseEvent, useRef, useState } from "react";
+import { Button, Input, InputWrapper, MainWrapper } from "tmfcomponents";
 
 import { Block, Container, Description, SectionWrapper, Title } from "./styled";
 

@@ -1,7 +1,6 @@
 import { useLocalization } from "@hooks/useLocalization";
-import { Button } from "@ui/button";
-import { Input, InputWrapper } from "@ui/input";
 import { FormEvent, useRef } from "react";
+import { Button, Input, InputWrapper } from "tmfcomponents";
 
 type SearchBarProps = {
   handleSearch: (newTag: string) => void;

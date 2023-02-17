@@ -1,6 +1,6 @@
 import { useLocalization } from "@hooks/useLocalization";
-import { MainWrapper } from "@ui/main-wrapper";
 import { useNavigate } from "react-router-dom";
+import { MainWrapper } from "tmfcomponents";
 
 import { BlockWrapper, Button, Container, Description, HeadingWrapper, Title } from "./styled";
 

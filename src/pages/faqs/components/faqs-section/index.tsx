@@ -1,8 +1,7 @@
-import { QuestionCard } from "@components/question-card";
 import { questions } from "@constants/questions";
 import { useLocalization } from "@hooks/useLocalization";
 import { HeadSection } from "@modules/head-section";
-import { MainWrapper } from "@ui/main-wrapper";
+import { MainWrapper, QuestionCard } from "tmfcomponents";
 
 import { QuestionsContainer } from "./styled";
 

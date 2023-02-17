@@ -1,6 +1,5 @@
-import { CompaniesList } from "@components/companies-list";
 import { useLocalization } from "@hooks/useLocalization";
-import { MainWrapper } from "@ui/main-wrapper";
+import { CompaniesList, MainWrapper } from "tmfcomponents";
 
 import {
   Block,

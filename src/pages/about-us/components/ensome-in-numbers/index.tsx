@@ -1,5 +1,5 @@
 import { useLocalization } from "@hooks/useLocalization";
-import { MainWrapper } from "@ui/main-wrapper";
+import { MainWrapper } from "tmfcomponents";
 
 import {
   Container,

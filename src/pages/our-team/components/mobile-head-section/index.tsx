@@ -1,5 +1,5 @@
 import IMG from "@assets/img_10.png";
-import { MainWrapper } from "@ui/main-wrapper";
+import { MainWrapper } from "tmfcomponents";
 
 import { Description, DescriptionContainer, Img } from "./styled";
 

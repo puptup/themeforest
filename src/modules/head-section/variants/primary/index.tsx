@@ -2,7 +2,7 @@
 import { controlIcons } from "@assets/control-icons";
 import { Links } from "@constants/links";
 import { useLocalization } from "@hooks/useLocalization";
-import { MainWrapper } from "@ui/main-wrapper";
+import { MainWrapper } from "tmfcomponents";
 
 import { Link } from "../styled";
 import { Description, Head, History, PageName, Title } from "./styled";

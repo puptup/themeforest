@@ -4,8 +4,7 @@ import { contacts } from "@constants/contacts";
 import { Links } from "@constants/links";
 import { useLocalization } from "@hooks/useLocalization";
 import { ContactUsForm } from "@modules/contact-us-form";
-import { Link } from "@ui/link";
-import { MainWrapper } from "@ui/main-wrapper";
+import { MainWrapper } from "tmfcomponents";
 
 import {
   Container,
@@ -15,6 +14,7 @@ import {
   InfoDescription,
   InfoTitle,
   InfoWrapper,
+  Link,
   PrimaryText,
   Title,
 } from "./styled";

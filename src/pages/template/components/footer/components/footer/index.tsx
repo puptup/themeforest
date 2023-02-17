@@ -1,12 +1,11 @@
 import { companyesIcons } from "@assets/footer-icons";
 import { logos } from "@assets/logo";
-import { DropdownListMobile } from "@components/dropdown-list-mobile";
 import { contacts } from "@constants/contacts";
 import { quickLinks, serviceLinks } from "@constants/links";
 import { useLocalization } from "@hooks/useLocalization";
 import { useMobile } from "@hooks/useMobile";
-import { Logo } from "@ui/logo";
-import { MainWrapper } from "@ui/main-wrapper";
+import { DropdownListMobile } from "@pages/template/components/dropdown-list-mobile";
+import { Logo, MainWrapper } from "tmfcomponents";
 
 import {
   Container,

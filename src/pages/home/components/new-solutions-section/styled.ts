@@ -1,6 +1,6 @@
 import { device } from "@constants/devices";
-import { Button as UIButton } from "@ui/button";
 import styled from "styled-components";
+import { Button as UIButton } from "tmfcomponents";
 
 export const HalfImg = styled.img`
   display: block;

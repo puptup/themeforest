@@ -1,12 +1,11 @@
-import { MemberCard } from "@components/member-card";
 import { Links } from "@constants/links";
 import { membersCards } from "@constants/members";
 import { useIntersectionObserver } from "@hooks/useIsInViewPort";
 import { useLocalization } from "@hooks/useLocalization";
 import { useMobile } from "@hooks/useMobile";
-import { MainWrapper } from "@ui/main-wrapper";
 import { useCallback, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { MainWrapper, MemberCard } from "tmfcomponents";
 
 import { CardsContainer, Container } from "./styled";
 
