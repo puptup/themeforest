@@ -2,7 +2,7 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
 import { englishTranslation } from "./english";
-import { russianTranslation } from "./russian/index";
+import { russianTranslation } from "./russian";
 
 const resources = {
   en: {
@@ -15,7 +15,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: localStorage.getItem("lang") || "ru",
+  lng: localStorage.getItem("lang") || "en",
   interpolation: {
     escapeValue: false,
   },

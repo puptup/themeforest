@@ -1,3 +1,4 @@
+import { tags } from "@constants/tags";
 import { useLocalization } from "@hooks/useLocalization";
 import { useMobile } from "@hooks/useMobile";
 import { BlogCardType } from "@types";
@@ -17,32 +18,37 @@ type BlogPostSectionProps = {
   post: BlogCardType;
 };
 
-const AllTopics = "All topics";
-
 export const BlogPostSection = ({ post }: BlogPostSectionProps) => {
   const isMobile = useMobile();
-  const [tag, setTag] = useState<string>(AllTopics);
   const [searchString, setSearchString] = useState("");
   const { language } = useLocalization();
+  const [activeTags, setActiveTags] = useState<string[]>([tags[language][0]]);
 
   useEffect(() => {
-    if (tag !== AllTopics) {
-      setTag(AllTopics);
+    if (!activeTags.includes(tags[language][0])) {
+      setActiveTags([tags[language][0]]);
     }
-  }, [post.id]);
+  }, [post.id, language]);
 
   const popularPosts = useMemo(() => {
     return getPopularPosts(searchString || post.tags[0], language);
   }, [post.id, searchString, language]);
 
   const relatedPosts = useMemo(
-    () => getRelatedPosts(tag === AllTopics ? post.tags[0] : tag, language),
-    [post.id, tag, language]
+    () => getRelatedPosts(activeTags, language),
+    [post.id, activeTags, language]
   );
 
   const handleTag = useCallback(
     (newTag: string) => () => {
-      setTag(newTag);
+      setActiveTags((prev) => {
+        if (prev.includes(newTag)) {
+          return prev.filter((el) => el !== newTag);
+        }
+
+        if (prev.length >= 2) return prev;
+        return [...prev, newTag];
+      });
     },
     []
   );
@@ -63,7 +69,7 @@ export const BlogPostSection = ({ post }: BlogPostSectionProps) => {
             <SearchBar handleSearch={handlePopularPosts} />
             <PopularPosts posts={popularPosts} />
             <Categories />
-            <Tags activeTag={tag} handleTag={handleTag} />
+            <Tags activeTags={activeTags} handleTag={handleTag} />
           </RightBlock>
         )}
       </Container>

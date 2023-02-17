@@ -10,7 +10,7 @@ export const blogCards = {
       text: "Значимость этих проблем настолько очевидна, что укрепление и развитие структуры представляет собой интересный эксперимент проверки направлений прогрессивного развития ...",
       author: "Уильям Понд",
       views: 481,
-      tags: ["Данные", "Будущее"],
+      tags: ["Данные"],
     },
     {
       image: blogImages.p2,
@@ -20,7 +20,7 @@ export const blogCards = {
       text: "Значимость этих проблем настолько очевидна, что укрепление и развитие структуры представляет собой интересный эксперимент проверки направлений прогрессивного развития ...",
       author: "Уильям Понд",
       views: 400,
-      tags: ["Приложение", "Управление"],
+      tags: ["Приложение"],
     },
     {
       image: blogImages.p3,
@@ -30,7 +30,7 @@ export const blogCards = {
       text: "Значимость этих проблем настолько очевидна, что укрепление и развитие структуры представляет собой интересный эксперимент проверки направлений прогрессивного развития ...",
       author: "Уильям Понд",
       views: 300,
-      tags: ["CMR", "Большие данные"],
+      tags: ["CMR"],
     },
     {
       image: blogImages.p4,
@@ -40,7 +40,7 @@ export const blogCards = {
       text: "Значимость этих проблем настолько очевидна, что укрепление и развитие структуры представляет собой интересный эксперимент проверки направлений прогрессивного развития ...",
       author: "Уильям Понд",
       views: 200,
-      tags: ["Медиа", "Будущее"],
+      tags: ["Медиа"],
     },
     {
       image: blogImages.p5,
@@ -50,7 +50,7 @@ export const blogCards = {
       text: "Значимость этих проблем настолько очевидна, что укрепление и развитие структуры представляет собой интересный эксперимент проверки направлений прогрессивного развития ...",
       author: "Уильям Понд",
       views: 11,
-      tags: ["CIO", "Стартап"],
+      tags: ["Стартап"],
     },
     {
       image: blogImages.p6,
@@ -60,7 +60,7 @@ export const blogCards = {
       text: "Значимость этих проблем настолько очевидна, что укрепление и развитие структуры представляет собой интересный эксперимент проверки направлений прогрессивного развития ...",
       author: "Уильям Понд",
       views: 333,
-      tags: ["Команда", "Данные"],
+      tags: ["Данные"],
     },
     {
       image: blogImages.p7,
@@ -70,7 +70,7 @@ export const blogCards = {
       text: "Значимость этих проблем настолько очевидна, что укрепление и развитие структуры представляет собой интересный эксперимент проверки направлений прогрессивного развития ...",
       author: "Уильям Понд",
       views: 444,
-      tags: ["Данные", "Будущее"],
+      tags: ["Будущее"],
     },
     {
       image: blogImages.p8,
@@ -81,7 +81,7 @@ export const blogCards = {
       text: "Значимость этих проблем настолько очевидна, что укрепление и развитие структуры представляет собой интересный эксперимент проверки направлений прогрессивного развития ...",
       author: "Уильям Понд",
       views: 481,
-      tags: ["Приложение", "Управление"],
+      tags: ["Управление"],
     },
     {
       image: blogImages.p9,
@@ -91,7 +91,7 @@ export const blogCards = {
       text: "Значимость этих проблем настолько очевидна, что укрепление и развитие структуры представляет собой интересный эксперимент проверки направлений прогрессивного развития ...",
       author: "Уильям Понд",
       views: 481,
-      tags: ["CIO", "Данные"],
+      tags: ["CIO"],
     },
   ],
 
@@ -104,7 +104,7 @@ export const blogCards = {
       text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure...",
       author: "William Pond",
       views: 481,
-      tags: ["Data", "Future"],
+      tags: ["Data"],
     },
     {
       image: blogImages.p2,
@@ -114,7 +114,7 @@ export const blogCards = {
       text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure...",
       author: "William Pond",
       views: 400,
-      tags: ["App", "Management"],
+      tags: ["App"],
     },
     {
       image: blogImages.p3,
@@ -124,7 +124,7 @@ export const blogCards = {
       text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure...",
       author: "William Pond",
       views: 300,
-      tags: ["CMR", "Big data"],
+      tags: ["CMR"],
     },
     {
       image: blogImages.p4,
@@ -134,7 +134,7 @@ export const blogCards = {
       text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure...",
       author: "William Pond",
       views: 200,
-      tags: ["Media", "Future"],
+      tags: ["Media"],
     },
     {
       image: blogImages.p5,
@@ -144,7 +144,7 @@ export const blogCards = {
       text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure...",
       author: "William Pond",
       views: 11,
-      tags: ["CIO", "Startup"],
+      tags: ["Startup"],
     },
     {
       image: blogImages.p6,
@@ -154,7 +154,7 @@ export const blogCards = {
       text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure...",
       author: "William Pond",
       views: 333,
-      tags: ["Team", "Data"],
+      tags: ["Data"],
     },
     {
       image: blogImages.p7,
@@ -164,7 +164,7 @@ export const blogCards = {
       text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure...",
       author: "William Pond",
       views: 444,
-      tags: ["Data", "Future"],
+      tags: ["Future"],
     },
     {
       image: blogImages.p8,
@@ -174,7 +174,7 @@ export const blogCards = {
       text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure...",
       author: "William Pond",
       views: 481,
-      tags: ["App", "Management"],
+      tags: ["Management"],
     },
     {
       image: blogImages.p9,
@@ -184,7 +184,7 @@ export const blogCards = {
       text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure...",
       author: "William Pond",
       views: 481,
-      tags: ["CIO", "Data"],
+      tags: ["CIO"],
     },
   ],
 };
