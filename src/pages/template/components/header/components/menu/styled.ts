@@ -1,4 +1,3 @@
-import { device } from "@constants/devices";
 import { NavLink as RouterLink } from "react-router-dom";
 import styled from "styled-components";
 import { Button as UIButton } from "tmfcomponents";
@@ -27,10 +26,8 @@ export const Text = styled.h6`
   font-weight: ${({ theme }) => theme.typography.fontWeight.medium};
 `;
 
-export const Button = styled(UIButton)`
-  @media ${device.laptop} {
-    display: none;
-  }
+export const LangButton = styled(UIButton)`
+  width: 40px;
 `;
 
 export const ButtonWrapper = styled.div`
