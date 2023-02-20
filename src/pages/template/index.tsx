@@ -1,8 +1,9 @@
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
+import { Spinner } from "./components/spinner";
 
 export const TemplatePage = () => {
   const location = useLocation();
@@ -16,7 +17,9 @@ export const TemplatePage = () => {
   return (
     <>
       <Header />
-      <Outlet />
+      <Suspense fallback={<Spinner />}>
+        <Outlet />
+      </Suspense>
       <Footer />
     </>
   );

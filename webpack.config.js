@@ -22,13 +22,9 @@ module.exports = {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
-      { 
-        test: /\.png$/i,
-        use: ['url-loader'], 
-      },
       {
-        test: /\.svg$/i,
-        use: ['@svgr/webpack', 'url-loader'],
+        test: /\.(png|jpg|svg)$/i,
+        type: 'asset/resource'
       }
     ],
   },

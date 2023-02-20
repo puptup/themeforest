@@ -1,18 +1,21 @@
+/* eslint-disable @typescript-eslint/no-shadow */
 import { Links } from "@constants/links";
-import { AboutUsPage } from "@pages/about-us";
-import { BlogPage } from "@pages/blog";
-import { BlogPostPage } from "@pages/blog-post";
-import { ContactsPage } from "@pages/contacts";
-import { FAQSPage } from "@pages/faqs";
-import { HomePage } from "@pages/home";
-import { MemberPage } from "@pages/member";
-import { OurTeamPage } from "@pages/our-team";
-import { Service } from "@pages/service-post";
-import { ServicesPage } from "@pages/services";
-import { SolutionPage } from "@pages/solution-post";
-import { SolutionsPage } from "@pages/solutions";
 import { TemplatePage } from "@pages/template";
+import { lazily } from "react-lazily";
 import { createBrowserRouter } from "react-router-dom";
+
+const { Service } = lazily(() => import("@pages/service-post"));
+const { ServicesPage } = lazily(() => import("@pages/services"));
+const { SolutionPage } = lazily(() => import("@pages/solution-post"));
+const { SolutionsPage } = lazily(() => import("@pages/solutions"));
+const { AboutUsPage } = lazily(() => import("@pages/about-us"));
+const { BlogPage } = lazily(() => import("@pages/blog"));
+const { BlogPostPage } = lazily(() => import("@pages/blog-post"));
+const { ContactsPage } = lazily(() => import("@pages/contacts"));
+const { FAQSPage } = lazily(() => import("@pages/faqs"));
+const { HomePage } = lazily(() => import("@pages/home"));
+const { MemberPage } = lazily(() => import("@pages/member"));
+const { OurTeamPage } = lazily(() => import("@pages/our-team"));
 
 export const router = createBrowserRouter([
   {
