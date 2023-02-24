@@ -6,9 +6,9 @@ export const ServicesCardWrapper = styled.div`
   gap: ${({ theme }) => theme.spacing.betweenItems.l};
 `;
 
-export const QuestionsContainer = styled.div`
+export const QuestionsGroupsWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.betweenItems.m};
+  gap: ${({ theme }) => theme.spacing.betweenItems.xl};
   padding-bottom: ${({ theme }) => theme.spacing.betweenSections.xxxl};
 `;

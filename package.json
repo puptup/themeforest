@@ -30,7 +30,7 @@
     "react-router-dom": "^6.7.0",
     "styled-components": "^5.3.6",
     "swiper": "^8.4.6",
-    "tmfcomponents": "0.0.4",
+    "tmfcomponents": "0.0.5",
     "yup": "^0.32.11"
   },
   "devDependencies": {

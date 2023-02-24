@@ -7301,10 +7301,10 @@ tiny-warning@^1.0.2:
   resolved "https://registry.npmjs.org/tiny-warning/-/tiny-warning-1.0.3.tgz"
   integrity sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA==
 
-tmfcomponents@0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/tmfcomponents/-/tmfcomponents-0.0.4.tgz#2c72b3656a5b52b9783c07903cecceb4cc57cad3"
-  integrity sha512-qM7oICXC6EO2+OhVZtjN+ve8GkIGKLk+F2la4poLWMN0m90W8XilkjEP1Jd5JNLzC6cRqyomNfJ4AMTG/8YjYQ==
+tmfcomponents@0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/tmfcomponents/-/tmfcomponents-0.0.5.tgz#d129a7ae84a5d75b7f8d4262d4042f5fe4b78fa5"
+  integrity sha512-HE3P/6KBvjP/wSH05DcpjVeN53Aq+ZlbADOyuK/0ntTCD84mD2zQr45q3KJ+T9QAq25HvoVu4cJEx3MuAYfrvQ==
 
 tmp@~0.2.1:
   version "0.2.1"

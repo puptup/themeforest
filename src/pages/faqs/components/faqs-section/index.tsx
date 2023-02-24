@@ -1,14 +1,24 @@
-import { questions } from "@constants/questions";
+import { questions as questionsGroups } from "@constants/questions";
 import { useLocalization } from "@hooks/useLocalization";
 import { HeadSection } from "@modules/head-section";
-import { MainWrapper, QuestionCard } from "tmfcomponents";
+import { useCallback, useState } from "react";
+import { MainWrapper } from "tmfcomponents";
 
-import { QuestionsContainer } from "./styled";
+import { QuestionContainer } from "../questions-container";
+import { QuestionsGroupsWrapper } from "./styled";
 
 const tPath = "faqs.";
 
 export const FaqsSection = () => {
   const { t, language } = useLocalization();
+  const [activeQuestion, setActiveQuestion] = useState("");
+
+  const handleActive = useCallback(
+    (question: string) => () => {
+      setActiveQuestion(question);
+    },
+    []
+  );
 
   return (
     <MainWrapper>
@@ -18,11 +28,20 @@ export const FaqsSection = () => {
         title={t(`${tPath}pageTitle`)}
         description={t(`${tPath}description`)}
       />
-      <QuestionsContainer>
-        {questions[language].map(({ question, answer }, index) => (
-          <QuestionCard question={question} answer={answer} key={index} />
-        ))}
-      </QuestionsContainer>
+      <QuestionsGroupsWrapper>
+        {questionsGroups.map((block) => {
+          const { title, questions } = block[language];
+          return (
+            <QuestionContainer
+              key={title}
+              title={title}
+              questions={questions}
+              activeQuestion={activeQuestion}
+              handleActive={handleActive}
+            />
+          );
+        })}
+      </QuestionsGroupsWrapper>
     </MainWrapper>
   );
 };
